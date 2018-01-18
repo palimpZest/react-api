@@ -2,10 +2,12 @@ import React, { Component } from "react";
 
 class About extends Component {
   render() {
-    return <div>
+    return (
+      <div>
         <hr />
         <div>Glad you made it to the about section!</div>
-      </div>;
+      </div>
+    );
   }
 }
 
