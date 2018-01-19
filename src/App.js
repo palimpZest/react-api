@@ -19,21 +19,21 @@ class App extends Component {
                   </NavLink>
                 </li>
                 <li>
-                  <NavLink to="/about" activeClassName="selected">
-                    About
+                  <NavLink to="/people" activeClassName="selected">
+                    People
                   </NavLink>
                 </li>
                 <li>
-                  <NavLink to="/people" activeClassName="selected">
-                    People
+                  <NavLink to="/about" activeClassName="selected">
+                    About
                   </NavLink>
                 </li>
               </ul>
             </header>
           </Switch>
           <Route exact path="/" component={Home} />
-          <Route exact path="/about" component={About} />
-          <Route exact path="/people" component={PeopleHolder} />
+          <Route path="/people" component={PeopleHolder} />
+          <Route path="/about" component={About} />
         </nav>
       </BrowserRouter>
     );
