@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Axios from "axios";
+import PeopleItem from "./PeopleItem";
 
 class PeopleHolder extends Component {
   constructor(props) {
@@ -24,16 +25,16 @@ class PeopleHolder extends Component {
     return (
       <div>
         <h1>This is the people holder</h1>
-        {this.state.items.map(item => {
+        {this.state.items.map((item, index) => {
           return (
-            <section>
-              <div>Name : {item.name}</div>
-              <div>Birth Year : {item.birth_year}</div>
-              <div>Gender : {item.gender}</div>
-              <div>Height : {item.height}</div>
-              <div>Mass : {item.mass}</div>
-              <hr />
-            </section>
+            <PeopleItem
+              key={index}
+              name={item.name}
+              birth_year={item.birth_year}
+              gender={item.gender}
+              height={item.height}
+              mass={item.mass}
+            />
           );
         })}
       </div>
