@@ -25,9 +25,10 @@ class PeopleHolder extends Component {
     return (
       <div>
         <h1>This is the people holder</h1>
-        {this.state.items.map(item => {
+        {this.state.items.map((item, index) => {
           return (
             <PeopleItem
+              key={index}
               name={item.name}
               birth_year={item.birth_year}
               gender={item.gender}
