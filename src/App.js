@@ -1,14 +1,16 @@
 import React, { Component } from "react";
 import { Route, BrowserRouter, Switch, NavLink } from "react-router-dom";
-import Home from "./Home";
-import About from "./About";
-import PeopleHolder from "./PeopleHolder";
+import Home from "./components/Home";
+import About from "./components/About";
+import PeopleHolder from "./components/PeopleHolder";
+import SpeciesHolder from "./components/SpeciesHolder";
+import StarshipsHolder from "./components/StarshipsHolder";
+import PlanetsHolder from "./components/PlanetsHolder";
 import "./App.css";
 
 class App extends Component {
   render() {
-    return (
-      <BrowserRouter>
+    return <BrowserRouter>
         <nav>
           <Switch>
             <header>
@@ -24,6 +26,21 @@ class App extends Component {
                   </NavLink>
                 </li>
                 <li>
+                  <NavLink to="/species" activeClassName="selected">
+                    Species
+                  </NavLink>
+                </li>
+                <li>
+                  <NavLink to="/starships" activeClassName="selected">
+                    Starships
+                  </NavLink>
+                </li>
+                <li>
+                  <NavLink to="/planets" activeClassName="selected">
+                    Planets
+                  </NavLink>
+                </li>
+                <li>
                   <NavLink to="/about" activeClassName="selected">
                     About
                   </NavLink>
@@ -33,10 +50,12 @@ class App extends Component {
           </Switch>
           <Route exact path="/" component={Home} />
           <Route path="/people" component={PeopleHolder} />
+          <Route path="/species" component={SpeciesHolder} />
+          <Route path="/starships" component={StarshipsHolder} />
+          <Route path="/planets" component={PlanetsHolder} />
           <Route path="/about" component={About} />
         </nav>
-      </BrowserRouter>
-    );
+      </BrowserRouter>;
   }
 }
 
