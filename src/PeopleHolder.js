@@ -6,14 +6,18 @@ class PeopleHolder extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      items: []
+      items: [],
+      loading: true
     };
   }
 
   componentDidMount() {
     Axios.get("https://swapi.co/api/people/")
       .then(response => {
-        this.setState({ items: response.data.results });
+        this.setState({ 
+          items: response.data.results,
+          loading : false 
+        });
         console.log(response.data.results);
       })
       .catch(function(error) {
@@ -22,23 +26,31 @@ class PeopleHolder extends Component {
   }
 
   render() {
+    let list;
+
+    if (this.state.loading) {
+      list = (
+        <div>
+          <div>Loading...</div>
+        </div>
+      );
+    } else {
+      list = this.state.items.map((item, index) => {
+        return (
+          <PeopleItem
+            key={index}
+            name={item.name}
+            birth_year={item.birth_year}
+            gender={item.gender}
+            height={item.height}
+            mass={item.mass}
+          />
+        );
+      });
+    }
     return (
-      <div>
-        <h1>This is the people holder</h1>
-        {this.state.items.map((item, index) => {
-          return (
-            <PeopleItem
-              key={index}
-              name={item.name}
-              birth_year={item.birth_year}
-              gender={item.gender}
-              height={item.height}
-              mass={item.mass}
-            />
-          );
-        })}
-      </div>
-    );
+      <div>{list}</div>
+    )
   }
 }
 
