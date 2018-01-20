@@ -4,6 +4,7 @@ import Home from "./components/Home";
 import About from "./components/About";
 import PeopleHolder from "./components/PeopleHolder";
 import SpeciesHolder from "./components/SpeciesHolder";
+import StarshipsHolder from "./components/StarshipsHolder";
 import "./App.css";
 
 class App extends Component {
@@ -29,6 +30,11 @@ class App extends Component {
                   </NavLink>
                 </li>
                 <li>
+                  <NavLink to="/starships" activeClassName="selected">
+                    Starships
+                  </NavLink>
+                </li>
+                <li>
                   <NavLink to="/about" activeClassName="selected">
                     About
                   </NavLink>
@@ -39,6 +45,7 @@ class App extends Component {
           <Route exact path="/" component={Home} />
           <Route path="/people" component={PeopleHolder} />
           <Route path="/species" component={SpeciesHolder} />
+          <Route path="/starships" component={StarshipsHolder} />
           <Route path="/about" component={About} />
         </nav>
       </BrowserRouter>;
