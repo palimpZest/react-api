@@ -2,17 +2,18 @@ import React, { Component } from "react";
 
 class PeopleItem extends Component {
   render() {
+    const { name, birth_year, gender, height, mass } = this.props;
     return (
       <div>
-        <span>Name : {this.props.name}</span>
+        <span>Name : {name}</span>
         <br />
-        <span>Birth Year : {this.props.birth_year}</span>
+        <span>Birth Year : {birth_year}</span>
         <br />
-        <span>Gender : {this.props.gender}</span>
+        <span>Gender : {gender}</span>
         <br />
-        <span>Height : {this.props.height} </span>
+        <span>Height : {height} </span>
         <br />
-        <span>Mass : {this.props.mass}</span>
+        <span>Mass : {mass}</span>
         <hr />
       </div>
     );
