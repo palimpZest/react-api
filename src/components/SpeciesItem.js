@@ -2,7 +2,14 @@ import React, { Component } from "react";
 
 class SpeciesItem extends Component {
   render() {
-    const { name, classification, designation, average_height, average_lifespan, language } = this.props;
+    const { 
+      name, 
+      classification, 
+      designation, 
+      average_height, 
+      average_lifespan, 
+      language 
+    } = this.props;
     return <div>
         <span>Name : {name}</span>
         <br />

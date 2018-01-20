@@ -5,6 +5,7 @@ import About from "./components/About";
 import PeopleHolder from "./components/PeopleHolder";
 import SpeciesHolder from "./components/SpeciesHolder";
 import StarshipsHolder from "./components/StarshipsHolder";
+import PlanetsHolder from "./components/PlanetsHolder";
 import "./App.css";
 
 class App extends Component {
@@ -35,6 +36,11 @@ class App extends Component {
                   </NavLink>
                 </li>
                 <li>
+                  <NavLink to="/planets" activeClassName="selected">
+                    Planets
+                  </NavLink>
+                </li>
+                <li>
                   <NavLink to="/about" activeClassName="selected">
                     About
                   </NavLink>
@@ -46,6 +52,7 @@ class App extends Component {
           <Route path="/people" component={PeopleHolder} />
           <Route path="/species" component={SpeciesHolder} />
           <Route path="/starships" component={StarshipsHolder} />
+          <Route path="/planets" component={PlanetsHolder} />
           <Route path="/about" component={About} />
         </nav>
       </BrowserRouter>;

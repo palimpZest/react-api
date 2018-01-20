@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import Axios from "axios";
-import SpeciesItem from "./SpeciesItem";
+import PlanetsItem from "./PlanetsItem";
 
-class SpeciesHolder extends Component {
+class PlanetsHolder extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -12,7 +12,7 @@ class SpeciesHolder extends Component {
   }
 
   componentDidMount() {
-    Axios.get("https://swapi.co/api/species/")
+    Axios.get("https://swapi.co/api/planets/")
       .then(response => {
         this.setState({
           items: response.data.results,
@@ -37,20 +37,23 @@ class SpeciesHolder extends Component {
     } else {
       list = this.state.items.map((item, index) => {
         return (
-          <SpeciesItem 
+          <PlanetsItem 
             key={index} 
             name={item.name} 
-            classification={item.classification} 
-            designation={item.designation} 
-            average_height={item.average_height} 
-            average_lifespan={item.average_lifespan} 
-            language={item.language}
+            rotation_period={item.rotation_period} 
+            orbital_period={item.orbital_period} 
+            diameter={item.diameter} 
+            climate={item.climate} 
+            gravity={item.gravity} 
+            terrain={item.terrain} 
+            surface_water={item.surface_water} 
+            population={item.population} 
           />
-        );  
+        ); 
       });
     }
     return <div>{list}</div>;
   }
 }
 
-export default SpeciesHolder;
+export default PlanetsHolder;
