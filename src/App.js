@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import { Route, BrowserRouter, Switch, NavLink } from "react-router-dom";
-import Home from "./Home";
-import About from "./About";
-import PeopleHolder from "./PeopleHolder";
+import Home from "./components/Home";
+import About from "./components/About";
+import PeopleHolder from "./components/PeopleHolder";
 import "./App.css";
 
 class App extends Component {
