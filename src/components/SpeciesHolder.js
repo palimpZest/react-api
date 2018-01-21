@@ -29,11 +29,9 @@ class SpeciesHolder extends Component {
     let list;
 
     if (this.state.loading) {
-      list = (
-        <div>
-          <div>Loading...</div>
-        </div>
-      );
+      list = <div>
+          <img className="loading-icon" src="https://media.giphy.com/media/TZf4ZyXb0lXXi/giphy.gif" alt="loading icon" />
+        </div>;
     } else {
       list = this.state.items.map((item, index) => {
         return (

@@ -12,17 +12,14 @@ class PeopleHolder extends Component {
   }
 
   componentDidMount() {
-    Axios.get("https://swapi.co/api/people/")
-      .then(response => {
-        this.setState({ 
-          items: response.data.results,
-          loading : false 
-        });
-        console.log(response.data.results);
-      })
-      .catch(function(error) {
-        console.log("error");
-      });
+  Axios.get("https://swapi.co/api/people/")
+    .then(response => {
+      this.setState({ items: response.data.results, loading: false });
+      console.log(response.data.results);
+    })
+    .catch(function(error) {
+      console.log("error");
+    });
   }
 
   render() {
@@ -31,7 +28,11 @@ class PeopleHolder extends Component {
     if (this.state.loading) {
       list = (
         <div>
-          <div>Loading...</div>
+          <img
+            className="loading-icon"
+            src="https://media.giphy.com/media/TZf4ZyXb0lXXi/giphy.gif"
+            alt="loading icon"
+          />
         </div>
       );
     } else {
@@ -48,9 +49,7 @@ class PeopleHolder extends Component {
         );
       });
     }
-    return (
-      <div>{list}</div>
-    )
+    return <div>{list}</div>;
   }
 }
 
