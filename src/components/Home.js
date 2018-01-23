@@ -12,7 +12,7 @@ class Home extends Component {
         </header>
         <h2>Hi, there!</h2>
         <h3 className="welcome-message">
-          This little fun project shows React Router and an API calls in action.
+          This little fun project shows React Router and API calls in action.
           <br /> Feel free to browse all the sections!
         </h3>
       </div>
