@@ -10,7 +10,8 @@ import "./App.css";
 
 class App extends Component {
   render() {
-    return <BrowserRouter>
+    return (
+      <BrowserRouter>
         <nav>
           <Switch>
             <header>
@@ -55,7 +56,8 @@ class App extends Component {
           <Route path="/planets" component={PlanetsHolder} />
           <Route path="/about" component={About} />
         </nav>
-      </BrowserRouter>;
+      </BrowserRouter>
+    );
   }
 }
 
