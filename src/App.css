@@ -1,21 +1,31 @@
+/* 
+ *
+ *
+Global styles
+ *
+ *
+*/
+
 .App {
   text-align: center;
 }
 
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+  margin-top: 12px;
+  height: 120px;
+  fill: red;
 }
 
 .App-header {
   background-color: #222;
-  height: 150px;
+  height: 210px;
   padding: 20px;
   color: white;
 }
 
 .App-title {
-  font-size: 1.5em;
+  font-size: 2.5em;
 }
 
 .App-intro {
@@ -31,11 +41,27 @@
   }
 }
 
-
-
 body {
   background-color: black;
   color: rgb(11, 166, 249);
+}
+
+header {
+  height: 50px;
+  text-align: center;
+}
+
+header ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+header li {
+  text-decoration: none;
+  display: inline;
+  font-size: 40px;
+  padding: 30px 15px;
 }
 
 .selected {
@@ -43,12 +69,26 @@ body {
   text-decoration: none;
 }
 
-.loading-icon {
-    width: 80vw;
-    height: 100vh;
-    margin: 0 10vw;
-}
+/* 
+ *
+ *
+Section styles
+ *
+ *
+*/
 
 hr {
   color: rgb(11, 166, 249);
+}
+
+/* Home */
+
+.loading-icon {
+  width: 80vw;
+  height: 100vh;
+  margin: 0 10vw;
+}
+
+.welcome-message {
+  line-height: 30px;
 }
