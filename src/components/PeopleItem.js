@@ -4,8 +4,8 @@ class PeopleItem extends Component {
   render() {
     const { name, birth_year, gender, height, mass } = this.props;
     return (
-      <div>
-        <span>Name : {name}</span>
+      <div className="profile-box">
+        <h2>Name : {name}</h2>
         <br />
         <span>Birth Year : {birth_year}</span>
         <br />
@@ -14,7 +14,6 @@ class PeopleItem extends Component {
         <span>Height : {height} </span>
         <br />
         <span>Mass : {mass}</span>
-        <hr />
       </div>
     );
   }
