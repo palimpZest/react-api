@@ -10,8 +10,8 @@ class SpeciesItem extends Component {
       average_lifespan, 
       language 
     } = this.props;
-    return <div>
-        <span>Name : {name}</span>
+    return <div className="profile-box">
+        <h2>Name : {name}</h2>
         <br />
         <span>Classification : {classification}</span>
         <br />
@@ -23,7 +23,6 @@ class SpeciesItem extends Component {
         <br />
         <span>Language : {language}</span>
         <br />
-        <hr />
       </div>;
   }
 }
