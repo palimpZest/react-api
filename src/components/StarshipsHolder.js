@@ -50,7 +50,7 @@ class StarshipsHolder extends Component {
                     hyperdrive_rating={item.hyperdrive_rating} 
                     MGLT={item.MGLT} 
                     starship_class={item.starship_class} 
-                    />;
+                    />
           </div>;
         
     });

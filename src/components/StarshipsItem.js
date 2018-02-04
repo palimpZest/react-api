@@ -17,8 +17,8 @@ class StarshipsItem extends Component {
     MGLT,
     starship_class
     } = this.props;
-    return <div>
-        <span>Name : {name}</span>
+    return <div className="starship-box">
+        <h2>Name : {name}</h2>
         <br />
         <span>Model : {model}</span>
         <br />
@@ -44,7 +44,6 @@ class StarshipsItem extends Component {
         <br />
         <span>Starship_class : {starship_class}</span>
         <br />
-        <hr />
       </div>;
   }
 }
