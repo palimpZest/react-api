@@ -13,8 +13,8 @@ class PlanetsItem extends Component {
 		surface_water,
 		population
     } = this.props;
-    return <div>
-        <span>Name : {name}</span>
+    return <div className="planet-box">
+        <h2>Name : {name}</h2>
         <br />
         <span>rotation_period : {rotation_period}</span>
         <br />
@@ -32,7 +32,6 @@ class PlanetsItem extends Component {
         <br />
         <span>population : {population}</span>
         <br />
-        <hr />
       </div>;
   }
 }

@@ -34,8 +34,7 @@ class StarshipsHolder extends Component {
         </div>;
     } else {
       list = this.state.items.map((item, index) => {
-        return <div>
-                <StarshipsItem 
+        return <StarshipsItem 
                     key={index} 
                     name={item.name} 
                     model={item.model} 
@@ -51,8 +50,6 @@ class StarshipsHolder extends Component {
                     MGLT={item.MGLT} 
                     starship_class={item.starship_class} 
                     />;
-          </div>;
-        
     });
     }
     return <div>{list}</div>;
