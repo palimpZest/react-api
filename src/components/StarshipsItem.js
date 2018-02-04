@@ -18,7 +18,7 @@ class StarshipsItem extends Component {
     starship_class
     } = this.props;
     return <div className="starship-box">
-        <h2>Name : {name}</h2>
+        <h3>Name : {name}</h3>
         <br />
         <span>Model : {model}</span>
         <br />
