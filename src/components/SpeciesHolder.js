@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Axios from "axios";
+import axios from "axios";
 import SpeciesItem from "./SpeciesItem";
 
 class SpeciesHolder extends Component {
@@ -12,17 +12,28 @@ class SpeciesHolder extends Component {
   }
 
   componentDidMount() {
-    Axios.get("https://swapi.co/api/species/")
-      .then(response => {
-        this.setState({
-          items: response.data.results,
-          loading: false
-        });
-        console.log(response.data.results);
-      })
-      .catch(function(error) {
-        console.log("error");
-      });
+    let that = this;    
+    axios
+      .all([
+        axios.get("https://swapi.co/api/species/?page=1"),
+        axios.get("https://swapi.co/api/species/?page=2"),
+        axios.get("https://swapi.co/api/species/?page=3"),
+        axios.get("https://swapi.co/api/species/?page=4")
+      ])
+      .then(axios.spread(function(
+          page1,
+          page2,
+          page3,
+          page4
+        ) {
+          let allItems = page1.data.results.concat(
+            page2.data.results,
+            page3.data.results,
+            page4.data.results
+          );
+          that.setState({ items: allItems, loading: false });
+        }))
+      .catch(error => console.log(error));
   }
 
   render() {

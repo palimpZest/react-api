@@ -69,6 +69,10 @@ header li {
   padding: 30px 15px;
 }
 
+.text-center {
+  text-align: center;
+}
+
 .selected {
   color: rgb(255, 217, 0);
   text-decoration: none;
@@ -121,7 +125,7 @@ hr {
 /* People && Species */
 
 .profile-box {
-  margin: 25px 60px;
+  margin: 16px;
   text-align: center;
   background-color: black;
   color: #fff;
@@ -143,8 +147,4 @@ hr {
   text-align: center;
   background-color: black;
   color: #fff;
-}
-
-.text-center {
-  text-align: center;
 }
