@@ -6,6 +6,8 @@ Global styles
  *
 */
 
+@import '~antd/dist/antd.css';
+
 .App {
   text-align: center;
 }
@@ -26,6 +28,8 @@ Global styles
 
 .App-title {
   font-size: 2.5em;
+  color: white;
+  margin-top: 15px;
 }
 
 .App-intro {
@@ -70,6 +74,23 @@ header li {
   text-decoration: none;
 }
 
+.ant-card {
+  border-color: #333;
+} 
+
+.ant-card-head {
+  background-color: black;
+  border-bottom: 1px solid #333;
+}
+
+.ant-card-head-title {
+  color: #40a9ff;
+}
+
+.ant-card-body {
+  color: #40a9ff;
+}
+
 /* 
  *
  *
@@ -92,93 +113,38 @@ hr {
 
 .welcome-message {
   line-height: 30px;
+  color: rgb(11, 166, 249);
+  font-size: 24px;
+  line-height: 35px;
 }
 
 /* People && Species */
 
 .profile-box {
-  display: inline-block;
-  width: 290px;
-  margin: 24px;
-  /* margin-top: 35px; */
-  margin-left: 32px;
-  border: 1px solid rgb(58, 58, 58);
-  padding: 6px;
+  margin: 25px 60px;
   text-align: center;
+  background-color: black;
+  color: #fff;
 }
-
-.profile-box h2 {
-  font-weight: 500;
-  margin: 0px;
-}
-
-.profile-box span {
-  font-weight: 400;
-  font-size: 18px;
-  margin: 0px;
-  margin-bottom: 8px;
-}
-
 
 /* Starships */
 
-.starship-box {
-  display: inline-block;
-  width: 450px;
-  height: 310px;
-  margin: 24px;
-  margin-top: 2px;
-  border: 1px solid rgb(58, 58, 58);
-  padding: 15px;
+.starship-box { 
+  margin: 25px 50px;
   text-align: center;
-  border-radius: 25%;
+  background-color: black;
+  color: #fff;
 }
-
-.starship-box h3 {
-  font-weight: 500;
-  margin: 0px;
-  font-size: 23px;
-  margin-top: 14px;
-}
-
-.starship-box span {
-  font-weight: 400;
-  font-size: 13px;
-  margin: 0px;
-  margin-bottom: 8px;
-}
-
-.text-center {
-  text-align: center;
-}
-
 
 /* Planets */
 
 .planet-box {
-  display: inline-block;
-  width: 270px;
-  height: 270px;
-  margin: 24px;
-  margin-top: 2px;
-  border: 1px solid rgb(58, 58, 58);  
-  padding: 45px;
+  margin: 25px 40px;
   text-align: center;
-  border-radius: 50%;
+  background-color: black;
+  color: #fff;
 }
 
-.planet-box h2 {
-  font-weight: 900;
-  margin: 0px;
-}
-
-.planet-box span {
-  font-weight: 400;
-  font-size: 18px;
-  margin: 0px;
-  margin-bottom: 8px;
-}
-
-span.terrain {
-  font-size: 14px;
+.text-center {
+  text-align: center;
 }

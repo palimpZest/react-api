@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Axios from "axios";
 import PlanetsItem from "./PlanetsItem";
+import { Row } from "antd";
 
 class PlanetsHolder extends Component {
   constructor(props) {
@@ -50,7 +51,7 @@ class PlanetsHolder extends Component {
         ); 
       });
     }
-    return <div>{list}</div>;
+    return <Row>{list}</Row>;
   }
 }
 
