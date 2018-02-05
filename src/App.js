@@ -7,11 +7,12 @@ import SpeciesHolder from "./components/SpeciesHolder";
 import StarshipsHolder from "./components/StarshipsHolder";
 import PlanetsHolder from "./components/PlanetsHolder";
 import "./App.css";
+import { BackTop } from "antd";
+import arrow from "./play-button.svg";
 
 class App extends Component {
   render() {
-    return (
-      <BrowserRouter>
+    return <BrowserRouter>
         <nav>
           <Switch>
             <header>
@@ -47,6 +48,9 @@ class App extends Component {
                   </NavLink>
                 </li>
               </ul>
+              <BackTop>
+                <img src={arrow} alt="arrow up" className="ant-back-top-inner" />
+              </BackTop>
             </header>
           </Switch>
           <Route exact path="/" component={Home} />
@@ -56,8 +60,7 @@ class App extends Component {
           <Route path="/planets" component={PlanetsHolder} />
           <Route path="/about" component={About} />
         </nav>
-      </BrowserRouter>
-    );
+      </BrowserRouter>;
   }
 }
 
