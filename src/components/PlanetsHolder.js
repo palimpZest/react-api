@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Axios from "axios";
+import axios from "axios";
 import PlanetsItem from "./PlanetsItem";
 import { Row } from "antd";
 
@@ -13,18 +13,36 @@ class PlanetsHolder extends Component {
   }
 
   componentDidMount() {
-    Axios.get("https://swapi.co/api/planets/")
-      .then(response => {
-        this.setState({
-          items: response.data.results,
-          loading: false
-        });
-        console.log(response.data.results);
-      })
-      .catch(function(error) {
-        console.log("error");
-      });
-  }
+  let that = this;    
+   axios.all([
+     axios.get("https://swapi.co/api/planets/?page=1"),
+     axios.get("https://swapi.co/api/planets/?page=2"),
+     axios.get("https://swapi.co/api/planets/?page=3"),
+     axios.get("https://swapi.co/api/planets/?page=4"),
+     axios.get("https://swapi.co/api/planets/?page=5"),
+     axios.get("https://swapi.co/api/planets/?page=6"),
+     axios.get("https://swapi.co/api/planets/?page=7")
+   ])
+  .then(axios.spread(function(
+      page1,
+      page2,
+      page3,
+      page4,
+      page5,
+      page6,
+      page7
+    ) {
+      let allItems = page1.data.results.concat(
+        page2.data.results, 
+        page3.data.results, 
+        page4.data.results, 
+        page5.data.results, 
+        page6.data.results, 
+        page7.data.results);
+      that.setState({ items: allItems, loading: false });
+    }))
+  .catch(error => console.log(error));
+}
 
   render() {
     let list;
