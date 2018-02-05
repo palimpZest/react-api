@@ -1,21 +1,18 @@
 import React, { Component } from "react";
+import Card from "antd/lib/card";
+import { Col } from "antd";
 
 class PeopleItem extends Component {
   render() {
     const { name, birth_year, gender, height, mass } = this.props;
-    return (
-      <div className="profile-box">
-        <h2>Name : {name}</h2>
-        <br />
-        <span>Birth Year : {birth_year}</span>
-        <br />
-        <span>Gender : {gender}</span>
-        <br />
-        <span>Height : {height} </span>
-        <br />
-        <span>Mass : {mass}</span>
-      </div>
-    );
+    return <Col span={6}>
+        <Card title={name} className="profile-box">
+          <p>Birth Year : {birth_year}</p>
+          <p>Gender : {gender}</p>
+          <p>Height : {height} </p>
+          <p>Mass : {mass}</p>
+        </Card>
+      </Col>;
   }
 }
 

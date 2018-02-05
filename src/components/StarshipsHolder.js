@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Axios from "axios";
 import StarshipsItem from "./StarshipsItem";
+import { Row } from "antd";
 
 class StarshipsHolder extends Component {
   constructor(props) {
@@ -52,7 +53,7 @@ class StarshipsHolder extends Component {
                     />;
     });
     }
-    return <div>{list}</div>;
+    return <Row>{list}</Row>;
   }
 }
 

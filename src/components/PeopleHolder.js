@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Axios from "axios";
 import PeopleItem from "./PeopleItem";
+import { Row } from "antd";
 
 class PeopleHolder extends Component {
   constructor(props) {
@@ -12,7 +13,7 @@ class PeopleHolder extends Component {
   }
 
   componentDidMount() {
-  Axios.get("https://swapi.co/api/people/")
+  Axios.get("https://swapi.co/api/people/?page=1")
     .then(response => {
       this.setState({ items: response.data.results, loading: false });
       console.log(response.data.results);
@@ -21,6 +22,7 @@ class PeopleHolder extends Component {
       console.log("error");
     });
   }
+
 
   render() {
     let list;
@@ -38,18 +40,18 @@ class PeopleHolder extends Component {
     } else {
       list = this.state.items.map((item, index) => {
         return (
-          <PeopleItem
-            key={index}
-            name={item.name}
-            birth_year={item.birth_year}
-            gender={item.gender}
-            height={item.height}
-            mass={item.mass}
-          />
+            <PeopleItem
+              key={index}
+              name={item.name}
+              birth_year={item.birth_year}
+              gender={item.gender}
+              height={item.height}
+              mass={item.mass}
+            />
         );
       });
     }
-    return <div>{list}</div>;
+    return <Row>{list}</Row>;
   }
 }
 
