@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import Card from "antd/lib/card";
-import { Col } from "antd";
 
 class PlanetsItem extends Component {
   render() {
@@ -15,8 +14,7 @@ class PlanetsItem extends Component {
 		surface_water,
 		population
     } = this.props;
-    return <Col span={8}>
-        <Card title={name} className="planet-box">
+    return <Card title={name} className="content-box">
           <p>rotation_period: {rotation_period}</p>
           <p>orbital_period: {orbital_period}</p>
           <p>diameter: {diameter}</p>
@@ -25,8 +23,7 @@ class PlanetsItem extends Component {
           <p>terrain: {terrain}</p>
           <p>surface_water: {surface_water}</p>
           <p>population: {population}</p>
-        </Card>
-      </Col>;
+        </Card>;
   }
 }
 

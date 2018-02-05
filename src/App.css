@@ -1,8 +1,6 @@
 /* 
  *
- *
 Global styles
- *
  *
 */
 
@@ -28,7 +26,7 @@ Global styles
 
 .App-title {
   font-size: 2.5em;
-  color: white;
+  color: #975C9F;
   margin-top: 15px;
 }
 
@@ -88,7 +86,7 @@ header li {
 }
 
 .ant-card-head-title {
-  color: #40a9ff;
+  color: #975C9F
 }
 
 .ant-card-body {
@@ -97,15 +95,9 @@ header li {
 
 /* 
  *
- *
 Section styles
  *
- *
 */
-
-hr {
-  color: rgb(11, 166, 249);
-}
 
 /* Home */
 
@@ -122,28 +114,12 @@ hr {
   line-height: 35px;
 }
 
-/* People && Species */
+/* People & Species & 
+  Starships & Planets
+*/
 
-.profile-box {
+.content-box {
   margin: 16px;
-  text-align: center;
-  background-color: black;
-  color: #fff;
-}
-
-/* Starships */
-
-.starship-box { 
-  margin: 25px 50px;
-  text-align: center;
-  background-color: black;
-  color: #fff;
-}
-
-/* Planets */
-
-.planet-box {
-  margin: 25px 40px;
   text-align: center;
   background-color: black;
   color: #fff;

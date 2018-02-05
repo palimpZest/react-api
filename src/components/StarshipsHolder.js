@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import axios from "axios";
 import StarshipsItem from "./StarshipsItem";
-import { Row } from "antd";
+import { Row, Col } from "antd";
 
 class StarshipsHolder extends Component {
   constructor(props) {
@@ -40,25 +40,28 @@ class StarshipsHolder extends Component {
         </div>;
     } else {
       list = this.state.items.map((item, index) => {
-        return <StarshipsItem 
-                    key={index} 
-                    name={item.name} 
-                    model={item.model} 
-                    manufacturer={item.manufacturer} 
-                    cost_in_credits={item.cost_in_credits} 
-                    length={item.length} 
-                    max_atmosphering_speed={item.max_atmosphering_speed} 
-                    crew={item.crew} 
-                    passengers={item.passengers} 
-                    cargo_capacity={item.cargo_capacity} 
-                    consumables={item.consumables} 
-                    hyperdrive_rating={item.hyperdrive_rating} 
-                    MGLT={item.MGLT} 
-                    starship_class={item.starship_class} 
-                    />;
+        return <Col xs={24} sm={24} md={12} lg={12} xl={8} xxl={6}>
+            <StarshipsItem 
+              key={index} 
+              name={item.name} 
+              model={item.model} 
+              manufacturer={item.manufacturer} 
+              cost_in_credits={item.cost_in_credits} 
+              length={item.length} 
+              max_atmosphering_speed={item.max_atmosphering_speed} 
+              crew={item.crew} 
+              passengers={item.passengers} 
+              cargo_capacity={item.cargo_capacity} 
+              consumables={item.consumables} 
+              hyperdrive_rating={item.hyperdrive_rating} 
+              MGLT={item.MGLT} starship_class={item.starship_class} 
+              />
+          </Col>;
     });
     }
-    return <Row>{list}</Row>;
+    return <Row type="flex" justify="space-around" gutter={{ xs: 0, sm: 16, md: 4, lg: 4, xl: 8, xxl: 0 }}>
+        {list}
+      </Row>;
   }
 }
 

@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import axios from "axios";
 import SpeciesItem from "./SpeciesItem";
+import { Row, Col } from "antd";
 
 class SpeciesHolder extends Component {
   constructor(props) {
@@ -46,19 +47,23 @@ class SpeciesHolder extends Component {
     } else {
       list = this.state.items.map((item, index) => {
         return (
-          <SpeciesItem 
-            key={index} 
-            name={item.name} 
-            classification={item.classification} 
-            designation={item.designation} 
-            average_height={item.average_height} 
-            average_lifespan={item.average_lifespan} 
-            language={item.language}
-          />
+          <Col xs={24} sm={12} md={8} lg={6} xl={6} xxl={4}>
+            <SpeciesItem 
+              key={index} 
+              name={item.name} 
+              classification={item.classification} 
+              designation={item.designation} 
+              average_height={item.average_height} 
+              average_lifespan={item.average_lifespan} 
+              language={item.language}
+            />
+          </Col>
         );  
       });
     }
-    return <div>{list}</div>;
+    return <Row type="flex" justify="space-around" gutter={{ xs: 0, sm: 16, md: 4, lg: 4, xl: 8, xxl: 0 }}>
+        {list}
+      </Row>;
   }
 }
 

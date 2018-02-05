@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import axios from "axios";
 import PlanetsItem from "./PlanetsItem";
-import { Row } from "antd";
+import { Row, Col } from "antd";
 
 class PlanetsHolder extends Component {
   constructor(props) {
@@ -53,23 +53,27 @@ class PlanetsHolder extends Component {
         </div>;
     } else {
       list = this.state.items.map((item, index) => {
-        return (
-          <PlanetsItem 
-            key={index} 
-            name={item.name} 
-            rotation_period={item.rotation_period} 
-            orbital_period={item.orbital_period} 
-            diameter={item.diameter} 
-            climate={item.climate} 
-            gravity={item.gravity} 
-            terrain={item.terrain} 
-            surface_water={item.surface_water} 
-            population={item.population} 
-          />
+        return ( 
+          <Col xs={24} sm={12} md={8} lg={8} xl={6} xxl={4}>
+            <PlanetsItem 
+              key={index} 
+              name={item.name} 
+              rotation_period={item.rotation_period} 
+              orbital_period={item.orbital_period} 
+              diameter={item.diameter} 
+              climate={item.climate} 
+              gravity={item.gravity} 
+              terrain={item.terrain} 
+              surface_water={item.surface_water} 
+              population={item.population} 
+            />
+          </Col>
         ); 
       });
     }
-    return <Row>{list}</Row>;
+    return <Row type="flex" justify="space-around" gutter={{ xs: 0, sm: 16, md: 4, lg: 4, xl: 8, xxl: 0 }}>
+        {list}
+      </Row>;
   }
 }
 
