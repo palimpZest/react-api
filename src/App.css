@@ -15,39 +15,6 @@ body {
   text-align: center;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  margin-top: 15px;
-  height: 120px;
-  fill: red;
-}
-
-.App-header {
-  background-color: #222;
-  height: 250px;
-  /* padding: 20px; */
-  color: white;
-}
-
-.App-title {
-  font-size: 2.5em;
-  color: #975c9f;
-  margin-top: 15px;
-}
-
-.App-intro {
-  font-size: large;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
 .text-center {
   text-align: center;
 }
@@ -69,7 +36,7 @@ Ant design styles
 }
 
 .ant-back-top {
-  bottom: 30px;
+  bottom: 37px;
   right: calc(50vw - 20px);
 }
 
@@ -124,6 +91,43 @@ Section styles
 
 /* Home */
 
+.App {
+  position: relative;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 7s linear;
+  margin: 55px 0 40px 0;
+  height: 200px;
+  fill: red;
+}
+
+.App-header {
+  background-color: #black;
+  height: 800px;
+  color: white;
+}
+
+.greeting {
+  line-height: 30px;
+  color: #975c9f;
+  font-size: 35px;
+}
+
+.App-title {
+  font-size: 2.5em;
+  color: #975c9f;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
 .loading-icon {
   width: 80vw;
   height: 100vh;
@@ -131,10 +135,22 @@ Section styles
 }
 
 .welcome-message {
-  line-height: 30px;
-  color: rgb(11, 166, 249);
-  font-size: 24px;
+  color : #fff;
+  font-size: 22px;
   line-height: 35px;
+  margin: 0 35px;
+}
+
+.back-up-message {
+  position: absolute;
+  color:rgb(255, 217, 0);
+  bottom: 2px;
+  right: calc(50vw - 80px);
+  font-size: 16px; 
+}
+
+.warp-img {
+  width: 90%;
 }
 
 /* People & Species & Starships & Planets
@@ -151,20 +167,9 @@ Section styles
   width: 10vw;
 }
 
-.link-style {
-  color: green;
-}
-
 @media screen and (max-width: 622px) {
   .ant-layout-header {
-    margin: 0 0 62px 0;
-    padding: 0;
-  }
-}
-
-@media screen and (max-width: 350px) {
-  .ant-layout-header {
-    margin: 0 0 130px 0;
+    margin: 0 0 50px 0;
     padding: 0;
   }
 }

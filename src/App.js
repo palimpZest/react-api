@@ -20,7 +20,7 @@ class App extends Component {
           <Switch>
             <Header>
               <Row type="flex" justify="space-around" gutter={{ xs: 0, sm: 0, md: 0, lg: 4, xl: 8, xxl: 32 }}>
-                <Menu theme="dark" mode="horizontal" style={{ lineHeight: "64px", backgroundColor: "black", color: "green" }}>
+                <Menu theme="dark" mode="horizontal" style={{ lineHeight: "64px", backgroundColor: "black", color: "blue" }}>
                   <Menu.Item key="1">
                     <NavLink exact to="/" activeClassName="selected">
                       Home
