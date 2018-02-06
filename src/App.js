@@ -9,49 +9,55 @@ import PlanetsHolder from "./components/PlanetsHolder";
 import "./App.css";
 import { BackTop } from "antd";
 import arrow from "./play-button.svg";
+import { Row } from "antd";
+import { Layout, Menu } from "antd";
+const { Header } = Layout;
+
 
 class App extends Component {
   render() {
     return <BrowserRouter>
         <nav>
           <Switch>
-            <header>
-              <ul>
-                <li>
-                  <NavLink exact to="/" activeClassName="selected">
-                    Home
-                  </NavLink>
-                </li>
-                <li>
-                  <NavLink to="/people" activeClassName="selected">
-                    People
-                  </NavLink>
-                </li>
-                <li>
-                  <NavLink to="/species" activeClassName="selected">
-                    Species
-                  </NavLink>
-                </li>
-                <li>
-                  <NavLink to="/starships" activeClassName="selected">
-                    Starships
-                  </NavLink>
-                </li>
-                <li>
-                  <NavLink to="/planets" activeClassName="selected">
-                    Planets
-                  </NavLink>
-                </li>
-                <li>
-                  <NavLink to="/about" activeClassName="selected">
-                    About
-                  </NavLink>
-                </li>
-              </ul>
+            <Header>
+              <Row type="flex" justify="space-around" gutter={{ xs: 0, sm: 0, md: 0, lg: 4, xl: 8, xxl: 32 }}>
+                <Menu theme="dark" mode="horizontal" defaultSelectedKeys={["1"]} style={{ lineHeight: "64px", backgroundColor: "black", color: "green" }}>
+                  <Menu.Item key="1">
+                    <NavLink exact to="/" activeClassName="selected">
+                      Home
+                    </NavLink>
+                  </Menu.Item>
+                  <Menu.Item key="2">
+                    <NavLink to="/people" activeClassName="selected">
+                      People
+                    </NavLink>
+                  </Menu.Item>
+                  <Menu.Item key="3">
+                    <NavLink to="/species" activeClassName="selected">
+                      Species
+                    </NavLink>
+                  </Menu.Item>
+                  <Menu.Item key="4">
+                    <NavLink to="/starships" activeClassName="selected">
+                      Starships
+                    </NavLink>
+                  </Menu.Item>
+                  <Menu.Item key="5">
+                    <NavLink to="/planets" activeClassName="selected">
+                      Planets
+                    </NavLink>
+                  </Menu.Item>
+                  <Menu.Item key="6">
+                    <NavLink to="/about" activeClassName="selected">
+                      About
+                    </NavLink>
+                  </Menu.Item>
+                </Menu>
+              </Row>
               <BackTop>
                 <img src={arrow} alt="arrow up" className="ant-back-top-inner" />
               </BackTop>
-            </header>
+            </Header>
           </Switch>
           <Route exact path="/" component={Home} />
           <Route path="/people" component={PeopleHolder} />

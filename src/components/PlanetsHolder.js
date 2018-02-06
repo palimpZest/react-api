@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import axios from "axios";
 import PlanetsItem from "./PlanetsItem";
 import { Row, Col } from "antd";
+import { Layout } from "antd";
+const { Content } = Layout;
 
 class PlanetsHolder extends Component {
   constructor(props) {
@@ -71,9 +73,11 @@ class PlanetsHolder extends Component {
         ); 
       });
     }
-    return <Row type="flex" justify="space-around" gutter={{ xs: 0, sm: 16, md: 4, lg: 4, xl: 8, xxl: 0 }}>
-        {list}
-      </Row>;
+    return <Content style={{ padding: '0 50px' }} >
+        <Row type="flex" justify="space-around" gutter={{ xs: 0, sm: 16, md: 4, lg: 4, xl: 8, xxl: 0 }}>
+          {list}
+        </Row>
+      </Content>;
   }
 }
 

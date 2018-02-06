@@ -15,15 +15,21 @@ class PlanetsItem extends Component {
 		population
     } = this.props;
     return <Card title={name} className="content-box">
-          <p>rotation_period: {rotation_period}</p>
-          <p>orbital_period: {orbital_period}</p>
-          <p>diameter: {diameter}</p>
-          <p>climate: {climate}</p>
-          <p>gravity: {gravity}</p>
-          <p>terrain: {terrain}</p>
-          <p>surface_water: {surface_water}</p>
-          <p>population: {population}</p>
-        </Card>;
+        <p>rotation_period: {rotation_period}</p>
+        <p>orbital_period: {orbital_period}</p>
+        <p>diameter: {diameter}</p>
+        <p>climate: {climate}</p>
+        <p>
+          gravity:<br />
+          {gravity}
+        </p>
+        <p>
+          terrain:<br />
+          {terrain}
+        </p>
+        <p>surface_water: {surface_water}</p>
+        <p>population: {population}</p>
+      </Card>;
   }
 }
 
