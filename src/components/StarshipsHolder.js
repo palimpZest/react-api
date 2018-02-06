@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import axios from "axios";
 import StarshipsItem from "./StarshipsItem";
 import { Row, Col } from "antd";
+import { Layout } from "antd";
+const { Content } = Layout;
 
 class StarshipsHolder extends Component {
   constructor(props) {
@@ -59,9 +61,11 @@ class StarshipsHolder extends Component {
           </Col>;
     });
     }
-    return <Row type="flex" justify="space-around" gutter={{ xs: 0, sm: 16, md: 4, lg: 4, xl: 8, xxl: 0 }}>
-        {list}
-      </Row>;
+    return <Content style={{ padding: '0 50px' }} >
+        <Row type="flex" justify="space-around" gutter={{ xs: 8, sm: 16, md: 8, lg: 8, xl: 8, xxl: 8 }}>
+          {list}
+        </Row>
+      </Content>;
   }
 }
 

@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import axios from "axios";
 import PeopleItem from "./PeopleItem";
 import { Row, Col } from "antd";
+import { Layout } from "antd";
+const { Content } = Layout;
 
 class PeopleHolder extends Component {
   constructor(props) {
@@ -78,9 +80,11 @@ class PeopleHolder extends Component {
           </Col>;
       });
     }
-    return <Row type="flex" justify="space-around" gutter={{ xs: 0, sm: 16, md: 4, lg: 4, xl: 8, xxl: 0 }}>
+    return <Content style={{ padding: '0 50px' }} >
+            <Row type="flex" justify="space-around" gutter={{ xs: 0, sm: 16, md: 4, lg: 4, xl: 8, xxl: 0 }}>
         {list}
-      </Row>;
+      </Row>
+      </Content>;
   }
 }
 
