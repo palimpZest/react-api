@@ -116,11 +116,13 @@ Ant design styles
 }
 
 .ant-card-head-title {
-  color: #975C9F
+  color: #975C9F;
+  font-size: 17px;
 }
 
 .ant-card-body {
   color: #40a9ff;
+  padding: 7px;
 }
 
 /* 
@@ -148,7 +150,7 @@ Section styles
 */
 
 .content-box {
-  margin: 16px 16px;
+  margin: 16px 8px;
   text-align: center;
   background-color: black;
   color: #fff;
@@ -163,9 +165,21 @@ Section styles
   color: green;
 }
 
-@media screen and (max-width: 557px) {
+.info-title {
+  color: #FFE6FF;
+}
+
+
+@media screen and (max-width: 622px) {
   .ant-layout-header {
     margin: 0 0 62px 0;
+    padding: 0;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .ant-layout-header {
+    margin: 0 0 130px 0;
     padding: 0;
   }
 }
