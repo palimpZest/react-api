@@ -55,21 +55,15 @@ class VehiclesHolder extends Component {
     } else {
       list = this.state.items.map((item, index) => {
         return <Col xs={24} sm={12} md={10} lg={8} xl={8} xxl={4}>
-            <VehiclesItem key={index} name={item.name} model={item.model} manufacturer={item.manufacturer} cost_in_credits={item.cost_in_credits} length={item.length} max_atmosphering_speed={item.max_atmosphering_speed} crew={item.crew} passengers={item.passengers} vehicle_class={item.vehicle_class} />
+            <VehiclesItem key={index} name={item.name} model={item.model} manufacturer={item.manufacturer} length={item.length} crew={item.crew} passengers={item.passengers} vehicle_class={item.vehicle_class} />
           </Col>;
       });
     }
-    return (
-      <Content style={{ padding: "0 50px" }}>
-        <Row
-          type="flex"
-          justify="space-around"
-          gutter={{ xs: 0, sm: 16, md: 4, lg: 4, xl: 8, xxl: 0 }}
-        >
+    return <Content style={{ padding: "0 10px" }}>
+        <Row type="flex" justify="space-around" gutter={{ xs: 0, sm: 16, md: 4, lg: 4, xl: 8, xxl: 0 }}>
           {list}
         </Row>
-      </Content>
-    );
+      </Content>;
   }
 }
 

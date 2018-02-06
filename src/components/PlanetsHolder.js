@@ -56,7 +56,7 @@ class PlanetsHolder extends Component {
     } else {
       list = this.state.items.map((item, index) => {
         return ( 
-          <Col xs={24} sm={12} md={8} lg={8} xl={6} xxl={4}>
+          <Col xs={24} sm={16} md={12} lg={8} xl={6} xxl={6}>
             <PlanetsItem 
               key={index} 
               name={item.name} 
@@ -73,7 +73,7 @@ class PlanetsHolder extends Component {
         ); 
       });
     }
-    return <Content style={{ padding: '0 50px' }} >
+    return <Content style={{ padding: '0 10px' }} >
         <Row type="flex" justify="space-around" gutter={{ xs: 0, sm: 16, md: 4, lg: 4, xl: 8, xxl: 0 }}>
           {list}
         </Row>

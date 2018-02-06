@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Card from "antd/lib/card";
+import { Row, Col } from "antd";
 
 class VehiclesItem extends Component {
   render() {
@@ -7,22 +8,38 @@ class VehiclesItem extends Component {
       name,
       model,
       manufacturer,
-      cost_in_credits,
       length,
-      max_atmosphering_speed,
       crew,
       passengers,
       vehicle_class,
     } = this.props;
     return <Card title={name} className="content-box">
-        <p>Model: {model}</p>
-        <p>Manufacturer: {manufacturer}</p>
-        <p>Cost_in_credits: {cost_in_credits}</p>
-        <p>Length: {length}</p>
-        <p>Max atmosphering speed: {max_atmosphering_speed}</p>
-        <p>Crew: {crew}</p>
-        <p>Passengers: {passengers}</p>
-        <p>Vehicle class: {vehicle_class}</p>
+        <Row type="flex" justify="space-around" gutter={8}>
+          <Col xs={24} sm={24} md={24} lg={24} xl={24} xxl={32}>
+            <p>Model</p>
+            <span>{model}</span>
+          </Col>
+          <Col xs={24} sm={24} md={24} lg={24} xl={24} xxl={32}>
+            <p>Manufacturer</p>
+            <span>{manufacturer}</span>
+          </Col>
+          <Col xs={24} sm={24} md={24} lg={24} xl={24} xxl={32}>
+            <p>Vehicle class</p>
+            <span>{vehicle_class}</span>
+          </Col>
+          <Col>
+            <p>Length (m)</p>
+            <span>{length}</span>
+          </Col>
+          <Col>
+            <p>Crew</p>
+            <span>{crew}</span>
+          </Col>
+          <Col>
+            <p>Passengers</p>
+            <span>{passengers}</span>
+          </Col>
+        </Row>
       </Card>;
   }
 }
