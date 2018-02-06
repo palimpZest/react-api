@@ -80,10 +80,10 @@ class PeopleHolder extends Component {
           </Col>;
       });
     }
-    return <Content style={{ padding: '0 50px' }} >
-            <Row type="flex" justify="space-around" gutter={{ xs: 0, sm: 16, md: 4, lg: 4, xl: 8, xxl: 0 }}>
-        {list}
-      </Row>
+    return <Content style={{ padding: "0 10px" }}>
+        <Row type="flex" justify="space-around" gutter={{ xs: 0, sm: 16, md: 4, lg: 4, xl: 8, xxl: 0 }}>
+          {list}
+        </Row>
       </Content>;
   }
 }

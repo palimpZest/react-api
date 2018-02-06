@@ -42,7 +42,7 @@ class StarshipsHolder extends Component {
         </div>;
     } else {
       list = this.state.items.map((item, index) => {
-        return <Col xs={24} sm={24} md={12} lg={12} xl={8} xxl={6}>
+        return <Col xs={24} sm={24} md={14} lg={12} xl={12} xxl={8}>
             <StarshipsItem 
               key={index} 
               name={item.name} 
@@ -61,7 +61,7 @@ class StarshipsHolder extends Component {
           </Col>;
     });
     }
-    return <Content style={{ padding: '0 50px' }} >
+    return <Content style={{ padding: "0 10px" }}>
         <Row type="flex" justify="space-around" gutter={{ xs: 8, sm: 16, md: 8, lg: 8, xl: 8, xxl: 8 }}>
           {list}
         </Row>
