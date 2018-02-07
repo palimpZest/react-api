@@ -1,11 +1,11 @@
 import React, { Component } from "react";
 import axios from "axios";
-import PeopleItem from "./PeopleItem";
+import VehiclesItem from "./VehiclesItem";
 import { Row, Col } from "antd";
 import { Layout } from "antd";
 const { Content } = Layout;
 
-class PeopleHolder extends Component {
+class VehiclesHolder extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -18,38 +18,24 @@ class PeopleHolder extends Component {
     let that = this;
     axios
       .all([
-        axios.get("https://swapi.co/api/people/?page=1"),
-        axios.get("https://swapi.co/api/people/?page=2"),
-        axios.get("https://swapi.co/api/people/?page=3"),
-        axios.get("https://swapi.co/api/people/?page=4"),
-        axios.get("https://swapi.co/api/people/?page=5"),
-        axios.get("https://swapi.co/api/people/?page=6"),
-        axios.get("https://swapi.co/api/people/?page=7"),
-        axios.get("https://swapi.co/api/people/?page=8")
+        axios.get("https://swapi.co/api/vehicles/?page=1"),
+        axios.get("https://swapi.co/api/vehicles/?page=2"),
+        axios.get("https://swapi.co/api/vehicles/?page=3"),
+        axios.get("https://swapi.co/api/vehicles/?page=4")
       ])
-      .then(
-        axios.spread(function(
+      .then(axios.spread(function(
           page1,
           page2,
           page3,
-          page4,
-          page5,
-          page6,
-          page7,
-          page8
+          page4
         ) {
           let allItems = page1.data.results.concat(
             page2.data.results,
             page3.data.results,
-            page4.data.results,
-            page5.data.results,
-            page6.data.results,
-            page7.data.results,
-            page8.data.results
+            page4.data.results
           );
           that.setState({ items: allItems, loading: false });
-        })
-      )
+        }))
       .catch(error => console.log(error));
   }
 
@@ -68,15 +54,8 @@ class PeopleHolder extends Component {
       );
     } else {
       list = this.state.items.map((item, index) => {
-        return <Col xs={24} sm={12} md={8} lg={6} xl={6} xxl={4}>
-            <PeopleItem 
-              key={index} 
-              name={item.name} 
-              birth_year={item.birth_year} 
-              gender={item.gender} 
-              height={item.height} 
-              mass={item.mass} 
-            />
+        return <Col xs={24} sm={12} md={10} lg={8} xl={8} xxl={4}>
+            <VehiclesItem key={index} name={item.name} model={item.model} manufacturer={item.manufacturer} length={item.length} crew={item.crew} passengers={item.passengers} vehicle_class={item.vehicle_class} />
           </Col>;
       });
     }
@@ -88,4 +67,4 @@ class PeopleHolder extends Component {
   }
 }
 
-export default PeopleHolder;
+export default VehiclesHolder;

@@ -2,20 +2,16 @@ import React, { Component } from "react";
 import Card from "antd/lib/card";
 import { Row, Col } from "antd";
 
-class StarshipsItem extends Component {
+class VehiclesItem extends Component {
   render() {
     const {
-    name,
-    model,
-    manufacturer,
-    length,
-    crew,
-    passengers,
-    cargo_capacity,
-    consumables,
-    hyperdrive_rating,
-    MGLT,
-    starship_class
+      name,
+      model,
+      manufacturer,
+      length,
+      crew,
+      passengers,
+      vehicle_class,
     } = this.props;
     return <Card title={name} className="content-box">
         <Row type="flex" justify="space-around" gutter={8}>
@@ -28,28 +24,12 @@ class StarshipsItem extends Component {
             <span>{manufacturer}</span>
           </Col>
           <Col xs={24} sm={24} md={24} lg={24} xl={24} xxl={32}>
-            <p>Starship class</p>
-            <span>{starship_class}</span>
-          </Col>
-          <Col xs={24} sm={12} md={12} lg={12} xl={12} xxl={10}>
-            <p>Hyperdrive rating</p>
-            <span>{hyperdrive_rating}</span>
-          </Col>
-          <Col xs={24} sm={12} md={12} lg={12} xl={12} xxl={10}>
-            <p>length</p>
-            <span>{length}</span>v
+            <p>Vehicle class</p>
+            <span>{vehicle_class}</span>
           </Col>
           <Col>
-            <p>Cargo_capacity</p>
-            <span>{cargo_capacity}</span>
-          </Col>
-          <Col>
-            <p>Consumables</p>
-            <span>{consumables}</span>
-          </Col>
-          <Col>
-            <p>MGLT</p>
-            <span>{MGLT}</span>
+            <p>Length (m)</p>
+            <span>{length}</span>
           </Col>
           <Col>
             <p>Crew</p>
@@ -64,4 +44,4 @@ class StarshipsItem extends Component {
   }
 }
 
-export default StarshipsItem;
+export default VehiclesItem;

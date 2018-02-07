@@ -1,6 +1,9 @@
 import React, { Component } from "react";
-import Axios from "axios";
+import axios from "axios";
 import SpeciesItem from "./SpeciesItem";
+import { Row, Col } from "antd";
+import { Layout } from "antd";
+const { Content } = Layout;
 
 class SpeciesHolder extends Component {
   constructor(props) {
@@ -12,17 +15,28 @@ class SpeciesHolder extends Component {
   }
 
   componentDidMount() {
-    Axios.get("https://swapi.co/api/species/")
-      .then(response => {
-        this.setState({
-          items: response.data.results,
-          loading: false
-        });
-        console.log(response.data.results);
-      })
-      .catch(function(error) {
-        console.log("error");
-      });
+    let that = this;    
+    axios
+      .all([
+        axios.get("https://swapi.co/api/species/?page=1"),
+        axios.get("https://swapi.co/api/species/?page=2"),
+        axios.get("https://swapi.co/api/species/?page=3"),
+        axios.get("https://swapi.co/api/species/?page=4")
+      ])
+      .then(axios.spread(function(
+          page1,
+          page2,
+          page3,
+          page4
+        ) {
+          let allItems = page1.data.results.concat(
+            page2.data.results,
+            page3.data.results,
+            page4.data.results
+          );
+          that.setState({ items: allItems, loading: false });
+        }))
+      .catch(error => console.log(error));
   }
 
   render() {
@@ -35,19 +49,25 @@ class SpeciesHolder extends Component {
     } else {
       list = this.state.items.map((item, index) => {
         return (
-          <SpeciesItem 
-            key={index} 
-            name={item.name} 
-            classification={item.classification} 
-            designation={item.designation} 
-            average_height={item.average_height} 
-            average_lifespan={item.average_lifespan} 
-            language={item.language}
-          />
+          <Col xs={24} sm={16} md={12} lg={8} xl={6} xxl={5}>
+            <SpeciesItem 
+              key={index} 
+              name={item.name} 
+              classification={item.classification} 
+              designation={item.designation} 
+              average_height={item.average_height} 
+              average_lifespan={item.average_lifespan} 
+              language={item.language}
+            />
+          </Col>
         );  
       });
     }
-    return <div>{list}</div>;
+    return <Content style={{ padding: "0 10px" }}>
+        <Row type="flex" justify="space-around" gutter={{ xs: 0, sm: 16, md: 4, lg: 4, xl: 8, xxl: 0 }}>
+          {list}
+        </Row>
+      </Content>;
   }
 }
 
