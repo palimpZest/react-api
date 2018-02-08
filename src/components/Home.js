@@ -20,9 +20,13 @@ class Home extends Component {
             </p>
             <br />
             <br />
+            <br />
             <p className="welcome-message">
               Feel free to browse all the sections!
             </p>
+            <br />
+            <br />
+            <br />
             <br />
             <br />
           </header>

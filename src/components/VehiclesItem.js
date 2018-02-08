@@ -14,7 +14,7 @@ class VehiclesItem extends Component {
       vehicle_class,
     } = this.props;
     return <Card title={name} className="content-box">
-        <Row type="flex" justify="space-around" gutter={8}>
+        <Row type="flex" justify="space-around" gutter={4}>
           <Col xs={24} sm={24} md={24} lg={24} xl={24} xxl={32}>
             <p>Model</p>
             <span>{model}</span>
