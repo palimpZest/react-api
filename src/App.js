@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Route, BrowserRouter, Switch, NavLink } from "react-router-dom";
 import Home from "./components/Home";
+import FilmsHolder from "./components/FilmsHolder";
 import PeopleHolder from "./components/PeopleHolder";
 import SpeciesHolder from "./components/SpeciesHolder";
 import VehiclesHolder from "./components/VehiclesHolder";
@@ -27,26 +28,31 @@ class App extends Component {
                     </NavLink>
                   </Menu.Item>
                   <Menu.Item key="2">
+                    <NavLink exact to="/films" activeClassName="selected">
+                      Films
+                    </NavLink>
+                  </Menu.Item>
+                  <Menu.Item key="3">
                     <NavLink to="/people" activeClassName="selected">
                       People
                     </NavLink>
                   </Menu.Item>
-                  <Menu.Item key="3">
+                  <Menu.Item key="4">
                     <NavLink to="/species" activeClassName="selected">
                       Species
                     </NavLink>
                   </Menu.Item>
-                  <Menu.Item key="4">
+                  <Menu.Item key="5">
                     <NavLink to="/vehicles" activeClassName="selected">
                       Vehicles
                     </NavLink>
                   </Menu.Item>
-                  <Menu.Item key="5">
+                  <Menu.Item key="6">
                     <NavLink to="/starships" activeClassName="selected">
                       Starships
                     </NavLink>
                   </Menu.Item>
-                  <Menu.Item key="6">
+                  <Menu.Item key="7">
                     <NavLink to="/planets" activeClassName="selected">
                       Planets
                     </NavLink>
@@ -59,6 +65,7 @@ class App extends Component {
             </Header>
           </Switch>
           <Route exact path="/" component={Home} />
+          <Route path="/films" component={FilmsHolder} />
           <Route path="/people" component={PeopleHolder} />
           <Route path="/species" component={SpeciesHolder} />
           <Route path="/vehicles" component={VehiclesHolder} />
