@@ -40,7 +40,7 @@ class PlanetsHolder extends Component {
       );
     } else {
       list = this.state.items.map((item, index) => {
-        return <Col xs={24} sm={16} md={12} lg={8} xl={6} xxl={6}>
+        return <Col xs={24} sm={18} md={16} lg={12} xl={8} xxl={7}>
             <FilmsItem 
                 key={index} 
                 title={item.title} 

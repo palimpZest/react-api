@@ -28,33 +28,33 @@ class App extends Component {
                     </NavLink>
                   </Menu.Item>
                   <Menu.Item key="2">
-                    <NavLink exact to="/films" activeClassName="selected">
-                      Films
-                    </NavLink>
-                  </Menu.Item>
-                  <Menu.Item key="3">
                     <NavLink to="/people" activeClassName="selected">
                       People
                     </NavLink>
                   </Menu.Item>
-                  <Menu.Item key="4">
+                  <Menu.Item key="3">
                     <NavLink to="/species" activeClassName="selected">
                       Species
                     </NavLink>
                   </Menu.Item>
-                  <Menu.Item key="5">
+                  <Menu.Item key="4">
                     <NavLink to="/vehicles" activeClassName="selected">
                       Vehicles
                     </NavLink>
                   </Menu.Item>
-                  <Menu.Item key="6">
+                  <Menu.Item key="5">
                     <NavLink to="/starships" activeClassName="selected">
                       Starships
                     </NavLink>
                   </Menu.Item>
-                  <Menu.Item key="7">
+                  <Menu.Item key="6">
                     <NavLink to="/planets" activeClassName="selected">
                       Planets
+                    </NavLink>
+                  </Menu.Item>
+                  <Menu.Item key="7">
+                    <NavLink exact to="/films" activeClassName="selected">
+                      Films
                     </NavLink>
                   </Menu.Item>
                 </Menu>
@@ -65,12 +65,12 @@ class App extends Component {
             </Header>
           </Switch>
           <Route exact path="/" component={Home} />
-          <Route path="/films" component={FilmsHolder} />
           <Route path="/people" component={PeopleHolder} />
           <Route path="/species" component={SpeciesHolder} />
           <Route path="/vehicles" component={VehiclesHolder} />
           <Route path="/starships" component={StarshipsHolder} />
           <Route path="/planets" component={PlanetsHolder} />
+          <Route path="/films" component={FilmsHolder} />
         </nav>
       </BrowserRouter>;
   }
