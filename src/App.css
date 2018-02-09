@@ -96,15 +96,14 @@ Section styles
 }
 
 .App-logo {
-  animation: App-logo-spin infinite 7s linear;
-  margin: 55px 0 40px 0;
+  animation: App-logo-spin infinite 10s linear;
+  margin: 55px 0;
   height: 200px;
-  fill: red;
 }
 
 .App-header {
-  background-color: #black;
-  height: 800px;
+  background-color: #0e0e0e;
+  height: 850px;
   color: white;
 }
 
@@ -114,9 +113,8 @@ Section styles
   font-size: 35px;
 }
 
-.App-title {
-  font-size: 2.5em;
-  color: #975c9f;
+.about {
+  margin-top: 35px;
 }
 
 @keyframes App-logo-spin {
@@ -135,18 +133,10 @@ Section styles
 }
 
 .welcome-message {
-  color : #fff;
+  color : #ddd;
   font-size: 22px;
-  line-height: 35px;
+  line-height: 60px;
   margin: 0 35px;
-}
-
-.back-up-message {
-  position: absolute;
-  color:rgb(255, 217, 0);
-  bottom: 2px;
-  right: calc(50vw - 80px);
-  font-size: 16px; 
 }
 
 .warp-img {
