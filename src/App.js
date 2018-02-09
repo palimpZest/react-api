@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Route, BrowserRouter, Switch, NavLink } from "react-router-dom";
 import Home from "./components/Home";
+import FilmsHolder from "./components/FilmsHolder";
 import PeopleHolder from "./components/PeopleHolder";
 import SpeciesHolder from "./components/SpeciesHolder";
 import VehiclesHolder from "./components/VehiclesHolder";
@@ -51,6 +52,11 @@ class App extends Component {
                       Planets
                     </NavLink>
                   </Menu.Item>
+                  <Menu.Item key="7">
+                    <NavLink exact to="/films" activeClassName="selected">
+                      Films
+                    </NavLink>
+                  </Menu.Item>
                 </Menu>
               </Row>
               <BackTop>
@@ -64,6 +70,7 @@ class App extends Component {
           <Route path="/vehicles" component={VehiclesHolder} />
           <Route path="/starships" component={StarshipsHolder} />
           <Route path="/planets" component={PlanetsHolder} />
+          <Route path="/films" component={FilmsHolder} />
         </nav>
       </BrowserRouter>;
   }
