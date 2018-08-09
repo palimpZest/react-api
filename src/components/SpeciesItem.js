@@ -1,18 +1,19 @@
-import React, { Component } from "react";
-import Card from "antd/lib/card";
-import { Row, Col } from "antd";
+import React, { Component } from 'react';
+import Card from 'antd/lib/card';
+import { Row, Col } from 'antd';
 
 class SpeciesItem extends Component {
   render() {
-    const { 
-      name, 
-      classification, 
-      designation, 
-      average_height, 
-      average_lifespan, 
-      language 
+    const {
+      name,
+      classification,
+      designation,
+      average_height,
+      average_lifespan,
+      language
     } = this.props;
-    return <Card title={name} className="content-box">
+    return (
+      <Card title={name} className="content-box">
         <Row type="flex" justify="space-around" gutter={4}>
           <Col>
             <p>Classification</p>
@@ -35,7 +36,8 @@ class SpeciesItem extends Component {
             <span>{average_lifespan}</span>
           </Col>
         </Row>
-      </Card>;
+      </Card>
+    );
   }
 }
 

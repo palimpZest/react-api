@@ -1,23 +1,24 @@
-import React, { Component } from "react";
-import Card from "antd/lib/card";
-import { Row, Col } from "antd";
+import React, { Component } from 'react';
+import Card from 'antd/lib/card';
+import { Row, Col } from 'antd';
 
 class StarshipsItem extends Component {
   render() {
     const {
-    name,
-    model,
-    manufacturer,
-    length,
-    crew,
-    passengers,
-    cargo_capacity,
-    consumables,
-    hyperdrive_rating,
-    MGLT,
-    starship_class
+      name,
+      model,
+      manufacturer,
+      length,
+      crew,
+      passengers,
+      cargo_capacity,
+      consumables,
+      hyperdrive_rating,
+      MGLT,
+      starship_class
     } = this.props;
-    return <Card title={name} className="content-box">
+    return (
+      <Card title={name} className="content-box">
         <Row type="flex" justify="space-around" gutter={8}>
           <Col xs={24} sm={24} md={24} lg={24} xl={24} xxl={32}>
             <p>Model</p>
@@ -60,7 +61,8 @@ class StarshipsItem extends Component {
             <span>{passengers}</span>
           </Col>
         </Row>
-      </Card>;
+      </Card>
+    );
   }
 }
 

@@ -4,7 +4,7 @@ Global styles
  *
 */
 
-@import "~antd/dist/antd.css";
+@import '~antd/dist/antd.css';
 
 body {
   background-color: black;
@@ -133,7 +133,7 @@ Section styles
 }
 
 .welcome-message {
-  color : #ddd;
+  color: #ddd;
   font-size: 22px;
   line-height: 60px;
   margin: 0 35px;

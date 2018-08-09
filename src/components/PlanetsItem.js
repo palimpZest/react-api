@@ -1,21 +1,22 @@
-import React, { Component } from "react";
-import Card from "antd/lib/card";
-import { Row, Col } from "antd";
+import React, { Component } from 'react';
+import Card from 'antd/lib/card';
+import { Row, Col } from 'antd';
 
 class PlanetsItem extends Component {
   render() {
     const {
-		name,
-		rotation_period,
-		orbital_period,
-		diameter,
-		climate,
-		gravity,
-		terrain,
-		surface_water,
-		population
+      name,
+      rotation_period,
+      orbital_period,
+      diameter,
+      climate,
+      gravity,
+      terrain,
+      surface_water,
+      population
     } = this.props;
-    return <Card title={name} className="content-box">
+    return (
+      <Card title={name} className="content-box">
         <Row type="flex" justify="space-around" gutter={8}>
           <Col>
             <p>Diameter</p>
@@ -50,7 +51,8 @@ class PlanetsItem extends Component {
             <span>{orbital_period}</span>
           </Col>
         </Row>
-      </Card>;
+      </Card>
+    );
   }
 }
 
