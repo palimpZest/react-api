@@ -1,9 +1,13 @@
-import React, { Component } from "react";
-import axios from "axios";
-import FilmsItem from "./FilmsItem";
-import { Row, Col } from "antd";
-import { Layout } from "antd";
+import React, { Component } from 'react';
+import axios from 'axios';
+import FilmsItem from './FilmsItem';
+import { Row, Col } from 'antd';
+import { Layout } from 'antd';
 const { Content } = Layout;
+
+let BASE_API = 'https://swapi.co/api';
+
+const filmCalls = [`${BASE_API}/films/?page=1`];
 
 class PlanetsHolder extends Component {
   constructor(props) {
@@ -15,16 +19,17 @@ class PlanetsHolder extends Component {
   }
 
   componentDidMount() {
-    axios.get("https://swapi.co/api/films/?page=1")
-        .then(response => {
-                this.setState({
-                items: response.data.results,
-                loading: false
-                });
-        })
+    axios
+      .get(filmCalls)
+      .then(response => {
+        this.setState({
+          items: response.data.results,
+          loading: false
+        });
+      })
       .catch(error => console.log(error));
   }
-  
+
   render() {
     let list;
 
@@ -40,19 +45,20 @@ class PlanetsHolder extends Component {
       );
     } else {
       list = this.state.items.map((item, index) => {
-        return <Col xs={24} sm={18} md={16} lg={12} xl={8} xxl={7}>
-            <FilmsItem 
-                key={index} 
-                title={item.title} 
-                episode_id={item.episode_id} 
-                opening_crawl={item.opening_crawl} 
-                release_date={item.release_date} 
+        return (
+          <Col key={index} xs={24} sm={18} md={16} lg={12} xl={8} xxl={7}>
+            <FilmsItem
+              title={item.title}
+              episode_id={item.episode_id}
+              opening_crawl={item.opening_crawl}
+              release_date={item.release_date}
             />
-          </Col>;
+          </Col>
+        );
       });
     }
     return (
-      <Content style={{ padding: "0 10px" }}>
+      <Content style={{ padding: '0 10px' }}>
         <Row
           type="flex"
           justify="space-around"

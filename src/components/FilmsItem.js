@@ -1,11 +1,12 @@
-import React, { Component } from "react";
-import Card from "antd/lib/card";
-import { Row, Col } from "antd";
+import React, { Component } from 'react';
+import Card from 'antd/lib/card';
+import { Row, Col } from 'antd';
 
 class FilmsItem extends Component {
   render() {
     const { title, episode_id, opening_crawl, release_date } = this.props;
-    return <Card title={title} className="content-box">
+    return (
+      <Card title={title} className="content-box">
         <Row type="flex" justify="space-around" gutter={16}>
           <Col>
             <p>Episode</p>
@@ -20,7 +21,8 @@ class FilmsItem extends Component {
             <span>{opening_crawl}</span>
           </Col>
         </Row>
-      </Card>;
+      </Card>
+    );
   }
 }
 

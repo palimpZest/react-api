@@ -1,11 +1,12 @@
-import React, { Component } from "react";
-import Card from "antd/lib/card";
-import { Row, Col } from "antd";
+import React, { Component } from 'react';
+import Card from 'antd/lib/card';
+import { Row, Col } from 'antd';
 
 class PeopleItem extends Component {
   render() {
     const { name, birth_year, gender, height, mass } = this.props;
-    return <Card title={name} className="content-box">
+    return (
+      <Card title={name} className="content-box">
         <Row type="flex" justify="space-around" gutter={8}>
           <Col>
             <p>Birth Year</p>
@@ -20,7 +21,8 @@ class PeopleItem extends Component {
             <span>{mass}</span>
           </Col>
         </Row>
-      </Card>;
+      </Card>
+    );
   }
 }
 

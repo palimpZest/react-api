@@ -1,6 +1,6 @@
-import React, { Component } from "react";
-import Card from "antd/lib/card";
-import { Row, Col } from "antd";
+import React, { Component } from 'react';
+import Card from 'antd/lib/card';
+import { Row, Col } from 'antd';
 
 class VehiclesItem extends Component {
   render() {
@@ -11,9 +11,10 @@ class VehiclesItem extends Component {
       length,
       crew,
       passengers,
-      vehicle_class,
+      vehicle_class
     } = this.props;
-    return <Card title={name} className="content-box">
+    return (
+      <Card title={name} className="content-box">
         <Row type="flex" justify="space-around" gutter={4}>
           <Col xs={24} sm={24} md={24} lg={24} xl={24} xxl={32}>
             <p>Model</p>
@@ -40,7 +41,8 @@ class VehiclesItem extends Component {
             <span>{passengers}</span>
           </Col>
         </Row>
-      </Card>;
+      </Card>
+    );
   }
 }
 
