@@ -57,6 +57,8 @@ class SpeciesHolder extends Component {
         return (
           <Col key={index} xs={24} sm={16} md={12} lg={8} xl={6} xxl={5}>
             <SpeciesItem
+              id={parseInt(index, 10) + 1}
+              url={item.url}
               name={item.name}
               classification={item.classification}
               designation={item.designation}

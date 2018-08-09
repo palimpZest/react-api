@@ -57,6 +57,7 @@ class StarshipsHolder extends Component {
         return (
           <Col key={index} xs={24} sm={24} md={14} lg={12} xl={12} xxl={8}>
             <StarshipsItem
+              id={parseInt(index, 10) + 1}
               name={item.name}
               model={item.model}
               manufacturer={item.manufacturer}

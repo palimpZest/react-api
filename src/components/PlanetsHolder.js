@@ -63,6 +63,7 @@ class PlanetsHolder extends Component {
         return (
           <Col key={index} xs={24} sm={16} md={12} lg={8} xl={6} xxl={6}>
             <PlanetsItem
+              id={parseInt(index, 10) + 1}
               name={item.name}
               rotation_period={item.rotation_period}
               orbital_period={item.orbital_period}

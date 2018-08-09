@@ -2,8 +2,27 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import Card from 'antd/lib/card';
 import { Row, Col } from 'antd';
+import axios from 'axios';
 
-class VehiclesItem extends Component {
+class VehiclesShowItem extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      item: []
+    };
+  }
+
+  componentDidMount() {
+    axios
+      .get(`https://swapi.co/api/vehicles/${this.props.match.params.id}/`)
+      .then(response => {
+        console.log('response.data');
+        console.log(response.data);
+        this.setState({
+          item: response.data
+        });
+      });
+  }
   render() {
     const {
       id,
@@ -14,7 +33,7 @@ class VehiclesItem extends Component {
       crew,
       passengers,
       vehicle_class
-    } = this.props;
+    } = this.state.item;
     return (
       <Link to={`/vehicles/${id}`}>
         <Card title={name} className="content-box">
@@ -50,4 +69,4 @@ class VehiclesItem extends Component {
   }
 }
 
-export default VehiclesItem;
+export default VehiclesShowItem;

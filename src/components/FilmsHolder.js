@@ -48,6 +48,7 @@ class PlanetsHolder extends Component {
         return (
           <Col key={index} xs={24} sm={18} md={16} lg={12} xl={8} xxl={7}>
             <FilmsItem
+              id={parseInt(index, 10) + 1}
               title={item.title}
               episode_id={item.episode_id}
               opening_crawl={item.opening_crawl}
