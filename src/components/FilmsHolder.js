@@ -31,6 +31,10 @@ class PlanetsHolder extends Component {
   }
 
   render() {
+    let indices = this.state.items.map(index => {
+      let removedText = index.url.replace(/\D+/g, '');
+      return removedText;
+    });
     let list;
 
     if (this.state.loading) {
@@ -48,7 +52,7 @@ class PlanetsHolder extends Component {
         return (
           <Col key={index} xs={24} sm={18} md={16} lg={12} xl={8} xxl={7}>
             <FilmsItem
-              id={parseInt(index, 10) + 1}
+              id={indices[index]}
               title={item.title}
               episode_id={item.episode_id}
               opening_crawl={item.opening_crawl}

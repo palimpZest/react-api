@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import Card from 'antd/lib/card';
 import { Link } from 'react-router-dom';
+import Card from 'antd/lib/card';
 import { Row, Col } from 'antd';
 
 class StarshipsItem extends Component {

@@ -50,7 +50,10 @@ class PeopleHolder extends Component {
   }
 
   render() {
-    console.log(this.props);
+    let indices = this.state.items.map(index => {
+      let removedText = index.url.replace(/\D+/g, '');
+      return removedText;
+    });
     let list;
 
     if (this.state.loading) {
@@ -68,7 +71,7 @@ class PeopleHolder extends Component {
         return (
           <Col key={index} xs={24} sm={12} md={8} lg={6} xl={6} xxl={4}>
             <PeopleItem
-              id={parseInt(index, 10) + 1}
+              id={indices[index]}
               name={item.name}
               birth_year={item.birth_year}
               gender={item.gender}

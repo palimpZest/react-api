@@ -40,6 +40,10 @@ class VehiclesHolder extends Component {
   }
 
   render() {
+    let indices = this.state.items.map(index => {
+      let removedText = index.url.replace(/\D+/g, '');
+      return removedText;
+    });
     let list;
 
     if (this.state.loading) {
@@ -57,7 +61,7 @@ class VehiclesHolder extends Component {
         return (
           <Col key={index} xs={24} sm={12} md={10} lg={8} xl={8} xxl={4}>
             <VehiclesItem
-              id={parseInt(index, 10) + 1}
+              id={indices[index]}
               name={item.name}
               model={item.model}
               manufacturer={item.manufacturer}
