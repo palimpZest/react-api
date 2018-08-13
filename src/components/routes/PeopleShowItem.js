@@ -1,13 +1,28 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import Card from 'antd/lib/card';
 import { Row, Col } from 'antd';
+import axios from 'axios';
 
-class PeopleItem extends Component {
+class PeopleShowItem extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      item: []
+    };
+  }
+
+  componentDidMount() {
+    axios.get(`https://swapi.co/api${this.props.match.url}/`).then(response => {
+      this.setState({
+        item: response.data
+      });
+    });
+  }
   render() {
-    const { id, name, birth_year, gender, height, mass } = this.props;
+    const { name, birth_year, gender, height, mass } = this.state.item;
     return (
-      <Link to={`/people/${id}`}>
+      <div>
         <Card title={name} className="content-box">
           <Row type="flex" justify="space-around" gutter={8}>
             <Col>
@@ -24,9 +39,10 @@ class PeopleItem extends Component {
             </Col>
           </Row>
         </Card>
-      </Link>
+        <NavLink to="/people/">Back</NavLink>
+      </div>
     );
   }
 }
 
-export default PeopleItem;
+export default PeopleShowItem;

@@ -7,6 +7,13 @@ import SpeciesHolder from './components/SpeciesHolder';
 import VehiclesHolder from './components/VehiclesHolder';
 import StarshipsHolder from './components/StarshipsHolder';
 import PlanetsHolder from './components/PlanetsHolder';
+import PeopleShowItem from './components/routes/PeopleShowItem';
+import PlanetsShowItem from './components/routes/PlanetsShowItem';
+import SpeciesShowItem from './components/routes/SpeciesShowItem';
+import StarshipsShowItem from './components/routes/StarshipsShowItem';
+import VehiclesShowItem from './components/routes/VehiclesShowItem';
+import FilmsShowItem from './components/routes/FilmsShowItem';
+import NotFound from './components/routes/NotFound';
 import './App.css';
 import { BackTop } from 'antd';
 import arrow from './play-button.svg';
@@ -78,11 +85,18 @@ class App extends Component {
           <Switch>
             <Route exact path="/" component={Home} />
             <Route exact path="/people" component={PeopleHolder} />
-            <Route path="/species" component={SpeciesHolder} />
-            <Route path="/vehicles" component={VehiclesHolder} />
-            <Route path="/starships" component={StarshipsHolder} />
-            <Route path="/planets" component={PlanetsHolder} />
-            <Route path="/films" component={FilmsHolder} />
+            <Route path="/people/:id" component={PeopleShowItem} />
+            <Route exact path="/species" component={SpeciesHolder} />
+            <Route path="/species/:id" component={SpeciesShowItem} />
+            <Route exact path="/vehicles" component={VehiclesHolder} />
+            <Route path="/vehicles/:id" component={VehiclesShowItem} />
+            <Route exact path="/starships" component={StarshipsHolder} />
+            <Route path="/starships/:id" component={StarshipsShowItem} />
+            <Route exact path="/planets" component={PlanetsHolder} />
+            <Route path="/planets/:id" component={PlanetsShowItem} />
+            <Route exact path="/films" component={FilmsHolder} />
+            <Route path="/films/:id" component={FilmsShowItem} />
+            <Route component={NotFound} />
           </Switch>
         </nav>
       </BrowserRouter>

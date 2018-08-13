@@ -40,6 +40,10 @@ class StarshipsHolder extends Component {
   }
 
   render() {
+    let indices = this.state.items.map(index => {
+      let removedText = index.url.replace(/\D+/g, '');
+      return removedText;
+    });
     let list;
 
     if (this.state.loading) {
@@ -57,6 +61,7 @@ class StarshipsHolder extends Component {
         return (
           <Col key={index} xs={24} sm={24} md={14} lg={12} xl={12} xxl={8}>
             <StarshipsItem
+              id={indices[index]}
               name={item.name}
               model={item.model}
               manufacturer={item.manufacturer}

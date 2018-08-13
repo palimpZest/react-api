@@ -1,12 +1,26 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import Card from 'antd/lib/card';
 import { Row, Col } from 'antd';
+import axios from 'axios';
 
-class PlanetsItem extends Component {
+class PlanetsShowItem extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      item: []
+    };
+  }
+
+  componentDidMount() {
+    axios.get(`https://swapi.co/api${this.props.match.url}/`).then(response => {
+      this.setState({
+        item: response.data
+      });
+    });
+  }
   render() {
     const {
-      id,
       name,
       rotation_period,
       orbital_period,
@@ -16,9 +30,9 @@ class PlanetsItem extends Component {
       terrain,
       surface_water,
       population
-    } = this.props;
+    } = this.state.item;
     return (
-      <Link to={`/planets/${id}`}>
+      <div>
         <Card title={name} className="content-box">
           <Row type="flex" justify="space-around" gutter={8}>
             <Col>
@@ -55,9 +69,10 @@ class PlanetsItem extends Component {
             </Col>
           </Row>
         </Card>
-      </Link>
+        <NavLink to="/planets">Back</NavLink>
+      </div>
     );
   }
 }
 
-export default PlanetsItem;
+export default PlanetsShowItem;

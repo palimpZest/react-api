@@ -1,21 +1,35 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import Card from 'antd/lib/card';
 import { Row, Col } from 'antd';
+import axios from 'axios';
 
-class SpeciesItem extends Component {
+class SpeciesShowItem extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      item: []
+    };
+  }
+
+  componentDidMount() {
+    axios.get(`https://swapi.co/api${this.props.match.url}`).then(response => {
+      this.setState({
+        item: response.data
+      });
+    });
+  }
   render() {
     const {
-      id,
       name,
       classification,
       designation,
       average_height,
       average_lifespan,
       language
-    } = this.props;
+    } = this.state.item;
     return (
-      <Link to={`/species/${id}`}>
+      <div>
         <Card title={name} className="content-box">
           <Row type="flex" justify="space-around" gutter={4}>
             <Col>
@@ -40,9 +54,10 @@ class SpeciesItem extends Component {
             </Col>
           </Row>
         </Card>
-      </Link>
+        <NavLink to="/species">Back</NavLink>
+      </div>
     );
   }
 }
 
-export default SpeciesItem;
+export default SpeciesShowItem;

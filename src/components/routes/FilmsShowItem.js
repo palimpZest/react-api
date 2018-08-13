@@ -1,13 +1,28 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import Card from 'antd/lib/card';
 import { Row, Col } from 'antd';
+import axios from 'axios';
 
-class FilmsItem extends Component {
+class FilmsShowItem extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      item: []
+    };
+  }
+
+  componentDidMount() {
+    axios.get(`https://swapi.co/api${this.props.match.url}/`).then(response => {
+      this.setState({
+        item: response.data
+      });
+    });
+  }
   render() {
-    const { id, title, episode_id, opening_crawl, release_date } = this.props;
+    const { title, episode_id, opening_crawl, release_date } = this.state.item;
     return (
-      <Link to={`/films/${id}`}>
+      <div>
         <Card title={title} className="content-box">
           <Row type="flex" justify="space-around" gutter={16}>
             <Col>
@@ -24,9 +39,10 @@ class FilmsItem extends Component {
             </Col>
           </Row>
         </Card>
-      </Link>
+        <NavLink to="/films">Back</NavLink>
+      </div>
     );
   }
 }
 
-export default FilmsItem;
+export default FilmsShowItem;
