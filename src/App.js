@@ -79,7 +79,11 @@ class App extends Component {
               </Menu>
             </Row>
             <BackTop>
-              <img src={arrow} alt="arrow up" className="ant-back-top-inner" />
+              <img
+                src={arrow}
+                alt="arrow up"
+                className="ant-inner ant-back-top-inner"
+              />
             </BackTop>
           </Header>
           <Switch>
