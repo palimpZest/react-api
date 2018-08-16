@@ -40,7 +40,7 @@ Ant design styles
   right: calc(50vw - 20px);
 }
 
-.ant-back-top-inner {
+.ant-inner {
   height: 50px;
   width: 50px;
   line-height: 40px;
@@ -49,7 +49,14 @@ Ant design styles
   color: #000;
   text-align: center;
   font-size: 20px;
+}
+
+.ant-back-top-inner {
   transform: rotate(270deg);
+}
+
+.ant-back-inner {
+  transform: rotate(180deg);
 }
 
 .ant-card {
@@ -151,6 +158,29 @@ Section styles
   text-align: center;
   background-color: black;
   color: #fff;
+}
+
+.content-people-species-box {
+  max-width: 550px;
+  min-height: 200px;
+}
+
+.content-vehicle-box {
+  max-width: 600px;
+  min-height: 350px;
+}
+
+.content-starship-box {
+  max-width: 600px;
+  min-height: 400px;
+}
+.content-film-box {
+  max-width: 600px;
+  min-height: 340px;
+}
+.content-planet-box {
+  max-width: 600px;
+  min-height: 450px;
 }
 
 .section-item {
