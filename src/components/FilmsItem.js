@@ -5,10 +5,21 @@ import { Row, Col } from 'antd';
 
 class FilmsItem extends Component {
   render() {
-    const { id, title, episode_id, opening_crawl, release_date } = this.props;
+    const {
+      id,
+      title,
+      image,
+      episode_id,
+      opening_crawl,
+      release_date
+    } = this.props;
     return (
       <Link to={`/films/${id}`}>
-        <Card title={title} className="content-box">
+        <Card
+          title={title}
+          cover={<img alt={title} src={`${image}`} />}
+          className="content-box"
+        >
           <Row type="flex" justify="space-around" gutter={16}>
             <Col>
               <p>Episode</p>
