@@ -22,8 +22,11 @@ class PlanetsHolder extends Component {
     axios
       .get(filmCalls)
       .then(response => {
+        let sortedItems = response.data.results.sort(function(a, b) {
+          return a.episode_id - b.episode_id;
+        });
         this.setState({
-          items: response.data.results,
+          items: sortedItems,
           loading: false
         });
       })
