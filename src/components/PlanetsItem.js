@@ -8,6 +8,7 @@ class PlanetsItem extends Component {
     const {
       id,
       name,
+      image,
       rotation_period,
       orbital_period,
       diameter,
@@ -19,7 +20,11 @@ class PlanetsItem extends Component {
     } = this.props;
     return (
       <Link to={`/planets/${id}`}>
-        <Card title={name} className="content-box">
+        <Card
+          title={name}
+          cover={<img alt={name} src={`${image}`} />}
+          className="content-box"
+        >
           <Row type="flex" justify="space-around" gutter={8}>
             <Col>
               <p>Diameter</p>

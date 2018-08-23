@@ -4,12 +4,15 @@ import Card from 'antd/lib/card';
 import { Row, Col } from 'antd';
 import axios from 'axios';
 import arrow from '../../play-button.svg';
+import { planetImages } from '../../data/imageData';
 
 class PlanetsShowItem extends Component {
   constructor(props) {
     super(props);
     this.state = {
       item: [],
+      planet: planetImages[0],
+      planetId: null,
       loading: true
     };
   }
@@ -17,7 +20,31 @@ class PlanetsShowItem extends Component {
   componentDidMount() {
     axios.get(`https://swapi.co/api${this.props.match.url}/`).then(response => {
       this.setState({
-        item: response.data,
+        item: response.data
+      });
+      // Due to missing data or incoherent response. the following lines allow
+      // to display the images for Tatooine and Jakku correctly
+      let removedText = this.state.item.url.replace(/\D+/g, '');
+      let removeTextToNumber = parseInt(removedText, 10) - 2;
+      if (removeTextToNumber === -1) {
+        console.log('Tatooine called');
+        removeTextToNumber = 59;
+        console.log('planetId changed to show corresponding image');
+        this.setState({
+          planetId: removeTextToNumber,
+          loading: false
+        });
+      } else if (removeTextToNumber === 59) {
+        console.log('Jakku called');
+        removeTextToNumber = 60;
+        console.log('planetId changed to show corresponding image');
+        this.setState({
+          planetId: removeTextToNumber,
+          loading: false
+        });
+      }
+      this.setState({
+        planetId: removeTextToNumber,
         loading: false
       });
     });
@@ -41,6 +68,14 @@ class PlanetsShowItem extends Component {
           <Card
             loading={this.state.loading}
             title={name}
+            cover={
+              !this.state.loading && (
+                <img
+                  alt={name}
+                  src={`${this.state.planet[this.state.planetId].image}`}
+                />
+              )
+            }
             className="content-box content-planet-box"
           >
             <Row type="flex" justify="space-around" gutter={8}>

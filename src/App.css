@@ -72,6 +72,10 @@ Ant design styles
   color: #975c9f;
 }
 
+.ant-card-cover {
+  min-height: 300px;
+}
+
 .ant-card-cover img {
   width: 300px;
   margin: 0 auto;
