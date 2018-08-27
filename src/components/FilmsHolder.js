@@ -15,7 +15,7 @@ class PlanetsHolder extends Component {
     super(props);
     this.state = {
       items: [],
-      film: filmImages,
+      filmImg: filmImages,
       loading: true
     };
   }
@@ -56,7 +56,7 @@ class PlanetsHolder extends Component {
       list = this.state.items.map((item, index) => {
         return (
           <Col key={index} xs={24} sm={18} md={16} lg={12} xl={8} xxl={7}>
-            {this.state.film.map(film => {
+            {this.state.filmImg.map(film => {
               return (
                 <FilmsItem
                   key={index}
