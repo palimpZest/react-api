@@ -4,12 +4,15 @@ import Card from 'antd/lib/card';
 import { Row, Col } from 'antd';
 import axios from 'axios';
 import arrow from '../../play-button.svg';
+import { starshipImages } from '../../data/imageData';
 
 class StarshipsShowItem extends Component {
   constructor(props) {
     super(props);
     this.state = {
       item: [],
+      starship: starshipImages[0],
+      starshipImg: null,
       loading: true
     };
   }
@@ -17,8 +20,18 @@ class StarshipsShowItem extends Component {
   componentDidMount() {
     axios.get(`https://swapi.co/api${this.props.match.url}/`).then(response => {
       this.setState({
-        item: response.data,
-        loading: false
+        item: response.data
+      });
+      Object.values(this.state.starship).map(result => {
+        if (result.name === this.state.item.name) {
+          let linkToImg = result.image;
+          this.setState({
+            starshipImg: linkToImg,
+            loading: false
+          });
+          return linkToImg;
+        }
+        return result;
       });
     });
   }
@@ -43,6 +56,11 @@ class StarshipsShowItem extends Component {
           <Card
             loading={this.state.loading}
             title={name}
+            cover={
+              !this.state.loading && (
+                <img alt={name} src={`${this.state.starshipImg}`} />
+              )
+            }
             className="content-box content-starship-box"
           >
             <Row type="flex" justify="space-around" gutter={8}>

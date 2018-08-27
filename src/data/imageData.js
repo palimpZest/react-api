@@ -347,3 +347,193 @@ export const planetImages = [
     }
   }
 ];
+
+export const starshipImages = [
+  {
+    0: {
+      name: 'Executor',
+      image:
+        'https://vignette.wikia.nocookie.net/starwars/images/3/38/Executor-SWE.png/revision/latest/scale-to-width-down/500?cb=20140522233011'
+    },
+    1: {
+      name: 'Sentinel-class landing craft',
+      image:
+        'https://vignette.wikia.nocookie.net/starwars/images/a/a7/TarkinLothalArrival.png/revision/latest/scale-to-width-down/500?cb=20150302012438'
+    },
+    2: {
+      name: 'Death Star',
+      image:
+        'https://vignette.wikia.nocookie.net/starwars/images/9/9d/DSI_hdapproach.png/revision/latest/scale-to-width-down/500?cb=20130221005853'
+    },
+    3: {
+      name: 'Millennium Falcon',
+      image:
+        'https://vignette.wikia.nocookie.net/starwars/images/2/21/MF_over_Takodana_SWCT.png/revision/latest/scale-to-width-down/500?cb=20170605041002'
+    },
+    4: {
+      name: 'Y-wing',
+      image:
+        'https://vignette.wikia.nocookie.net/starwars/images/1/1d/BTL-B_Y-wing_rear.jpg/revision/latest/scale-to-width-down/500?cb=20100128043202'
+    },
+    5: {
+      name: 'X-wing',
+      image:
+        'https://vignette.wikia.nocookie.net/starwars/images/5/56/X-wing_vs_TIE_fighter_on_Takodana.png/revision/latest/scale-to-width-down/500?cb=20160417062726'
+    },
+    6: {
+      name: 'TIE Advanced x1',
+      image:
+        'https://vignette.wikia.nocookie.net/starwars/images/1/1d/Vader_TIEAdvanced_SWB.png/revision/latest/scale-to-width-down/500?cb=20160915042032'
+    },
+    7: {
+      name: 'Slave 1',
+      image:
+        'https://vignette.wikia.nocookie.net/starwars/images/b/ba/Slave_I_DICE.png/revision/latest/scale-to-width-down/500?cb=20170825000729'
+    },
+    8: {
+      name: 'Imperial shuttle',
+      image:
+        'https://vignette.wikia.nocookie.net/starwars/images/a/af/Shuttle-CHRON.jpg/revision/latest/scale-to-width-down/500?cb=20100813150543'
+    },
+    9: {
+      name: 'EF76 Nebulon-B escort frigate',
+      image:
+        'https://vignette.wikia.nocookie.net/starwars/images/5/50/NBfrigate.JPG/revision/latest/scale-to-width-down/500?cb=20061215024715'
+    },
+    10: {
+      name: 'Calamari Cruiser',
+      image:
+        'https://vignette.wikia.nocookie.net/starwars/images/9/94/MCLiberty.jpg/revision/latest/scale-to-width-down/500?cb=20070104001953'
+    },
+    11: {
+      name: 'A-wing',
+      image:
+        'https://vignette.wikia.nocookie.net/starwars/images/8/8d/A-wing_DICE.png/revision/latest/scale-to-width-down/500?cb=20161021230115'
+    },
+    12: {
+      name: 'B-wing',
+      image:
+        'https://vignette.wikia.nocookie.net/starwars/images/7/71/BWingsKillISD2-ST.jpg/revision/latest/scale-to-width-down/500?cb=20151109015327'
+    },
+    13: {
+      name: 'Republic Cruiser',
+      image:
+        'https://vignette.wikia.nocookie.net/starwars/images/8/81/Radiant7_negvv.png/revision/latest/scale-to-width-down/500?cb=20170411231733'
+    },
+    14: {
+      name: 'Naboo fighter',
+      image:
+        'https://vignette.wikia.nocookie.net/starwars/images/d/d3/N-1_BF2.png/revision/latest/scale-to-width-down/500?cb=20170825000654'
+    },
+    15: {
+      name: 'Naboo Royal Starship',
+      image:
+        'https://vignette.wikia.nocookie.net/starwars/images/f/f2/NabooRoyalStarshipTatooine.png/revision/latest/scale-to-width-down/500?cb=20130121220216'
+    },
+    16: {
+      name: 'Scimitar',
+      image:
+        'https://vignette.wikia.nocookie.net/starwars/images/8/8b/Sith_Infiltrator_SWCT.png/revision/latest/scale-to-width-down/500?cb=20160629050027'
+    },
+    17: {
+      name: 'J-type diplomatic barge',
+      image:
+        'https://vignette.wikia.nocookie.net/starwars/images/7/76/Naboo_Royal_Cruiser_DB.png/revision/latest/scale-to-width-down/500?cb=20171111134725'
+    },
+    18: {
+      name: 'AA-9 Coruscant freighter',
+      image:
+        'https://vignette.wikia.nocookie.net/starwars/images/c/c7/Aa9coruscantfreighter.jpg/revision/latest/scale-to-width-down/500?cb=20091201131352'
+    },
+    19: {
+      name: 'Jedi starfighter',
+      image:
+        'https://vignette.wikia.nocookie.net/starwars/images/7/79/Jedi_Starfighter_EpII.png/revision/latest/scale-to-width-down/500?cb=20150722030412'
+    },
+    20: {
+      name: 'H-type Nubian yacht',
+      image:
+        'https://vignette.wikia.nocookie.net/starwars/images/1/1a/NabooYachtLanding-AotC.jpg/revision/latest/scale-to-width-down/500?cb=20111001150233'
+    },
+    21: {
+      name: 'Star Destroyer',
+      image:
+        'https://vignette.wikia.nocookie.net/starwars/images/5/58/ISD-I.png/revision/latest/scale-to-width-down/500?cb=20150416041211'
+    },
+    22: {
+      name: 'Trade Federation cruiser',
+      image:
+        'https://vignette.wikia.nocookie.net/starwars/images/4/47/InvisibleHandStarboard-FF.png/revision/latest/scale-to-width-down/500?cb=20160906045609'
+    },
+    23: {
+      name: 'Theta-class T-2c shuttle',
+      image:
+        'https://vignette.wikia.nocookie.net/starwars/images/8/8e/Theta-class_shuttle.png/revision/latest/scale-to-width-down/500?cb=20180412042447'
+    },
+    24: {
+      name: 'T-70 X-wing fighter',
+      image:
+        'https://vignette.wikia.nocookie.net/starwars/images/7/78/Episode_VII_-_X_wing_Squadron.png/revision/latest/scale-to-width-down/500?cb=20150914023437'
+    },
+    25: {
+      name: 'Rebel transport',
+      image:
+        'https://vignette.wikia.nocookie.net/starwars/images/6/67/GR-75_Medium_Transport_TAEtrivia.png/revision/latest/scale-to-width-down/500?cb=20170627030525'
+    },
+    26: {
+      name: 'Droid control ship',
+      image:
+        'https://vignette.wikia.nocookie.net/starwars/images/9/95/Lucrehulk_battleship_TCW.jpg/revision/latest/scale-to-width-down/500?cb=20090311015214'
+    },
+    27: {
+      name: 'Republic Assault ship',
+      image:
+        'https://vignette.wikia.nocookie.net/starwars/images/4/4b/Acclamator.jpg/revision/latest/scale-to-width-down/500?cb=20170302022437'
+    },
+    28: {
+      name: 'Solar Sailer',
+      image:
+        'https://vignette.wikia.nocookie.net/starwars/images/6/60/Solar_Sailer_Coruscant.jpg/revision/latest/scale-to-width-down/500?cb=20060527223214'
+    },
+    29: {
+      name: 'Republic attack cruiser',
+      image:
+        'https://vignette.wikia.nocookie.net/starwars/images/0/0d/Imperial_attack_cruisers.png/revision/latest/scale-to-width-down/500?cb=20140317112248'
+    },
+    30: {
+      name: 'Naboo star skiff',
+      image:
+        'https://vignette.wikia.nocookie.net/starwars/images/d/df/Naboo_star_skiff_1.png/revision/latest/scale-to-width-down/500?cb=20130212042348'
+    },
+    31: {
+      name: 'Jedi Interceptor',
+      image:
+        'https://vignette.wikia.nocookie.net/starwars/images/a/a6/Eta-2_Interceptor.png/revision/latest/scale-to-width-down/500?cb=20130613124413'
+    },
+    32: {
+      name: 'arc-170',
+      image:
+        'https://vignette.wikia.nocookie.net/starwars/images/b/ba/ARC170starfighter.jpg/revision/latest/scale-to-width-down/500?cb=20111112062600'
+    },
+    33: {
+      name: 'Belbullab-22 starfighter',
+      image:
+        'https://vignette.wikia.nocookie.net/starwars/images/3/3e/Soulless_One2_TCW.jpg/revision/latest/scale-to-width-down/500?cb=20090311020627'
+    },
+    34: {
+      name: 'V-wing',
+      image:
+        'https://vignette.wikia.nocookie.net/starwars/images/a/a9/V-wing_BF2.png/revision/latest/scale-to-width-down/500?cb=20170825000555'
+    },
+    35: {
+      name: 'CR90 corvette',
+      image:
+        'https://vignette.wikia.nocookie.net/starwars/images/4/47/Rebels-TantiveIVConceptArt-CroppedBackground.png/revision/latest/scale-to-width-down/500?cb=20150215073634'
+    },
+    36: {
+      name: 'Banking clan frigate',
+      image:
+        'https://vignette.wikia.nocookie.net/starwars/images/0/07/Munificent_TCW.jpg/revision/latest/scale-to-width-down/500?cb=20090311013715'
+    }
+  }
+];
