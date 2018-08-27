@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import SpeciesItem from './SpeciesItem';
+import { speciesImages } from '../data/imageData';
 import { Row, Col } from 'antd';
 import { Layout } from 'antd';
 const { Content } = Layout;
@@ -19,6 +20,7 @@ class SpeciesHolder extends Component {
     super(props);
     this.state = {
       items: [],
+      speciesImg: speciesImages,
       loading: true
     };
   }
@@ -60,16 +62,22 @@ class SpeciesHolder extends Component {
       list = this.state.items.map((item, index) => {
         return (
           <Col key={index} xs={24} sm={16} md={12} lg={8} xl={6} xxl={5}>
-            <SpeciesItem
-              id={indices[index]}
-              url={item.url}
-              name={item.name}
-              classification={item.classification}
-              designation={item.designation}
-              average_height={item.average_height}
-              average_lifespan={item.average_lifespan}
-              language={item.language}
-            />
+            {this.state.speciesImg.map(species => {
+              return (
+                <SpeciesItem
+                  key={index}
+                  id={indices[index]}
+                  image={species[index].image}
+                  url={item.url}
+                  name={item.name}
+                  classification={item.classification}
+                  designation={item.designation}
+                  average_height={item.average_height}
+                  average_lifespan={item.average_lifespan}
+                  language={item.language}
+                />
+              );
+            })}
           </Col>
         );
       });

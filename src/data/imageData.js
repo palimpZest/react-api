@@ -537,3 +537,193 @@ export const starshipImages = [
     }
   }
 ];
+
+export const speciesImages = [
+  {
+    0: {
+      name: 'Hutt',
+      image:
+        'https://vignette.wikia.nocookie.net/starwars/images/a/a7/HuttNEGAS.png/revision/latest/scale-to-width-down/500?cb=20130115030417'
+    },
+    1: {
+      name: `Yoda's species`,
+      image:
+        'https://vignette.wikia.nocookie.net/starwars/images/5/5a/YodaNEGAS.jpg/revision/latest/scale-to-width-down/500?cb=20061129202540'
+    },
+    2: {
+      name: 'Trandoshan',
+      image:
+        'https://vignette.wikia.nocookie.net/starwars/images/4/45/Trandoshan_NEGAS.png/revision/latest/scale-to-width-down/500?cb=20130115031110'
+    },
+    3: {
+      name: 'Mon Calamari',
+      image:
+        'https://vignette.wikia.nocookie.net/starwars/images/7/77/Mon_Calamari_NEGAS.jpg/revision/latest/scale-to-width-down/500?cb=20170926052257'
+    },
+    4: {
+      name: 'Ewok',
+      image:
+        'https://vignette.wikia.nocookie.net/starwars/images/8/82/EwokNEGAS.jpg/revision/latest/scale-to-width-down/499?cb=20061126065723'
+    },
+    5: {
+      name: 'Sullustan',
+      image:
+        'https://vignette.wikia.nocookie.net/starwars/images/f/f5/Sullustan_NEGAS.jpg/revision/latest/scale-to-width-down/499?cb=20100810063353'
+    },
+    6: {
+      name: 'Neimodian',
+      image:
+        'https://vignette.wikia.nocookie.net/starwars/images/5/52/Neimoidian_NEGAS.jpg/revision/latest/scale-to-width-down/500?cb=20061021200803'
+    },
+    7: {
+      name: 'Gungan',
+      image:
+        'https://vignette.wikia.nocookie.net/starwars/images/3/31/Gungan_NEGAS.jpg/revision/latest/scale-to-width-down/500?cb=20070225162243'
+    },
+    8: {
+      name: 'Toydarian',
+      image:
+        'https://vignette.wikia.nocookie.net/starwars/images/9/9a/Toydarian_EtU.png/revision/latest/scale-to-width-down/500?cb=20160920122918'
+    },
+    9: {
+      name: 'Dug',
+      image:
+        'https://vignette.wikia.nocookie.net/starwars/images/b/bd/Dug_NEGAS.jpg/revision/latest/scale-to-width-down/499?cb=20090709061842'
+    },
+    10: {
+      name: `Twi'lek`,
+      image:
+        'https://vignette.wikia.nocookie.net/starwars/images/9/95/TwilekNEGAS.png/revision/latest/scale-to-width-down/500?cb=20150523023715'
+    },
+    11: {
+      name: 'Aleena',
+      image:
+        'https://vignette.wikia.nocookie.net/starwars/images/e/e3/Ratts.jpg/revision/latest/scale-to-width-down/500?cb=20080508150745'
+    },
+    12: {
+      name: 'Vulptereen',
+      image:
+        'https://vignette.wikia.nocookie.net/starwars/images/c/cd/Dud_Bolt_FF_Scan.png/revision/latest/scale-to-width-down/500?cb=20150414170315'
+    },
+    13: {
+      name: 'Xexto',
+      image:
+        'https://vignette.wikia.nocookie.net/starwars/images/3/30/Gasgano.jpg/revision/latest/scale-to-width-down/500?cb=20150331133737'
+    },
+    14: {
+      name: 'Toong',
+      image:
+        'https://vignette.wikia.nocookie.net/starwars/images/1/18/BenQuadinarosFull-SWE.png/revision/latest/scale-to-width-down/500?cb=20160910192602'
+    },
+    15: {
+      name: 'Cerean',
+      image:
+        'https://vignette.wikia.nocookie.net/starwars/images/a/ae/Cerean_NEGAS.jpg/revision/latest/scale-to-width-down/500?cb=20100615162146'
+    },
+    16: {
+      name: 'Nautolan',
+      image:
+        'https://vignette.wikia.nocookie.net/starwars/images/4/4c/Nautolan_NEGAS.jpg/revision/latest/scale-to-width-down/500?cb=20061205192252'
+    },
+    17: {
+      name: 'Zabrak',
+      image:
+        'https://vignette.wikia.nocookie.net/starwars/images/e/ee/ZabrakNEGAS.jpg/revision/latest/scale-to-width-down/500?cb=20070416170907'
+    },
+    18: {
+      name: 'Tholothian',
+      image:
+        'https://vignette.wikia.nocookie.net/starwars/images/1/1a/Gallia.jpg/revision/latest/scale-to-width-down/500?cb=20060204153348'
+    },
+    19: {
+      name: 'Iktotchi',
+      image:
+        'https://vignette.wikia.nocookie.net/starwars/images/f/f0/Iktotchi_NEGAS.jpg/revision/latest/scale-to-width-down/500?cb=20061202133616'
+    },
+    20: {
+      name: 'Quermian',
+      image:
+        'https://vignette.wikia.nocookie.net/starwars/images/9/9a/XextoQuermian.jpg/revision/latest/scale-to-width-down/500?cb=20100810190143'
+    },
+    21: {
+      name: 'Kel Dor',
+      image:
+        'https://vignette.wikia.nocookie.net/starwars/images/2/24/Kel_Dor_NEGAS.jpg/revision/latest/scale-to-width-down/500?cb=20061130130943'
+    },
+    22: {
+      name: 'Chagrian',
+      image:
+        'https://vignette.wikia.nocookie.net/starwars/images/5/5e/ChagrianNEGAS.jpg/revision/latest/scale-to-width-down/499?cb=20061201134120'
+    },
+    23: {
+      name: 'Geonosian',
+      image:
+        'https://vignette.wikia.nocookie.net/starwars/images/a/a0/Geonosian_NEGAS.png/revision/latest/scale-to-width-down/500?cb=20170226060952'
+    },
+    24: {
+      name: 'Mirialan',
+      image:
+        'https://vignette.wikia.nocookie.net/starwars/images/2/2a/Mira.png/revision/latest/scale-to-width-down/500?cb=20150801192217'
+    },
+    25: {
+      name: 'Clawdite',
+      image:
+        'https://vignette.wikia.nocookie.net/starwars/images/3/37/ClawditeNEGAS.jpg/revision/latest/scale-to-width-down/500?cb=20090709061818'
+    },
+    26: {
+      name: 'Besalisk',
+      image:
+        'https://vignette.wikia.nocookie.net/starwars/images/1/1b/BesaliskNEGAS.jpg/revision/latest/scale-to-width-down/500?cb=20130908201429'
+    },
+    27: {
+      name: 'Kaminoan',
+      image:
+        'https://vignette.wikia.nocookie.net/starwars/images/0/03/KaminoanNEGAS.jpg/revision/latest/scale-to-width-down/499?cb=20090709062442'
+    },
+    28: {
+      name: 'Skakoan',
+      image:
+        'https://vignette.wikia.nocookie.net/starwars/images/a/a0/Skakoan2.jpg/revision/latest/scale-to-width-down/500?cb=20091012195839'
+    },
+    29: {
+      name: 'Muun',
+      image:
+        'https://vignette.wikia.nocookie.net/starwars/images/2/2c/Muun_FDEV_Arden_Beckwith.png/revision/latest/scale-to-width-down/500?cb=20180323003122'
+    },
+    30: {
+      name: 'Togruta',
+      image:
+        'https://vignette.wikia.nocookie.net/starwars/images/b/b2/Togruta_NEGAS.jpg/revision/latest/scale-to-width-down/500?cb=20100810070146'
+    },
+    31: {
+      name: 'Kaleesh',
+      image:
+        'https://vignette.wikia.nocookie.net/starwars/images/1/14/Kaleesh_NEGAS.jpg/revision/latest/scale-to-width-down/500?cb=20061205191444'
+    },
+    32: {
+      name: `Pau'an`,
+      image:
+        'https://vignette.wikia.nocookie.net/starwars/images/2/22/Pau%27an.jpg/revision/latest/scale-to-width-down/499?cb=20070705042952'
+    },
+    33: {
+      name: 'Wookiee',
+      image:
+        'https://vignette.wikia.nocookie.net/starwars/images/1/14/Wookiee_NEGAS.jpg/revision/latest/scale-to-width-down/499?cb=20090711201859'
+    },
+    34: {
+      name: 'Droid',
+      image:
+        'https://vignette.wikia.nocookie.net/starwars/images/b/b6/2-1B_negtd.jpg/revision/latest/scale-to-width-down/500?cb=20100616170941'
+    },
+    35: {
+      name: 'Human',
+      image:
+        'https://vignette.wikia.nocookie.net/starwars/images/d/d6/Human_NEGAS.jpg/revision/latest/scale-to-width-down/500?cb=20090709062312'
+    },
+    36: {
+      name: 'Rodian',
+      image:
+        'https://vignette.wikia.nocookie.net/starwars/images/2/23/Rodian_NEGAS.jpg/revision/latest/scale-to-width-down/500?cb=20061127015745'
+    }
+  }
+];
