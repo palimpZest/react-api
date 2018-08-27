@@ -538,6 +538,206 @@ export const starshipImages = [
   }
 ];
 
+export const vehicleImages = [
+  {
+    0: {
+      name: 'Sand Crawler',
+      image:
+        'https://vignette.wikia.nocookie.net/starwars/images/f/ff/Sandcrawler.png/revision/latest/scale-to-width-down/500?cb=20130812001443'
+    },
+    1: {
+      name: 'T-16 skyhopper',
+      image:
+        'https://vignette.wikia.nocookie.net/starwars/images/f/f2/T-16_skyhopper_-_SW_20.png/revision/latest/scale-to-width-down/500?cb=20160805002611'
+    },
+    2: {
+      name: 'X-34 landspeeder',
+      image:
+        'https://vignette.wikia.nocookie.net/starwars/images/5/54/X34-landspeeder.jpg/revision/latest/scale-to-width-down/500?cb=20080316031428'
+    },
+    3: {
+      name: 'TIE/LN starfighter',
+      image:
+        'https://vignette.wikia.nocookie.net/starwars/images/9/92/TIEfighter2-Fathead.png/revision/latest/scale-to-width-down/500?cb=20161109040841'
+    },
+    4: {
+      name: 'Snowspeeder',
+      image:
+        'https://vignette.wikia.nocookie.net/starwars/images/4/44/T-47_Speeder_DICE.png/revision/latest/scale-to-width-down/500?cb=20151106063152'
+    },
+    5: {
+      name: 'TIE bomber',
+      image:
+        'https://vignette.wikia.nocookie.net/starwars/images/1/17/TIE_Bomber_BF2.png/revision/latest/scale-to-width-down/500?cb=20170825000703'
+    },
+    6: {
+      name: 'AT-AT',
+      image:
+        'https://vignette.wikia.nocookie.net/starwars/images/1/16/AT-AT_2_Fathead.png/revision/latest/scale-to-width-down/500?cb=20161108042721'
+    },
+    7: {
+      name: 'AT-ST',
+      image:
+        'https://vignette.wikia.nocookie.net/starwars/images/f/ff/ATST-SWBdice.png/revision/latest/scale-to-width-down/500?cb=20151110032640'
+    },
+    8: {
+      name: 'Storm IV Twin-Pod cloud car',
+      image:
+        'https://vignette.wikia.nocookie.net/starwars/images/3/3b/Cloud-car-v2.png/revision/latest/scale-to-width-down/500?cb=20160617064429'
+    },
+    9: {
+      name: 'Sail barge',
+      image:
+        'https://vignette.wikia.nocookie.net/starwars/images/8/8c/Sail_Barge.png/revision/latest/scale-to-width-down/500?cb=20130331043828'
+    },
+    10: {
+      name: 'Bantha-II cargo skiff',
+      image:
+        'https://vignette.wikia.nocookie.net/starwars/images/c/cc/Bantha-II_Cargo_Skiff_BG.png/revision/latest/scale-to-width-down/500?cb=20161023211218'
+    },
+    11: {
+      name: 'TIE/IN interceptor',
+      image:
+        'https://vignette.wikia.nocookie.net/starwars/images/f/f5/TIE_Interceptor_BF.png/revision/latest/scale-to-width-down/500?cb=20170501054325'
+    },
+    12: {
+      name: 'Imperial Speeder Bike',
+      image:
+        'https://vignette.wikia.nocookie.net/starwars/images/4/47/Speeder_Bike_DICE.png/revision/latest/scale-to-width-down/500?cb=20171102044625'
+    },
+    13: {
+      name: 'Vulture Droid',
+      image:
+        'https://vignette.wikia.nocookie.net/starwars/images/4/40/Droid_Starfighters.png/revision/latest/scale-to-width-down/500?cb=20130924231621'
+    },
+    14: {
+      name: 'Multi-Troop Transport',
+      image:
+        'https://vignette.wikia.nocookie.net/starwars/images/f/f5/MTTopenforbusiness-SWE.jpg/revision/latest/scale-to-width-down/500?cb=20120206202824'
+    },
+    15: {
+      name: 'Armored Assault Tank',
+      image:
+        'https://vignette.wikia.nocookie.net/starwars/images/7/78/SepAAT.jpg/revision/latest/scale-to-width-down/500?cb=20090311014604'
+    },
+    16: {
+      name: 'Single Trooper Aerial Platform',
+      image:
+        'https://vignette.wikia.nocookie.net/starwars/images/c/ce/STAP-SWE.png/revision/latest/scale-to-width-down/500?cb=20160914004451'
+    },
+    17: {
+      name: 'C-9979 landing craft',
+      image:
+        'https://vignette.wikia.nocookie.net/starwars/images/f/f0/C9979_ep1ig.jpg/revision/latest/scale-to-width-down/500?cb=20120226042037'
+    },
+    18: {
+      name: 'Tribubble bongo',
+      image:
+        'https://vignette.wikia.nocookie.net/starwars/images/d/d8/Bongo.jpg/revision/latest/scale-to-width-down/500?cb=20080430201913'
+    },
+    19: {
+      name: 'Sith speeder',
+      image:
+        'https://vignette.wikia.nocookie.net/starwars/images/c/c1/FC-20_Speeder.png/revision/latest/scale-to-width-down/500?cb=20151027005050'
+    },
+    20: {
+      name: 'Zephyr-G swoop bike',
+      image:
+        'https://vignette.wikia.nocookie.net/starwars/images/9/98/Zephyr-G.jpg/revision/latest/scale-to-width-down/500?cb=20051217192222'
+    },
+    21: {
+      name: 'Koro-2 Exodrive airspeeder',
+      image:
+        'https://vignette.wikia.nocookie.net/starwars/images/2/22/Koro2_uvg.jpg/revision/latest/scale-to-width-down/500?cb=20130519005132'
+    },
+    22: {
+      name: 'XJ-6 airspeeder',
+      image:
+        'https://vignette.wikia.nocookie.net/starwars/images/f/f6/XJ-6_hotrod.jpg/revision/latest/scale-to-width-down/500?cb=20080218042929'
+    },
+    23: {
+      name: 'LAAT/i',
+      image:
+        'https://vignette.wikia.nocookie.net/starwars/images/c/c5/Low_Altitude_Assault_Transport.png/revision/latest/scale-to-width-down/500?cb=20130719130715'
+    },
+    24: {
+      name: 'LAAT/c',
+      image:
+        'https://vignette.wikia.nocookie.net/starwars/images/7/7f/LAATc_Geonosis_1.jpg/revision/latest/scale-to-width-down/500?cb=20111001151025'
+    },
+    25: {
+      name: 'Tsmeu-6 personal wheel bike',
+      image:
+        'https://vignette.wikia.nocookie.net/starwars/images/2/2c/GrievWheelBike_wsmi.jpg/revision/latest/scale-to-width-down/500?cb=20071215145011'
+    },
+    26: {
+      name: 'Emergency Firespeeder',
+      image:
+        'https://vignette.wikia.nocookie.net/starwars/images/6/66/Fire_ship.jpg/revision/latest/scale-to-width-down/500?cb=20051220124720'
+    },
+    27: {
+      name: 'Droid tri-fighter',
+      image:
+        'https://vignette.wikia.nocookie.net/starwars/images/a/a0/DroidTrifighter-TCWs3BR2.png/revision/latest/scale-to-width-down/500?cb=20150308204046'
+    },
+    28: {
+      name: 'Oevvaor jet catamaran',
+      image:
+        'https://vignette.wikia.nocookie.net/starwars/images/0/03/Wookieeflyingcat2.png/revision/latest/scale-to-width-down/500?cb=20130202035458'
+    },
+    29: {
+      name: 'Raddaugh Gnasp fluttercraft',
+      image:
+        'https://vignette.wikia.nocookie.net/starwars/images/1/19/Catamaran.JPG/revision/latest/scale-to-width-down/500?cb=20071030194931'
+    },
+    30: {
+      name: 'Clone turbo tank',
+      image:
+        'https://vignette.wikia.nocookie.net/starwars/images/f/f7/JuggernautROTS.jpg/revision/latest/scale-to-width-down/500?cb=20091201162123'
+    },
+    31: {
+      name: 'Corporate Alliance tank droid',
+      image:
+        'https://vignette.wikia.nocookie.net/starwars/images/7/73/Tank_droid_TCW.png/revision/latest/scale-to-width-down/500?cb=20170703051940'
+    },
+    32: {
+      name: 'Droid gunship',
+      image:
+        'https://vignette.wikia.nocookie.net/starwars/images/6/6d/DroidGunship-DB.png/revision/latest/scale-to-width-down/500?cb=20141227052202'
+    },
+    33: {
+      name: 'AT-RT',
+      image:
+        'https://vignette.wikia.nocookie.net/starwars/images/5/5c/AT-RT_BF2.png/revision/latest/scale-to-width-down/500?cb=20170825000646'
+    },
+    34: {
+      name: 'AT-TE',
+      image:
+        'https://vignette.wikia.nocookie.net/starwars/images/9/9a/AT-TE-front.png/revision/latest/scale-to-width-down/500?cb=20151026185157'
+    },
+    35: {
+      name: 'SPHA',
+      image:
+        'https://vignette.wikia.nocookie.net/starwars/images/2/2a/SPHA-T.JPG/revision/latest/scale-to-width-down/500?cb=20060515020703'
+    },
+    36: {
+      name: 'Flitknot speeder',
+      image:
+        'https://vignette.wikia.nocookie.net/starwars/images/7/76/FlitknotSpeeder.jpg/revision/latest/scale-to-width-down/500?cb=20071213133909'
+    },
+    37: {
+      name: 'Neimoidian shuttle',
+      image:
+        'https://vignette.wikia.nocookie.net/starwars/images/c/cf/Sheathipede_OS.jpg/revision/latest/scale-to-width-down/500?cb=20120211051954'
+    },
+    38: {
+      name: 'Geonosian starfighter',
+      image:
+        'https://vignette.wikia.nocookie.net/starwars/images/8/82/Nantex-class_fighters.png/revision/latest/scale-to-width-down/500?cb=20160117183706'
+    }
+  }
+];
+
 export const speciesImages = [
   {
     0: {

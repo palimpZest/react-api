@@ -4,12 +4,15 @@ import Card from 'antd/lib/card';
 import { Row, Col } from 'antd';
 import axios from 'axios';
 import arrow from '../../play-button.svg';
+import { vehicleImages } from '../../data/imageData';
 
 class VehiclesShowItem extends Component {
   constructor(props) {
     super(props);
     this.state = {
       item: [],
+      vehicle: vehicleImages[0],
+      vehicleImg: null,
       loading: true
     };
   }
@@ -17,8 +20,18 @@ class VehiclesShowItem extends Component {
   componentDidMount() {
     axios.get(`https://swapi.co/api${this.props.match.url}/`).then(response => {
       this.setState({
-        item: response.data,
-        loading: false
+        item: response.data
+      });
+      Object.values(this.state.vehicle).map(result => {
+        if (result.name === this.state.item.name) {
+          let linkToImg = result.image;
+          this.setState({
+            vehicleImg: linkToImg,
+            loading: false
+          });
+          return linkToImg;
+        }
+        return result;
       });
     });
   }
@@ -39,6 +52,11 @@ class VehiclesShowItem extends Component {
           <Card
             loading={this.state.loading}
             title={name}
+            cover={
+              !this.state.loading && (
+                <img alt={name} src={`${this.state.vehicleImg}`} />
+              )
+            }
             className="content-box content-vehicle-box"
           >
             <Row type="flex" justify="space-around" gutter={4}>
