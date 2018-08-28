@@ -5,10 +5,14 @@ import { Row, Col } from 'antd';
 
 class PeopleItem extends Component {
   render() {
-    const { id, name, birth_year, gender, height, mass } = this.props;
+    const { id, image, name, birth_year, gender, height, mass } = this.props;
     return (
       <Link to={`/people/${id}`}>
-        <Card title={name} className="content-box">
+        <Card
+          title={name}
+          cover={<img alt={name} src={`${image}`} />}
+          className="content-box"
+        >
           <Row type="flex" justify="space-around" gutter={8}>
             <Col>
               <p>Birth Year</p>

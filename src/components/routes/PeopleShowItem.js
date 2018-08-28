@@ -4,12 +4,15 @@ import Card from 'antd/lib/card';
 import { Row, Col } from 'antd';
 import axios from 'axios';
 import arrow from '../../play-button.svg';
+import { peopleImages } from '../../data/imageData';
 
 class PeopleShowItem extends Component {
   constructor(props) {
     super(props);
     this.state = {
       item: [],
+      people: peopleImages[0],
+      peopleImg: null,
       loading: true
     };
   }
@@ -17,8 +20,20 @@ class PeopleShowItem extends Component {
   componentDidMount() {
     axios.get(`https://swapi.co/api${this.props.match.url}/`).then(response => {
       this.setState({
-        item: response.data,
-        loading: false
+        item: response.data
+        // loading: false
+      });
+      Object.values(this.state.people).map(result => {
+        if (result.name === this.state.item.name) {
+          let linkToImg = result.image;
+          this.setState({
+            peopleImg: linkToImg,
+            loading: false
+          });
+          console.log(linkToImg);
+          return linkToImg;
+        }
+        return result;
       });
     });
   }
@@ -31,6 +46,11 @@ class PeopleShowItem extends Component {
           <Card
             loading={this.state.loading}
             title={name}
+            cover={
+              !this.state.loading && (
+                <img alt={name} src={`${this.state.peopleImg}`} />
+              )
+            }
             className="content-box content-people-species-box"
           >
             <Row type="flex" justify="space-around" gutter={4}>

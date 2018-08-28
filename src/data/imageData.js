@@ -927,3 +927,443 @@ export const speciesImages = [
     }
   }
 ];
+
+export const peopleImages = [
+  {
+    0: {
+      name: 'Luke Skywalker',
+      image:
+        'https://vignette.wikia.nocookie.net/starwars/images/d/d9/Luke-rotjpromo.jpg/revision/latest/scale-to-width-down/500?cb=20091030151422'
+    },
+    1: {
+      name: 'C-3PO',
+      image:
+        'https://vignette.wikia.nocookie.net/starwars/images/5/51/C-3PO_EP3.png/revision/latest/scale-to-width-down/500?cb=20131005124036'
+    },
+    2: {
+      name: 'R2-D2',
+      image:
+        'https://vignette.wikia.nocookie.net/starwars/images/1/1a/R2d2.jpg/revision/latest/scale-to-width-down/500?cb=20090524204255'
+    },
+    3: {
+      name: 'Darth Vader',
+      image:
+        'https://vignette.wikia.nocookie.net/starwars/images/9/94/Vaderrotj.jpg/revision/latest/scale-to-width-down/500?cb=20070418231644'
+    },
+    4: {
+      name: 'Leia Organa',
+      image:
+        'https://vignette.wikia.nocookie.net/starwars/images/8/89/Leia_endorpromo02.jpg/revision/latest/scale-to-width-down/500?cb=20080506155343'
+    },
+    5: {
+      name: 'Owen Lars',
+      image:
+        'https://vignette.wikia.nocookie.net/starwars/images/9/91/OwenLarsHS-SWE.jpg/revision/latest/scale-to-width-down/500?cb=20120428164235'
+    },
+    6: {
+      name: 'Beru Whitesun lars',
+      image:
+        'https://vignette.wikia.nocookie.net/starwars/images/7/76/Beru_headshot2.jpg/revision/latest/scale-to-width-down/500?cb=20111029215429'
+    },
+    7: {
+      name: 'R5-D4',
+      image:
+        'https://vignette.wikia.nocookie.net/starwars/images/2/2c/R5d4.jpg/revision/latest/scale-to-width-down/500?cb=20080404200713'
+    },
+    8: {
+      name: 'Biggs Darklighter',
+      image:
+        'https://vignette.wikia.nocookie.net/starwars/images/0/00/BiggsHS-ANH.png/revision/latest/scale-to-width-down/500?cb=20130305010406'
+    },
+    9: {
+      name: 'Obi-Wan Kenobi',
+      image:
+        'https://vignette.wikia.nocookie.net/starwars/images/e/e6/OWK_SWFB.png/revision/latest/scale-to-width-down/500?cb=20160910183426'
+    },
+    10: {
+      name: 'Anakin Skywalker',
+      image:
+        'https://vignette.wikia.nocookie.net/starwars/images/6/6f/Anakin_Skywalker_RotS.png/revision/latest/scale-to-width-down/500?cb=20130621175844'
+    },
+    11: {
+      name: 'Wilhuff Tarkin',
+      image:
+        'https://vignette.wikia.nocookie.net/starwars/images/c/c1/Tarkininfobox.jpg/revision/latest/scale-to-width-down/500?cb=20100620213033'
+    },
+    12: {
+      name: 'Chewbacca',
+      image:
+        'https://vignette.wikia.nocookie.net/starwars/images/e/ec/ChewbaccaCSWE.jpg/revision/latest/scale-to-width-down/500?cb=20130702064257'
+    },
+    13: {
+      name: 'Han Solo',
+      image:
+        'https://vignette.wikia.nocookie.net/starwars/images/0/01/Hansoloprofile.jpg/revision/latest/scale-to-width-down/499?cb=20100129155042'
+    },
+    14: {
+      name: 'Greedo',
+      image:
+        'https://vignette.wikia.nocookie.net/starwars/images/c/c6/Greedo.jpg/revision/latest/scale-to-width-down/500?cb=20180209034210'
+    },
+    15: {
+      name: 'Jabba Desilijic Tiure',
+      image:
+        'https://vignette.wikia.nocookie.net/starwars/images/7/7f/Jabba_SWSB.png/revision/latest/scale-to-width-down/500?cb=20160910034237'
+    },
+    16: {
+      name: 'Wedge Antilles',
+      image:
+        'https://vignette.wikia.nocookie.net/starwars/images/6/60/WedgeHelmetless-ROTJHD.jpg/revision/latest/scale-to-width-down/500?cb=20110916160227'
+    },
+    17: {
+      name: 'Jek Tono Porkins',
+      image:
+        'https://vignette.wikia.nocookie.net/starwars/images/5/53/Porkins.jpg/revision/latest/scale-to-width-down/500?cb=20111104223725'
+    },
+    18: {
+      name: 'Yoda',
+      image:
+        'https://vignette.wikia.nocookie.net/starwars/images/d/d6/Yoda_SWSB.png/revision/latest/scale-to-width-down/500?cb=20150206140125'
+    },
+    19: {
+      name: 'Palpatine',
+      image:
+        'https://vignette.wikia.nocookie.net/starwars/images/d/d8/Emperor_Sidious.png/revision/latest/scale-to-width-down/500?cb=20130620100935'
+    },
+    20: {
+      name: 'Boba Fett',
+      image:
+        'https://vignette.wikia.nocookie.net/starwars/images/5/58/BobaFettMain2.jpg/revision/latest/scale-to-width-down/500?cb=20130920001614'
+    },
+    21: {
+      name: 'IG-88',
+      image:
+        'https://vignette.wikia.nocookie.net/starwars/images/a/aa/IG-88B-ESB.jpg/revision/latest/scale-to-width-down/499?cb=20151130035541'
+    },
+    22: {
+      name: 'Bossk',
+      image:
+        'https://vignette.wikia.nocookie.net/starwars/images/1/1d/Bossk.png/revision/latest/scale-to-width-down/500?cb=20130219044712'
+    },
+    23: {
+      name: 'Lando Calrissian',
+      image:
+        'https://vignette.wikia.nocookie.net/starwars/images/7/7d/Lando_WoSW.jpg/revision/latest/scale-to-width-down/500?cb=20080715214753'
+    },
+    24: {
+      name: 'Lobot',
+      image:
+        'https://vignette.wikia.nocookie.net/starwars/images/e/e0/Lobot_SWSB.png/revision/latest/scale-to-width-down/500?cb=20160910032142'
+    },
+    25: {
+      name: 'Ackbar',
+      image:
+        'https://vignette.wikia.nocookie.net/starwars/images/f/fb/Ackbar_HS.jpg/revision/latest/scale-to-width-down/500?cb=20081118162020'
+    },
+    26: {
+      name: 'Mon Mothma',
+      image:
+        'https://vignette.wikia.nocookie.net/starwars/images/4/46/Monmothma.jpg/revision/latest/scale-to-width-down/500?cb=20070615234013'
+    },
+    27: {
+      name: 'Arvel Crynyd',
+      image:
+        'https://vignette.wikia.nocookie.net/starwars/images/d/de/Arvel-crynyd.jpg/revision/latest/scale-to-width-down/295?cb=20120113223349'
+    },
+    28: {
+      name: 'Wicket Systri Warrick',
+      image:
+        'https://vignette.wikia.nocookie.net/starwars/images/4/4f/Wicket_RotJ.png/revision/latest/scale-to-width-down/500?cb=20130622101905'
+    },
+    29: {
+      name: 'Nien Nunb',
+      image:
+        'https://vignette.wikia.nocookie.net/starwars/images/c/c7/NienNunbHS-SWE.jpg/revision/latest/scale-to-width-down/499?cb=20111120232928'
+    },
+    30: {
+      name: 'Qui-Gon Jinn',
+      image:
+        'https://vignette.wikia.nocookie.net/starwars/images/6/66/Qui-Gon_Jinn_SWFB.png/revision/latest/scale-to-width-down/500?cb=20160910051518'
+    },
+    31: {
+      name: 'Nute Gunray',
+      image:
+        'https://vignette.wikia.nocookie.net/starwars/images/f/fe/Nutegunraypromo_copy.jpg/revision/latest/scale-to-width-down/500?cb=20090417195344'
+    },
+    32: {
+      name: 'Finis Valorum',
+      image:
+        'https://vignette.wikia.nocookie.net/starwars/images/8/89/Valorum.jpg/revision/latest/scale-to-width-down/500?cb=20080801152355'
+    },
+    33: {
+      name: 'Jar Jar Binks',
+      image:
+        'https://vignette.wikia.nocookie.net/starwars/images/0/02/Jar_Jar_SWSB.png/revision/latest/scale-to-width-down/500?cb=20160910034613'
+    },
+    34: {
+      name: 'Roos Tarpals',
+      image:
+        'https://vignette.wikia.nocookie.net/starwars/images/c/ca/TarpalsHS.jpg/revision/latest/scale-to-width-down/500?cb=20180218034913'
+    },
+    35: {
+      name: 'Rugor Nass',
+      image:
+        'https://vignette.wikia.nocookie.net/starwars/images/d/d8/Bossnass.jpg/revision/latest/scale-to-width-down/500?cb=20171019170439'
+    },
+    36: {
+      name: 'Ric Olié',
+      image:
+        'https://vignette.wikia.nocookie.net/starwars/images/4/4c/RicOlieHS-SWE.png/revision/latest/scale-to-width-down/500?cb=20120226230538'
+    },
+    37: {
+      name: 'Watto',
+      image:
+        'https://vignette.wikia.nocookie.net/starwars/images/e/eb/WattoHS.jpg/revision/latest/scale-to-width-down/500?cb=20081222024729'
+    },
+    38: {
+      name: 'Sebulba',
+      image:
+        'https://vignette.wikia.nocookie.net/starwars/images/f/f4/Sebulba-SWISE2010.jpg/revision/latest/scale-to-width-down/500?cb=20110306033904'
+    },
+    39: {
+      name: 'Quarsh Panaka',
+      image:
+        'https://vignette.wikia.nocookie.net/starwars/images/0/0e/Moff_Panaka.jpg/revision/latest/scale-to-width-down/500?cb=20141130193801'
+    },
+    40: {
+      name: 'Shmi Skywalker',
+      image:
+        'https://vignette.wikia.nocookie.net/starwars/images/1/17/Shmi_FF.png/revision/latest/scale-to-width-down/500?cb=20160907060834'
+    },
+    41: {
+      name: 'Darth Maul',
+      image:
+        'https://vignette.wikia.nocookie.net/starwars/images/5/50/Darth_Maul_profile.png/revision/latest/scale-to-width-down/499?cb=20140209162228'
+    },
+    42: {
+      name: 'Bib Fortuna',
+      image:
+        'https://vignette.wikia.nocookie.net/starwars/images/3/33/BibFortunaHS-ROTJ.png/revision/latest/scale-to-width-down/295?cb=20130326042806'
+    },
+    43: {
+      name: 'Ayla Secura',
+      image:
+        'https://vignette.wikia.nocookie.net/starwars/images/f/f9/Aayla.jpg/revision/latest/scale-to-width-down/500?cb=20120815094201'
+    },
+    44: {
+      name: 'Dud Bolt',
+      image:
+        'https://vignette.wikia.nocookie.net/starwars/images/b/b0/Dud_Bolt.jpg/revision/latest/scale-to-width-down/500?cb=20061130092516'
+    },
+    45: {
+      name: 'Gasgano',
+      image:
+        'https://vignette.wikia.nocookie.net/starwars/images/5/57/GasganoHS-SWE.jpg/revision/latest/scale-to-width-down/499?cb=20120112024006'
+    },
+    46: {
+      name: 'Ben Quadinaros',
+      image:
+        'https://vignette.wikia.nocookie.net/starwars/images/d/d5/Toong_AA.JPG/revision/latest/scale-to-width-down/500?cb=20070228212416'
+    },
+    47: {
+      name: 'Mace Windu',
+      image:
+        'https://vignette.wikia.nocookie.net/starwars/images/f/fc/Mace_Windu.jpg/revision/latest/scale-to-width-down/499?cb=20071230055326'
+    },
+    48: {
+      name: 'Ki-Adi-Mundi',
+      image:
+        'https://vignette.wikia.nocookie.net/starwars/images/9/9e/KiAdiMundi.jpg/revision/latest/scale-to-width-down/500?cb=20070930185700'
+    },
+    49: {
+      name: 'Kit Fisto',
+      image:
+        'https://vignette.wikia.nocookie.net/starwars/images/1/17/KitFisto-SithSnapshot.jpg/revision/latest/scale-to-width-down/499?cb=20051006220620'
+    },
+    50: {
+      name: 'Eeth Koth',
+      image:
+        'https://vignette.wikia.nocookie.net/starwars/images/b/b6/Eeth_Koth_profile.png/revision/latest/scale-to-width-down/500?cb=20131103213648'
+    },
+    51: {
+      name: 'Adi Gallia',
+      image:
+        'https://vignette.wikia.nocookie.net/starwars/images/b/ba/AdiGallia.jpg/revision/latest/scale-to-width-down/500?cb=20080126123820'
+    },
+    52: {
+      name: 'Saesee Tiin',
+      image:
+        'https://vignette.wikia.nocookie.net/starwars/images/c/ca/Iktotchi_AA.JPG/revision/latest/scale-to-width-down/500?cb=20071002144646'
+    },
+    53: {
+      name: 'Yarael Poof',
+      image:
+        'https://vignette.wikia.nocookie.net/starwars/images/9/96/Yarael_Poof.png/revision/latest/scale-to-width-down/500?cb=20131112121643'
+    },
+    54: {
+      name: 'Plo Koon',
+      image:
+        'https://vignette.wikia.nocookie.net/starwars/images/c/c4/Plo_Koon_TPM.png/revision/latest/scale-to-width-down/500?cb=20130911190623'
+    },
+    55: {
+      name: 'Mas Amedda',
+      image:
+        'https://vignette.wikia.nocookie.net/starwars/images/3/3f/Mas12432.jpg/revision/latest/scale-to-width-down/499?cb=20130913002346'
+    },
+    56: {
+      name: 'Gregar Typho',
+      image:
+        'https://vignette.wikia.nocookie.net/starwars/images/5/52/Gregar_Typho.jpg/revision/latest/scale-to-width-down/350?cb=20090903192036'
+    },
+    57: {
+      name: 'Cordé',
+      image:
+        'https://vignette.wikia.nocookie.net/starwars/images/d/de/Cord%C3%A9.jpg/revision/latest/scale-to-width-down/500?cb=20130225181527'
+    },
+    58: {
+      name: 'Cliegg Lars',
+      image:
+        'https://vignette.wikia.nocookie.net/starwars/images/3/36/ClieggLarsHS-SWE.jpg/revision/latest/scale-to-width-down/500?cb=20180513065414'
+    },
+    59: {
+      name: 'Poggle the Lesser',
+      image:
+        'https://vignette.wikia.nocookie.net/starwars/images/9/93/Poggle_the_lesser_-_sw_card_trader.png/revision/latest/scale-to-width-down/500?cb=20160707212132'
+    },
+    60: {
+      name: 'Luminara Unduli',
+      image:
+        'https://vignette.wikia.nocookie.net/starwars/images/2/21/LuminaraHS-SWE_%28new%29.png/revision/latest/scale-to-width-down/295?cb=20180206232118'
+    },
+    61: {
+      name: 'Barriss Offee',
+      image:
+        'https://vignette.wikia.nocookie.net/starwars/images/3/37/Barrisprofile2.jpg/revision/latest/scale-to-width-down/499?cb=20070728014608'
+    },
+    62: {
+      name: 'Dormé',
+      image:
+        'https://vignette.wikia.nocookie.net/starwars/images/1/18/Dormesenate.jpg/revision/latest/scale-to-width-down/500?cb=20070506233854'
+    },
+    63: {
+      name: 'Dooku',
+      image:
+        'https://vignette.wikia.nocookie.net/starwars/images/f/f1/Count_Dooku_headshot_gaze.jpg/revision/latest/scale-to-width-down/500?cb=20071218042012'
+    },
+    64: {
+      name: 'Bail Prestor Organa',
+      image:
+        'https://vignette.wikia.nocookie.net/starwars/images/5/50/Bail_Organa_Mug.jpg/revision/latest/scale-to-width-down/500?cb=20080823033853'
+    },
+    65: {
+      name: 'Jango Fett',
+      image:
+        'https://vignette.wikia.nocookie.net/starwars/images/7/70/Jango_OP.jpg/revision/latest/scale-to-width-down/500?cb=20071029210612'
+    },
+    66: {
+      name: 'Zam Wesell',
+      image:
+        'https://vignette.wikia.nocookie.net/starwars/images/d/d1/ZamWesell.jpg/revision/latest/scale-to-width-down/500?cb=20091224023343'
+    },
+    67: {
+      name: 'Dexter Jettster',
+      image:
+        'https://vignette.wikia.nocookie.net/starwars/images/6/6c/DexterHS-SWE.jpg/revision/latest/scale-to-width-down/500?cb=20111106014007'
+    },
+    68: {
+      name: 'Lama Su',
+      image:
+        'https://vignette.wikia.nocookie.net/starwars/images/7/73/Lama_Su.jpg/revision/latest/scale-to-width-down/499?cb=20080117165735'
+    },
+    69: {
+      name: 'Taun We',
+      image:
+        'https://vignette.wikia.nocookie.net/starwars/images/9/9c/TaunWe.jpg/revision/latest/scale-to-width-down/500?cb=20080117164920'
+    },
+    70: {
+      name: 'Jocasta Nu',
+      image:
+        'https://vignette.wikia.nocookie.net/starwars/images/4/44/Jocasta_Nu.jpg/revision/latest/scale-to-width-down/499?cb=20090909121527'
+    },
+    71: {
+      name: 'Ratts Tyerell',
+      image:
+        'https://vignette.wikia.nocookie.net/starwars/images/6/68/RattsHS.jpg/revision/latest/scale-to-width-down/500?cb=20111117040905'
+    },
+    72: {
+      name: 'R4-P17',
+      image:
+        'https://vignette.wikia.nocookie.net/starwars/images/6/6b/R4-P17.jpg/revision/latest/scale-to-width-down/295?cb=20080429155212'
+    },
+    73: {
+      name: 'Wat Tambor',
+      image:
+        'https://vignette.wikia.nocookie.net/starwars/images/e/e8/TamborBoomHeadshot.jpg/revision/latest/scale-to-width-down/500?cb=20090607210827'
+    },
+    74: {
+      name: 'San Hill',
+      image:
+        'https://vignette.wikia.nocookie.net/starwars/images/4/4f/San_hill.jpg/revision/latest/scale-to-width-down/500?cb=20071203213757'
+    },
+    75: {
+      name: 'Shaak Ti',
+      image:
+        'https://vignette.wikia.nocookie.net/starwars/images/4/44/Shaak_Ti_Big_Headshot.jpg/revision/latest/scale-to-width-down/500?cb=20130421193922'
+    },
+    76: {
+      name: 'Grievous',
+      image:
+        'https://vignette.wikia.nocookie.net/starwars/images/d/de/Grievoushead.jpg/revision/latest/scale-to-width-down/500?cb=20100630082056'
+    },
+    77: {
+      name: 'Tarfful',
+      image:
+        'https://vignette.wikia.nocookie.net/starwars/images/3/37/Tarfful_RotS.png/revision/latest/scale-to-width-down/500?cb=20140825183910'
+    },
+    78: {
+      name: 'Raymus Antilles',
+      image:
+        'https://vignette.wikia.nocookie.net/starwars/images/8/80/Raymus_card_trader.png/revision/latest/scale-to-width-down/500?cb=20170716200353'
+    },
+    79: {
+      name: 'Sly Moore',
+      image:
+        'https://vignette.wikia.nocookie.net/starwars/images/e/ec/SlyMooreIsWatchingYouPoop-OfficialPix.jpg/revision/latest/scale-to-width-down/500?cb=20130913002333'
+    },
+    80: {
+      name: 'Tion Medon',
+      image:
+        'https://vignette.wikia.nocookie.net/starwars/images/e/e8/TionMedonchron.jpg/revision/latest/scale-to-width-down/500?cb=20070120141520'
+    },
+    81: {
+      name: 'Finn',
+      image:
+        'https://vignette.wikia.nocookie.net/starwars/images/a/af/Finn_TLJ_Collector%27s_Edition.png/revision/latest/scale-to-width-down/500?cb=20180124021541'
+    },
+    82: {
+      name: 'Rey',
+      image:
+        'https://vignette.wikia.nocookie.net/starwars/images/f/f8/ReyTLJEntertainmentWeeklyNovember.png/revision/latest/scale-to-width-down/500?cb=20171119211748'
+    },
+    83: {
+      name: 'Poe Dameron',
+      image:
+        'https://vignette.wikia.nocookie.net/starwars/images/7/79/Poe_Dameron_TLJ.png/revision/latest/scale-to-width-down/500?cb=20180124021517'
+    },
+    84: {
+      name: 'BB8',
+      image:
+        'https://vignette.wikia.nocookie.net/starwars/images/6/68/BB8-Fathead.png/revision/latest/scale-to-width-down/500?cb=20161108050455'
+    },
+    85: {
+      name: 'Captain Phasma',
+      image:
+        'https://vignette.wikia.nocookie.net/starwars/images/0/02/Phasma.png/revision/latest/scale-to-width-down/500?cb=20171231052405'
+    },
+    86: {
+      name: 'Padmé Amidala',
+      image:
+        'https://vignette.wikia.nocookie.net/starwars/images/b/b2/Padmegreenscrshot.jpg/revision/latest/scale-to-width-down/500?cb=20100423143631'
+    }
+  }
+];
