@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import StarshipsItem from './StarshipsItem';
+import { starshipImages } from '../data/imageData';
 import { Row, Col } from 'antd';
 import { Layout } from 'antd';
 const { Content } = Layout;
@@ -19,6 +20,7 @@ class StarshipsHolder extends Component {
     super(props);
     this.state = {
       items: [],
+      starshipImg: starshipImages,
       loading: true
     };
   }
@@ -60,22 +62,28 @@ class StarshipsHolder extends Component {
       list = this.state.items.map((item, index) => {
         return (
           <Col key={index} xs={24} sm={24} md={14} lg={12} xl={12} xxl={8}>
-            <StarshipsItem
-              id={indices[index]}
-              name={item.name}
-              model={item.model}
-              manufacturer={item.manufacturer}
-              cost_in_credits={item.cost_in_credits}
-              length={item.length}
-              max_atmosphering_speed={item.max_atmosphering_speed}
-              crew={item.crew}
-              passengers={item.passengers}
-              cargo_capacity={item.cargo_capacity}
-              consumables={item.consumables}
-              hyperdrive_rating={item.hyperdrive_rating}
-              MGLT={item.MGLT}
-              starship_class={item.starship_class}
-            />
+            {this.state.starshipImg.map(starship => {
+              return (
+                <StarshipsItem
+                  key={index}
+                  id={indices[index]}
+                  image={starship[index].image}
+                  name={item.name}
+                  model={item.model}
+                  manufacturer={item.manufacturer}
+                  cost_in_credits={item.cost_in_credits}
+                  length={item.length}
+                  max_atmosphering_speed={item.max_atmosphering_speed}
+                  crew={item.crew}
+                  passengers={item.passengers}
+                  cargo_capacity={item.cargo_capacity}
+                  consumables={item.consumables}
+                  hyperdrive_rating={item.hyperdrive_rating}
+                  MGLT={item.MGLT}
+                  starship_class={item.starship_class}
+                />
+              );
+            })}
           </Col>
         );
       });

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import PlanetsItem from './PlanetsItem';
+import { planetImages } from '../data/imageData';
 import { Row, Col } from 'antd';
 import { Layout } from 'antd';
 const { Content } = Layout;
@@ -22,6 +23,7 @@ class PlanetsHolder extends Component {
     super(props);
     this.state = {
       items: [],
+      planetImg: planetImages,
       loading: true
     };
   }
@@ -66,18 +68,24 @@ class PlanetsHolder extends Component {
       list = this.state.items.map((item, index) => {
         return (
           <Col key={index} xs={24} sm={16} md={12} lg={8} xl={6} xxl={6}>
-            <PlanetsItem
-              id={indices[index]}
-              name={item.name}
-              rotation_period={item.rotation_period}
-              orbital_period={item.orbital_period}
-              diameter={item.diameter}
-              climate={item.climate}
-              gravity={item.gravity}
-              terrain={item.terrain}
-              surface_water={item.surface_water}
-              population={item.population}
-            />
+            {this.state.planetImg.map(planet => {
+              return (
+                <PlanetsItem
+                  key={index}
+                  id={indices[index]}
+                  image={planet[index].image}
+                  name={item.name}
+                  rotation_period={item.rotation_period}
+                  orbital_period={item.orbital_period}
+                  diameter={item.diameter}
+                  climate={item.climate}
+                  gravity={item.gravity}
+                  terrain={item.terrain}
+                  surface_water={item.surface_water}
+                  population={item.population}
+                />
+              );
+            })}
           </Col>
         );
       });

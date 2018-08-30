@@ -33,6 +33,7 @@ Ant design styles
   margin: 0;
   padding: 0;
   background-color: black;
+  font-weight: 900;
 }
 
 .ant-back-top {
@@ -66,28 +67,53 @@ Ant design styles
 .ant-card-head {
   background-color: rgba(34, 34, 34, 0.5);
   border-bottom: 1px solid #333;
+  text-transform: capitalize;
+  font-size: 10px;
 }
 
 .ant-card-head-title {
   color: #975c9f;
+  font-size: 20px;
+  font-family: 'Abel', sans-serif;
+}
+
+.ant-card-cover {
+  min-height: 300px;
+}
+
+.ant-card-cover img {
+  width: 300px;
+  margin: 0 auto;
+  padding: 1px;
+  overflow: none;
+}
+
+.ant-card-vehicle-starship-cover img {
+  margin: 0 auto;
+  padding: 1px;
+  overflow: none;
 }
 
 .ant-card-body {
   color: #40a9ff;
-  padding: 10px;
+  padding: 0 40px 5px 40px;
+  font-family: 'Archivo Narrow', sans-serif;
 }
 
 .ant-card-body p {
   color: #40a9ff;
   margin: 0;
-  padding-top: 16px;
-  font-size: 14px;
+  padding-top: 7px;
+  font-size: 11px;
+  font-weight: 900;
+  text-transform: uppercase;
 }
 
 .ant-card-body span {
   color: rgba(255, 255, 255, 0.77);
   padding-bottom: 5px;
   font-size: 14px;
+  text-transform: capitalize;
 }
 
 /* 
@@ -161,7 +187,7 @@ Section styles
 }
 
 .content-people-species-box {
-  max-width: 550px;
+  max-width: 500px;
   min-height: 200px;
 }
 
@@ -187,10 +213,95 @@ Section styles
   width: 10vw;
 }
 
+.content-img-people img {
+  width: auto;
+  margin: 0 auto;
+  padding: 15px;
+  max-height: 300px;
+}
+
+.people-img-filter img {
+  filter: brightness(90%) sepia(75%) hue-rotate(90deg);
+}
+
+.content-img-species img {
+  width: auto;
+  max-height: 300px;
+  margin: 0 auto;
+  padding: 15px;
+  min-height: 300px;
+  max-height: 300px;
+}
+
+.species-img-filter img {
+  filter: brightness(90%) sepia(75%) hue-rotate(210deg);
+}
+
+.content-img-vehicles img {
+  width: auto;
+  margin: 0 auto;
+  padding-top: 1px;
+  max-height: 250px;
+}
+
+.vehicles-img-filter img {
+  filter: brightness(90%) sepia(75%) hue-rotate(45deg);
+}
+
+.content-img-starships img {
+  width: auto;
+  margin: 0 auto;
+  padding-top: 1px;
+  max-height: 250px;
+}
+
+.starships-img-filter img {
+  filter: brightness(90%) sepia(75%) hue-rotate(90deg);
+}
+
+.content-img-planets img {
+  max-width: 100%;
+  min-height: 150px;
+  max-height: 300px;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+.planets-img-filter img {
+  filter: brightness(135%) contrast(115%);
+}
+
+.content-img-films img {
+  margin: 0 auto;
+  padding-top: 15px;
+}
+
+.films-img-filter img {
+  filter: brightness(90%);
+}
+
+.ant-card-head-title {
+  color: #975c9f;
+  font-weight: 900;
+  letter-spacing: 1px;
+}
+
 @media screen and (max-width: 622px) {
   .ant-layout-header {
     margin: 0 0 50px 0;
     padding: 0;
+  }
+  .ant-card-cover {
+    min-height: 10px;
+  }
+}
+
+@media screen and (max-width: 2000px) {
+  .content-img-starships img,
+  .content-img-vehicles img {
+    max-width: 100%;
+    min-height: auto;
+    padding: 15px;
   }
 }
 

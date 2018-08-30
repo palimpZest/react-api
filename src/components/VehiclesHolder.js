@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import VehiclesItem from './VehiclesItem';
+import { vehicleImages } from '../data/imageData';
 import { Row, Col } from 'antd';
 import { Layout } from 'antd';
 const { Content } = Layout;
@@ -19,6 +20,7 @@ class VehiclesHolder extends Component {
     super(props);
     this.state = {
       items: [],
+      vehicleImg: vehicleImages,
       loading: true
     };
   }
@@ -59,17 +61,23 @@ class VehiclesHolder extends Component {
     } else {
       list = this.state.items.map((item, index) => {
         return (
-          <Col key={index} xs={24} sm={12} md={10} lg={8} xl={8} xxl={4}>
-            <VehiclesItem
-              id={indices[index]}
-              name={item.name}
-              model={item.model}
-              manufacturer={item.manufacturer}
-              length={item.length}
-              crew={item.crew}
-              passengers={item.passengers}
-              vehicle_class={item.vehicle_class}
-            />
+          <Col key={index} xs={24} sm={16} md={12} lg={12} xl={8} xxl={6}>
+            {this.state.vehicleImg.map(vehicle => {
+              return (
+                <VehiclesItem
+                  key={index}
+                  id={indices[index]}
+                  image={vehicle[index].image}
+                  name={item.name}
+                  model={item.model}
+                  manufacturer={item.manufacturer}
+                  length={item.length}
+                  crew={item.crew}
+                  passengers={item.passengers}
+                  vehicle_class={item.vehicle_class}
+                />
+              );
+            })}
           </Col>
         );
       });

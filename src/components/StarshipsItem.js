@@ -7,6 +7,7 @@ class StarshipsItem extends Component {
   render() {
     const {
       id,
+      image,
       name,
       model,
       manufacturer,
@@ -21,7 +22,11 @@ class StarshipsItem extends Component {
     } = this.props;
     return (
       <Link to={`/starships/${id}`}>
-        <Card title={name} className="content-box">
+        <Card
+          title={name}
+          cover={<img alt={name} src={`${image}`} />}
+          className="content-box ant-card-vehicle-starship-cover content-img-starships starships-img-filter"
+        >
           <Row type="flex" justify="space-around" gutter={8}>
             <Col xs={24} sm={24} md={24} lg={24} xl={24} xxl={32}>
               <p>Model</p>

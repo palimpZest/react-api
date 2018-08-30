@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import FilmsItem from './FilmsItem';
+import { filmImages } from '../data/imageData';
 import { Row, Col } from 'antd';
 import { Layout } from 'antd';
 const { Content } = Layout;
@@ -14,6 +15,7 @@ class PlanetsHolder extends Component {
     super(props);
     this.state = {
       items: [],
+      filmImg: filmImages,
       loading: true
     };
   }
@@ -54,13 +56,19 @@ class PlanetsHolder extends Component {
       list = this.state.items.map((item, index) => {
         return (
           <Col key={index} xs={24} sm={18} md={16} lg={12} xl={8} xxl={7}>
-            <FilmsItem
-              id={indices[index]}
-              title={item.title}
-              episode_id={item.episode_id}
-              opening_crawl={item.opening_crawl}
-              release_date={item.release_date}
-            />
+            {this.state.filmImg.map(film => {
+              return (
+                <FilmsItem
+                  key={index}
+                  id={indices[index]}
+                  image={film[index].image}
+                  title={item.title}
+                  episode_id={item.episode_id}
+                  opening_crawl={item.opening_crawl}
+                  release_date={item.release_date}
+                />
+              );
+            })}
           </Col>
         );
       });

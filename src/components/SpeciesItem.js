@@ -7,6 +7,7 @@ class SpeciesItem extends Component {
   render() {
     const {
       id,
+      image,
       name,
       classification,
       designation,
@@ -16,7 +17,11 @@ class SpeciesItem extends Component {
     } = this.props;
     return (
       <Link to={`/species/${id}`}>
-        <Card title={name} className="content-box">
+        <Card
+          title={name}
+          cover={<img alt={name} src={`${image}`} />}
+          className="content-box content-img-species species-img-filter"
+        >
           <Row type="flex" justify="space-around" gutter={4}>
             <Col>
               <p>Classification</p>

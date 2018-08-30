@@ -4,12 +4,14 @@ import Card from 'antd/lib/card';
 import { Row, Col } from 'antd';
 import axios from 'axios';
 import arrow from '../../play-button.svg';
+import { filmImages } from '../../data/imageData';
 
 class FilmsShowItem extends Component {
   constructor(props) {
     super(props);
     this.state = {
       item: [],
+      film: filmImages[0],
       loading: true
     };
   }
@@ -31,6 +33,14 @@ class FilmsShowItem extends Component {
           <Card
             loading={this.state.loading}
             title={title}
+            cover={
+              !this.state.loading && (
+                <img
+                  alt={title}
+                  src={`${this.state.film[episode_id - 1].image}`}
+                />
+              )
+            }
             className="content-box content-film-box"
           >
             <Row type="flex" justify="space-around" gutter={16}>
