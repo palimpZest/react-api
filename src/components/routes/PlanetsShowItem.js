@@ -76,7 +76,7 @@ class PlanetsShowItem extends Component {
                 />
               )
             }
-            className="content-box content-planet-box"
+            className="content-box content-planet-box content-img-planets"
           >
             <Row type="flex" justify="space-around" gutter={8}>
               <Col>

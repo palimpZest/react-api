@@ -20,7 +20,7 @@ class SpeciesItem extends Component {
         <Card
           title={name}
           cover={<img alt={name} src={`${image}`} />}
-          className="content-box"
+          className="content-box content-img-species species-img-filter"
         >
           <Row type="flex" justify="space-around" gutter={4}>
             <Col>

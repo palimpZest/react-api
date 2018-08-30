@@ -21,7 +21,6 @@ class PeopleShowItem extends Component {
     axios.get(`https://swapi.co/api${this.props.match.url}/`).then(response => {
       this.setState({
         item: response.data
-        // loading: false
       });
       Object.values(this.state.people).map(result => {
         if (result.name === this.state.item.name) {
@@ -51,7 +50,7 @@ class PeopleShowItem extends Component {
                 <img alt={name} src={`${this.state.peopleImg}`} />
               )
             }
-            className="content-box content-people-species-box"
+            className="content-box content-img-people content-people-species-box"
           >
             <Row type="flex" justify="space-around" gutter={4}>
               <Col>

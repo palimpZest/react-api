@@ -57,7 +57,7 @@ class VehiclesShowItem extends Component {
                 <img alt={name} src={`${this.state.vehicleImg}`} />
               )
             }
-            className="content-box content-vehicle-box"
+            className="content-box ant-card-vehicle-starship-cover content-img-vehicles content-vehicle-box"
           >
             <Row type="flex" justify="space-around" gutter={4}>
               <Col xs={24} sm={24} md={24} lg={24} xl={24} xxl={32}>

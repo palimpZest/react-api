@@ -18,7 +18,7 @@ class FilmsItem extends Component {
         <Card
           title={title}
           cover={<img alt={title} src={`${image}`} />}
-          className="content-box"
+          className="content-box content-img-films films-img-filter"
         >
           <Row type="flex" justify="space-around" gutter={16}>
             <Col>

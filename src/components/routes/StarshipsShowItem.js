@@ -61,7 +61,7 @@ class StarshipsShowItem extends Component {
                 <img alt={name} src={`${this.state.starshipImg}`} />
               )
             }
-            className="content-box content-starship-box"
+            className="content-box ant-card-vehicle-starship-cover content-starship-box content-img-starships"
           >
             <Row type="flex" justify="space-around" gutter={8}>
               <Col xs={24} sm={24} md={24} lg={24} xl={24} xxl={32}>

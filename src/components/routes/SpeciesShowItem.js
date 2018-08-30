@@ -58,7 +58,7 @@ class SpeciesShowItem extends Component {
                 <img alt={name} src={`${this.state.speciesImg}`} />
               )
             }
-            className="content-box content-people-species-box"
+            className="content-box content-img-species content-people-species-box"
           >
             <Row type="flex" justify="space-around" gutter={4}>
               <Col>

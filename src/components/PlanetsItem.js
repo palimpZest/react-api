@@ -23,7 +23,7 @@ class PlanetsItem extends Component {
         <Card
           title={name}
           cover={<img alt={name} src={`${image}`} />}
-          className="content-box"
+          className="content-box content-img-planets planets-img-filter"
         >
           <Row type="flex" justify="space-around" gutter={8}>
             <Col>

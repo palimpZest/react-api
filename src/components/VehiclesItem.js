@@ -21,7 +21,7 @@ class VehiclesItem extends Component {
         <Card
           title={name}
           cover={<img alt={name} src={`${image}`} />}
-          className="content-box"
+          className="content-box ant-card-vehicle-starship-cover content-img-vehicles vehicles-img-filter"
         >
           <Row type="flex" justify="space-around" gutter={4}>
             <Col xs={24} sm={24} md={24} lg={24} xl={24} xxl={32}>
