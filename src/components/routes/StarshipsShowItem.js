@@ -51,7 +51,6 @@ class StarshipsShowItem extends Component {
     } = this.state.item;
     return (
       <Row type="flex" justify="center">
-        <br />
         <Col type="flex" justify="center">
           <Card
             loading={this.state.loading}

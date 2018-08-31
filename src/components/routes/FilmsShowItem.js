@@ -28,7 +28,6 @@ class FilmsShowItem extends Component {
     const { title, episode_id, opening_crawl, release_date } = this.state.item;
     return (
       <Row type="flex" justify="center">
-        <br />
         <Col type="flex" justify="center">
           <Card
             loading={this.state.loading}
