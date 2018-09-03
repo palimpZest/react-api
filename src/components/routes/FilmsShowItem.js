@@ -64,7 +64,7 @@ class FilmsShowItem extends Component {
               <img
                 src={arrow}
                 alt="arrow up"
-                className="ant-inner ant-back-inner"
+                className="ant-inner ant-individual-inner ant-back-inner"
               />
             </NavLink>
           </Row>

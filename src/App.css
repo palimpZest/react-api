@@ -63,6 +63,10 @@ Ant design styles
   font-size: 20px;
 }
 
+.ant-individual-inner {
+  margin-top: 50px;
+}
+
 .ant-back-top-inner {
   transform: rotate(270deg);
 }
@@ -141,8 +145,8 @@ Section styles
 
 .App-logo {
   animation: App-logo-spin infinite 10s linear;
-  margin: 55px 0;
-  height: 200px;
+  margin: 100px 0 45px 0;
+  height: 170px;
 }
 
 .App-header {
@@ -299,7 +303,7 @@ Section styles
 
 @media screen and (max-width: 639px) {
   .ant-layout-header {
-    margin: 0 0 50px 0;
+    margin: 0;
     padding: 0;
   }
   .ant-card-cover {
