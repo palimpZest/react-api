@@ -51,7 +51,6 @@ class StarshipsShowItem extends Component {
     } = this.state.item;
     return (
       <Row type="flex" justify="center">
-        <br />
         <Col type="flex" justify="center">
           <Card
             loading={this.state.loading}
@@ -112,7 +111,7 @@ class StarshipsShowItem extends Component {
               <img
                 src={arrow}
                 alt="arrow up"
-                className="ant-inner ant-back-inner"
+                className="ant-inner ant-individual-inner ant-back-inner"
               />
             </NavLink>
           </Row>

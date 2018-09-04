@@ -74,7 +74,7 @@ class PlanetsHolder extends Component {
       });
     }
     return (
-      <Content style={{ padding: '0 10px' }}>
+      <Content>
         <Row
           type="flex"
           justify="space-around"

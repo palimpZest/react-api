@@ -28,7 +28,6 @@ class FilmsShowItem extends Component {
     const { title, episode_id, opening_crawl, release_date } = this.state.item;
     return (
       <Row type="flex" justify="center">
-        <br />
         <Col type="flex" justify="center">
           <Card
             loading={this.state.loading}
@@ -65,7 +64,7 @@ class FilmsShowItem extends Component {
               <img
                 src={arrow}
                 alt="arrow up"
-                className="ant-inner ant-back-inner"
+                className="ant-inner ant-individual-inner ant-back-inner"
               />
             </NavLink>
           </Row>

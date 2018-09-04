@@ -21,12 +21,16 @@ import { Row } from 'antd';
 import { Layout, Menu } from 'antd';
 const { Header } = Layout;
 
+const Footer = () => {
+  return <div style={{ height: '120px' }} />;
+};
+
 class App extends Component {
   render() {
     return (
       <BrowserRouter>
         <nav>
-          <Header>
+          <Header className="header-style">
             <Row
               type="flex"
               justify="space-around"
@@ -36,7 +40,6 @@ class App extends Component {
                 theme="dark"
                 mode="horizontal"
                 style={{
-                  lineHeight: '64px',
                   backgroundColor: 'black',
                   color: 'blue'
                 }}
@@ -102,6 +105,7 @@ class App extends Component {
             <Route path="/films/:id" component={FilmsShowItem} />
             <Route component={NotFound} />
           </Switch>
+          <Footer />
         </nav>
       </BrowserRouter>
     );
