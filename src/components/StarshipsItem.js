@@ -24,7 +24,7 @@ class StarshipsItem extends Component {
       <Link to={`/starships/${id}`}>
         <Card
           title={name}
-          cover={<img alt={name} src={`${image}`} />}
+          cover={image && <img alt={name} src={`${image}`} />}
           className="content-box ant-card-vehicle-starship-cover content-img-starships starships-img-filter"
         >
           <Row type="flex" justify="space-around" gutter={8}>

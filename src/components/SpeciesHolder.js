@@ -35,9 +35,12 @@ class SpeciesHolder extends Component {
             page3.data.results,
             page4.data.results
           );
-          this.setState({ items: allItems, loading: false });
+          this.setState({ items: allItems });
         })
       )
+      .then(() => {
+        this.setState({ loading: false });
+      })
       .catch(error => console.log(error));
   }
 
@@ -47,41 +50,37 @@ class SpeciesHolder extends Component {
       return removedText;
     });
     let list;
-
-    if (this.state.loading) {
-      list = (
-        <div>
+    this.state.loading
+      ? (list = (
           <img
             className="loading-icon"
             src="https://media.giphy.com/media/TZf4ZyXb0lXXi/giphy.gif"
             alt="loading icon"
           />
-        </div>
-      );
-    } else {
-      list = this.state.items.map((item, index) => {
-        return (
-          <Col key={index} xs={24} sm={16} md={12} lg={8} xl={6} xxl={5}>
-            {this.state.speciesImg.map(species => {
-              return (
-                <SpeciesItem
-                  key={index}
-                  id={indices[index]}
-                  image={species[index].image}
-                  url={item.url}
-                  name={item.name}
-                  classification={item.classification}
-                  designation={item.designation}
-                  average_height={item.average_height}
-                  average_lifespan={item.average_lifespan}
-                  language={item.language}
-                />
-              );
-            })}
-          </Col>
-        );
-      });
-    }
+        ))
+      : (list = this.state.items.map((item, index) => {
+          return (
+            <Col key={index} xs={24} sm={16} md={12} lg={8} xl={6} xxl={5}>
+              {this.state.speciesImg.map(species => {
+                return (
+                  <SpeciesItem
+                    key={index}
+                    id={indices[index]}
+                    image={species[index].image}
+                    url={item.url}
+                    name={item.name}
+                    classification={item.classification}
+                    designation={item.designation}
+                    average_height={item.average_height}
+                    average_lifespan={item.average_lifespan}
+                    language={item.language}
+                  />
+                );
+              })}
+            </Col>
+          );
+        }));
+
     return (
       <Content>
         <Row

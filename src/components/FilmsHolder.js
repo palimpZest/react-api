@@ -24,13 +24,15 @@ class PlanetsHolder extends Component {
     axios
       .get(filmCalls)
       .then(response => {
-        let sortedItems = response.data.results.sort(function(a, b) {
+        let sortedItems = response.data.results.sort((a, b) => {
           return a.episode_id - b.episode_id;
         });
         this.setState({
-          items: sortedItems,
-          loading: false
+          items: sortedItems
         });
+      })
+      .then(() => {
+        this.setState({ loading: false });
       })
       .catch(error => console.log(error));
   }
@@ -41,38 +43,34 @@ class PlanetsHolder extends Component {
       return removedText;
     });
     let list;
-
-    if (this.state.loading) {
-      list = (
-        <div>
+    this.state.loading
+      ? (list = (
           <img
             className="loading-icon"
             src="https://media.giphy.com/media/TZf4ZyXb0lXXi/giphy.gif"
             alt="loading icon"
           />
-        </div>
-      );
-    } else {
-      list = this.state.items.map((item, index) => {
-        return (
-          <Col key={index} xs={24} sm={18} md={16} lg={12} xl={8} xxl={7}>
-            {this.state.filmImg.map(film => {
-              return (
-                <FilmsItem
-                  key={index}
-                  id={indices[index]}
-                  image={film[index].image}
-                  title={item.title}
-                  episode_id={item.episode_id}
-                  opening_crawl={item.opening_crawl}
-                  release_date={item.release_date}
-                />
-              );
-            })}
-          </Col>
-        );
-      });
-    }
+        ))
+      : (list = this.state.items.map((item, index) => {
+          return (
+            <Col key={index} xs={24} sm={18} md={16} lg={12} xl={8} xxl={7}>
+              {this.state.filmImg.map(film => {
+                return (
+                  <FilmsItem
+                    key={index}
+                    id={indices[index]}
+                    image={film[index].image}
+                    title={item.title}
+                    episode_id={item.episode_id}
+                    opening_crawl={item.opening_crawl}
+                    release_date={item.release_date}
+                  />
+                );
+              })}
+            </Col>
+          );
+        }));
+
     return (
       <Content>
         <Row

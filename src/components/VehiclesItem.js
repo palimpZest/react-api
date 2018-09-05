@@ -20,7 +20,7 @@ class VehiclesItem extends Component {
       <Link to={`/vehicles/${id}`}>
         <Card
           title={name}
-          cover={<img alt={name} src={`${image}`} />}
+          cover={image && <img alt={name} src={`${image}`} />}
           className="content-box ant-card-vehicle-starship-cover content-img-vehicles vehicles-img-filter"
         >
           <Row type="flex" justify="space-around" gutter={4}>

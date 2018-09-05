@@ -35,9 +35,12 @@ class StarshipsHolder extends Component {
             page3.data.results,
             page4.data.results
           );
-          this.setState({ items: allItems, loading: false });
+          this.setState({ items: allItems });
         })
       )
+      .then(() => {
+        this.setState({ loading: false });
+      })
       .catch(error => console.log(error));
   }
 
@@ -47,47 +50,43 @@ class StarshipsHolder extends Component {
       return removedText;
     });
     let list;
-
-    if (this.state.loading) {
-      list = (
-        <div>
+    this.state.loading
+      ? (list = (
           <img
             className="loading-icon"
             src="https://media.giphy.com/media/TZf4ZyXb0lXXi/giphy.gif"
             alt="loading icon"
           />
-        </div>
-      );
-    } else {
-      list = this.state.items.map((item, index) => {
-        return (
-          <Col key={index} xs={24} sm={24} md={14} lg={12} xl={12} xxl={8}>
-            {this.state.starshipImg.map(starship => {
-              return (
-                <StarshipsItem
-                  key={index}
-                  id={indices[index]}
-                  image={starship[index].image}
-                  name={item.name}
-                  model={item.model}
-                  manufacturer={item.manufacturer}
-                  cost_in_credits={item.cost_in_credits}
-                  length={item.length}
-                  max_atmosphering_speed={item.max_atmosphering_speed}
-                  crew={item.crew}
-                  passengers={item.passengers}
-                  cargo_capacity={item.cargo_capacity}
-                  consumables={item.consumables}
-                  hyperdrive_rating={item.hyperdrive_rating}
-                  MGLT={item.MGLT}
-                  starship_class={item.starship_class}
-                />
-              );
-            })}
-          </Col>
-        );
-      });
-    }
+        ))
+      : (list = this.state.items.map((item, index) => {
+          return (
+            <Col key={index} xs={24} sm={24} md={14} lg={12} xl={12} xxl={8}>
+              {this.state.starshipImg.map(starship => {
+                return (
+                  <StarshipsItem
+                    key={index}
+                    id={indices[index]}
+                    image={starship[index].image}
+                    name={item.name}
+                    model={item.model}
+                    manufacturer={item.manufacturer}
+                    cost_in_credits={item.cost_in_credits}
+                    length={item.length}
+                    max_atmosphering_speed={item.max_atmosphering_speed}
+                    crew={item.crew}
+                    passengers={item.passengers}
+                    cargo_capacity={item.cargo_capacity}
+                    consumables={item.consumables}
+                    hyperdrive_rating={item.hyperdrive_rating}
+                    MGLT={item.MGLT}
+                    starship_class={item.starship_class}
+                  />
+                );
+              })}
+            </Col>
+          );
+        }));
+
     return (
       <Content>
         <Row

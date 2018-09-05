@@ -46,10 +46,13 @@ class PeopleHolder extends Component {
               page8.data.results,
               page9.data.results
             );
-            this.setState({ items: allItems, loading: false });
+            this.setState({ items: allItems });
           }
         )
       )
+      .then(() => {
+        this.setState({ loading: false });
+      })
       .catch(error => console.log(error));
   }
 
@@ -59,39 +62,35 @@ class PeopleHolder extends Component {
       return removedText;
     });
     let list;
-
-    if (this.state.loading) {
-      list = (
-        <div>
+    this.state.loading
+      ? (list = (
           <img
             className="loading-icon"
             src="https://media.giphy.com/media/TZf4ZyXb0lXXi/giphy.gif"
             alt="loading icon"
           />
-        </div>
-      );
-    } else {
-      list = this.state.items.map((item, index) => {
-        return (
-          <Col key={index} xs={22} sm={12} md={8} lg={7} xl={6} xxl={5}>
-            {this.state.peopleImg.map(people => {
-              return (
-                <PeopleItem
-                  key={index}
-                  id={indices[index]}
-                  image={people[index].image}
-                  name={item.name}
-                  birth_year={item.birth_year}
-                  gender={item.gender}
-                  height={item.height}
-                  mass={item.mass}
-                />
-              );
-            })}
-          </Col>
-        );
-      });
-    }
+        ))
+      : (list = this.state.items.map((item, index) => {
+          return (
+            <Col key={index} xs={22} sm={12} md={8} lg={7} xl={6} xxl={5}>
+              {this.state.peopleImg.map(people => {
+                return (
+                  <PeopleItem
+                    key={index}
+                    id={indices[index]}
+                    image={people[index].image}
+                    name={item.name}
+                    birth_year={item.birth_year}
+                    gender={item.gender}
+                    height={item.height}
+                    mass={item.mass}
+                  />
+                );
+              })}
+            </Col>
+          );
+        }));
+
     return (
       <Content>
         <Row

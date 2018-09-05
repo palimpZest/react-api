@@ -35,9 +35,12 @@ class VehiclesHolder extends Component {
             page3.data.results,
             page4.data.results
           );
-          this.setState({ items: allItems, loading: false });
+          this.setState({ items: allItems });
         })
       )
+      .then(() => {
+        this.setState({ loading: false });
+      })
       .catch(error => console.log(error));
   }
 
@@ -47,41 +50,39 @@ class VehiclesHolder extends Component {
       return removedText;
     });
     let list;
+    this.state.loading
+      ? (list = (
+          <div>
+            <img
+              className="loading-icon"
+              src="https://media.giphy.com/media/TZf4ZyXb0lXXi/giphy.gif"
+              alt="loading icon"
+            />
+          </div>
+        ))
+      : (list = this.state.items.map((item, index) => {
+          return (
+            <Col key={index} xs={24} sm={16} md={12} lg={12} xl={8} xxl={6}>
+              {this.state.vehicleImg.map(vehicle => {
+                return (
+                  <VehiclesItem
+                    key={index}
+                    id={indices[index]}
+                    image={vehicle[index].image}
+                    name={item.name}
+                    model={item.model}
+                    manufacturer={item.manufacturer}
+                    length={item.length}
+                    crew={item.crew}
+                    passengers={item.passengers}
+                    vehicle_class={item.vehicle_class}
+                  />
+                );
+              })}
+            </Col>
+          );
+        }));
 
-    if (this.state.loading) {
-      list = (
-        <div>
-          <img
-            className="loading-icon"
-            src="https://media.giphy.com/media/TZf4ZyXb0lXXi/giphy.gif"
-            alt="loading icon"
-          />
-        </div>
-      );
-    } else {
-      list = this.state.items.map((item, index) => {
-        return (
-          <Col key={index} xs={24} sm={16} md={12} lg={12} xl={8} xxl={6}>
-            {this.state.vehicleImg.map(vehicle => {
-              return (
-                <VehiclesItem
-                  key={index}
-                  id={indices[index]}
-                  image={vehicle[index].image}
-                  name={item.name}
-                  model={item.model}
-                  manufacturer={item.manufacturer}
-                  length={item.length}
-                  crew={item.crew}
-                  passengers={item.passengers}
-                  vehicle_class={item.vehicle_class}
-                />
-              );
-            })}
-          </Col>
-        );
-      });
-    }
     return (
       <Content>
         <Row
