@@ -60,7 +60,7 @@ class StarshipsHolder extends Component {
         ))
       : (list = this.state.items.map((item, index) => {
           return (
-            <Col key={index} xs={24} sm={24} md={14} lg={12} xl={12} xxl={8}>
+            <Col key={index} xs={24} sm={16} md={12} lg={12} xl={8} xxl={6}>
               {this.state.starshipImg.map(starship => {
                 return (
                   <StarshipsItem
@@ -92,7 +92,7 @@ class StarshipsHolder extends Component {
         <Row
           type="flex"
           justify="space-around"
-          gutter={{ xs: 8, sm: 16, md: 8, lg: 8, xl: 8, xxl: 8 }}
+          gutter={{ xs: 8, sm: 16, md: 4, lg: 4, xl: 8, xxl: 0 }}
         >
           {list}
         </Row>
