@@ -72,7 +72,7 @@ class PeopleHolder extends Component {
         ))
       : (list = this.state.items.map((item, index) => {
           return (
-            <Col key={index} xs={22} sm={12} md={8} lg={7} xl={6} xxl={5}>
+            <Col key={index} xs={24} sm={12} md={8} lg={7} xl={6} xxl={5}>
               {this.state.peopleImg.map(people => {
                 return (
                   <PeopleItem
