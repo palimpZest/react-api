@@ -21,10 +21,6 @@ import { Row } from 'antd';
 import { Layout, Menu } from 'antd';
 const { Header } = Layout;
 
-const Footer = () => {
-  return <div style={{ height: '120px' }} />;
-};
-
 class App extends Component {
   render() {
     return (
@@ -92,17 +88,17 @@ class App extends Component {
           <Switch>
             <Route exact path="/" component={Home} />
             <Route exact path="/people" component={PeopleHolder} />
-            <Route path="/people/:id" component={PeopleShowItem} />
+            <Route path="/people/:id(\d+)" component={PeopleShowItem} />
             <Route exact path="/species" component={SpeciesHolder} />
-            <Route path="/species/:id" component={SpeciesShowItem} />
+            <Route path="/species/:id(\d+)" component={SpeciesShowItem} />
             <Route exact path="/vehicles" component={VehiclesHolder} />
-            <Route path="/vehicles/:id" component={VehiclesShowItem} />
+            <Route path="/vehicles/:id(\d+)" component={VehiclesShowItem} />
             <Route exact path="/starships" component={StarshipsHolder} />
-            <Route path="/starships/:id" component={StarshipsShowItem} />
+            <Route path="/starships/:id(\d+)" component={StarshipsShowItem} />
             <Route exact path="/planets" component={PlanetsHolder} />
-            <Route path="/planets/:id" component={PlanetsShowItem} />
+            <Route path="/planets/:id(\d+)" component={PlanetsShowItem} />
             <Route exact path="/films" component={FilmsHolder} />
-            <Route path="/films/:id" component={FilmsShowItem} />
+            <Route path="/films/:id(\d+)" component={FilmsShowItem} />
             <Route component={NotFound} />
           </Switch>
           <Footer />
@@ -111,5 +107,9 @@ class App extends Component {
     );
   }
 }
+
+const Footer = () => {
+  return <div className="footer" />;
+};
 
 export default App;

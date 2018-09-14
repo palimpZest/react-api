@@ -12,7 +12,7 @@ class PlanetsShowItem extends Component {
     this.state = {
       item: [],
       planet: planetImages[0],
-      planetId: null,
+      planetImg: null,
       loading: true
     };
   }
@@ -22,30 +22,16 @@ class PlanetsShowItem extends Component {
       this.setState({
         item: response.data
       });
-      // Due to missing data or incoherent response. the following lines allow
-      // to display the images for Tatooine and Jakku correctly
-      let removedText = this.state.item.url.replace(/\D+/g, '');
-      let removeTextToNumber = parseInt(removedText, 10) - 2;
-      if (removeTextToNumber === -1) {
-        console.log('Tatooine called');
-        removeTextToNumber = 59;
-        console.log('planetId changed to show corresponding image');
-        this.setState({
-          planetId: removeTextToNumber,
-          loading: false
-        });
-      } else if (removeTextToNumber === 59) {
-        console.log('Jakku called');
-        removeTextToNumber = 60;
-        console.log('planetId changed to show corresponding image');
-        this.setState({
-          planetId: removeTextToNumber,
-          loading: false
-        });
-      }
-      this.setState({
-        planetId: removeTextToNumber,
-        loading: false
+      Object.values(this.state.planet).map(result => {
+        if (result.name === this.state.item.name) {
+          let linkToImg = result.image;
+          this.setState({
+            planetImg: linkToImg,
+            loading: false
+          });
+          return linkToImg;
+        }
+        return result;
       });
     });
   }
@@ -69,10 +55,7 @@ class PlanetsShowItem extends Component {
             title={name}
             cover={
               !this.state.loading && (
-                <img
-                  alt={name}
-                  src={`${this.state.planet[this.state.planetId].image}`}
-                />
+                <img alt={name} src={`${this.state.planetImg}`} />
               )
             }
             className="content-box content-planet-box content-img-planets"

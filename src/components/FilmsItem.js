@@ -16,8 +16,9 @@ class FilmsItem extends Component {
     return (
       <Link to={`/films/${id}`}>
         <Card
+          loading={!image}
           title={title}
-          cover={<img alt={title} src={`${image}`} />}
+          cover={image && <img alt={title} src={`${image}`} />}
           className="content-box content-img-films films-img-filter"
         >
           <Row type="flex" justify="space-around" gutter={16}>

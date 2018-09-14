@@ -255,7 +255,7 @@ Section styles
 .content-img-vehicles img {
   width: auto;
   margin: 0 auto;
-  padding-top: 1px;
+  padding: 15px;
   max-height: 250px;
 }
 
@@ -265,9 +265,10 @@ Section styles
 
 .content-img-starships img {
   width: auto;
-  margin: 0 auto;
-  padding-top: 1px;
+  padding: 15px;
   max-height: 250px;
+  margin: 0 auto;
+  min-height: auto;
 }
 
 .starships-img-filter img {
@@ -276,10 +277,11 @@ Section styles
 
 .content-img-planets img {
   max-width: 100%;
-  min-height: 150px;
+  width: auto;
   max-height: 300px;
+  height: auto;
   margin: 0 auto;
-  padding: 10px;
+  padding: 15px;
 }
 
 .planets-img-filter img {
@@ -301,6 +303,26 @@ Section styles
   letter-spacing: 1px;
 }
 
+/* Footer
+*/
+
+.footer {
+  height: 120px;
+}
+
+/* Not found page
+*/
+
+.not-found-holder {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100vw;
+  height: calc(100vh - 320px);
+  background: #ccc;
+  font-size: 24px;
+}
+
 @media screen and (max-width: 639px) {
   .ant-layout-header {
     margin: 0;
@@ -312,15 +334,6 @@ Section styles
   .header-style {
     position: relative;
     width: 100%;
-  }
-}
-
-@media screen and (max-width: 2000px) {
-  .content-img-starships img,
-  .content-img-vehicles img {
-    max-width: 100%;
-    min-height: auto;
-    padding: 15px;
   }
 }
 

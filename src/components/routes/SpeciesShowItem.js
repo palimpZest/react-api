@@ -21,7 +21,6 @@ class SpeciesShowItem extends Component {
     axios.get(`https://swapi.co/api${this.props.match.url}`).then(response => {
       this.setState({
         item: response.data
-        // loading: false
       });
       Object.values(this.state.species).map(result => {
         if (result.name === this.state.item.name) {
@@ -30,7 +29,6 @@ class SpeciesShowItem extends Component {
             speciesImg: linkToImg,
             loading: false
           });
-          console.log(linkToImg);
           return linkToImg;
         }
         return result;

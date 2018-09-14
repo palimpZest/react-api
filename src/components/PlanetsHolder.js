@@ -41,9 +41,12 @@ class PlanetsHolder extends Component {
             page6.data.results,
             page7.data.results
           );
-          this.setState({ items: allItems, loading: false });
+          this.setState({ items: allItems });
         })
       )
+      .then(() => {
+        this.setState({ loading: false });
+      })
       .catch(error => console.log(error));
   }
 
@@ -53,43 +56,39 @@ class PlanetsHolder extends Component {
       return removedText;
     });
     let list;
-
-    if (this.state.loading) {
-      list = (
-        <div>
+    this.state.loading
+      ? (list = (
           <img
             className="loading-icon"
             src="https://media.giphy.com/media/TZf4ZyXb0lXXi/giphy.gif"
             alt="loading icon"
           />
-        </div>
-      );
-    } else {
-      list = this.state.items.map((item, index) => {
-        return (
-          <Col key={index} xs={24} sm={16} md={12} lg={8} xl={6} xxl={6}>
-            {this.state.planetImg.map(planet => {
-              return (
-                <PlanetsItem
-                  key={index}
-                  id={indices[index]}
-                  image={planet[index].image}
-                  name={item.name}
-                  rotation_period={item.rotation_period}
-                  orbital_period={item.orbital_period}
-                  diameter={item.diameter}
-                  climate={item.climate}
-                  gravity={item.gravity}
-                  terrain={item.terrain}
-                  surface_water={item.surface_water}
-                  population={item.population}
-                />
-              );
-            })}
-          </Col>
-        );
-      });
-    }
+        ))
+      : (list = this.state.items.map((item, index) => {
+          return (
+            <Col key={index} xs={24} sm={16} md={12} lg={8} xl={6} xxl={6}>
+              {this.state.planetImg.map(planet => {
+                return (
+                  <PlanetsItem
+                    key={index}
+                    id={indices[index]}
+                    image={planet[index].image}
+                    name={item.name}
+                    rotation_period={item.rotation_period}
+                    orbital_period={item.orbital_period}
+                    diameter={item.diameter}
+                    climate={item.climate}
+                    gravity={item.gravity}
+                    terrain={item.terrain}
+                    surface_water={item.surface_water}
+                    population={item.population}
+                  />
+                );
+              })}
+            </Col>
+          );
+        }));
+
     return (
       <Content>
         <Row
