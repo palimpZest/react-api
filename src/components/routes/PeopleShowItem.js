@@ -29,7 +29,6 @@ class PeopleShowItem extends Component {
             peopleImg: linkToImg,
             loading: false
           });
-          console.log(linkToImg);
           return linkToImg;
         }
         return result;

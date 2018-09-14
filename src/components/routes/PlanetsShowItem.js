@@ -29,7 +29,6 @@ class PlanetsShowItem extends Component {
             planetImg: linkToImg,
             loading: false
           });
-          console.log(linkToImg);
           return linkToImg;
         }
         return result;
