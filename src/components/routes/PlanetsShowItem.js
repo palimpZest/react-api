@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom';
 import Card from 'antd/lib/card';
 import { Row, Col } from 'antd';
 import axios from 'axios';
-import arrow from '../../play-button.svg';
+import arrow from '../../icons/play-button.svg';
 import { planetImages } from '../../data/imageData';
 
 class PlanetsShowItem extends Component {

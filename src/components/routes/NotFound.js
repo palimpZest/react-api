@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
-import logo from '../../r2-d2.png';
+import logo from '../../icons/r2-d2.png';
 import { Layout } from 'antd';
 const { Content } = Layout;
 

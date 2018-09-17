@@ -16,7 +16,7 @@ import FilmsShowItem from './components/routes/FilmsShowItem';
 import NotFound from './components/routes/NotFound';
 import './App.css';
 import { BackTop } from 'antd';
-import arrow from './play-button.svg';
+import arrow from './icons/play-button.svg';
 import { Row } from 'antd';
 import { Layout, Menu } from 'antd';
 const { Header } = Layout;
