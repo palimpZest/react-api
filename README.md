@@ -24,6 +24,7 @@
 ##### **Credits**
 
 _Rd-d2 icon from Icons8._
+_Other icons by radiusss_
 _Images and photos from Wookieepedia._
 _Thanks to SWAPI for the data._
 _The characters, places, and products are © by Lucasfilm Ltd / Disney Ltd. They are used for illustrative purposes only._
