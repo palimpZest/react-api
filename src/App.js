@@ -13,10 +13,11 @@ import SpeciesShowItem from './components/routes/SpeciesShowItem';
 import StarshipsShowItem from './components/routes/StarshipsShowItem';
 import VehiclesShowItem from './components/routes/VehiclesShowItem';
 import FilmsShowItem from './components/routes/FilmsShowItem';
+import ScrollToTop from './components/routes/ScrollToTop';
 import NotFound from './components/routes/NotFound';
 import './App.css';
 import { BackTop } from 'antd';
-import arrow from './play-button.svg';
+import arrow from './icons/play-button.svg';
 import { Row } from 'antd';
 import { Layout, Menu } from 'antd';
 const { Header } = Layout;
@@ -85,22 +86,24 @@ class App extends Component {
               />
             </BackTop>
           </Header>
-          <Switch>
-            <Route exact path="/" component={Home} />
-            <Route exact path="/people" component={PeopleHolder} />
-            <Route path="/people/:id(\d+)" component={PeopleShowItem} />
-            <Route exact path="/species" component={SpeciesHolder} />
-            <Route path="/species/:id(\d+)" component={SpeciesShowItem} />
-            <Route exact path="/vehicles" component={VehiclesHolder} />
-            <Route path="/vehicles/:id(\d+)" component={VehiclesShowItem} />
-            <Route exact path="/starships" component={StarshipsHolder} />
-            <Route path="/starships/:id(\d+)" component={StarshipsShowItem} />
-            <Route exact path="/planets" component={PlanetsHolder} />
-            <Route path="/planets/:id(\d+)" component={PlanetsShowItem} />
-            <Route exact path="/films" component={FilmsHolder} />
-            <Route path="/films/:id(\d+)" component={FilmsShowItem} />
-            <Route component={NotFound} />
-          </Switch>
+          <ScrollToTop>
+            <Switch>
+              <Route exact path="/" component={Home} />
+              <Route exact path="/people" component={PeopleHolder} />
+              <Route path="/people/:id(\d+)" component={PeopleShowItem} />
+              <Route exact path="/species" component={SpeciesHolder} />
+              <Route path="/species/:id(\d+)" component={SpeciesShowItem} />
+              <Route exact path="/vehicles" component={VehiclesHolder} />
+              <Route path="/vehicles/:id(\d+)" component={VehiclesShowItem} />
+              <Route exact path="/starships" component={StarshipsHolder} />
+              <Route path="/starships/:id(\d+)" component={StarshipsShowItem} />
+              <Route exact path="/planets" component={PlanetsHolder} />
+              <Route path="/planets/:id(\d+)" component={PlanetsShowItem} />
+              <Route exact path="/films" component={FilmsHolder} />
+              <Route path="/films/:id(\d+)" component={FilmsShowItem} />
+              <Route component={NotFound} />
+            </Switch>
+          </ScrollToTop>
           <Footer />
         </nav>
       </BrowserRouter>

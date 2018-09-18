@@ -11,14 +11,6 @@ body {
   color: rgb(11, 166, 249);
 }
 
-.App {
-  text-align: center;
-}
-
-.text-center {
-  text-align: center;
-}
-
 .selected {
   color: rgb(255, 217, 0);
   text-decoration: none;
@@ -140,29 +132,63 @@ Section styles
 /* Home */
 
 .App {
-  position: relative;
+  display: flex;
+  justify-content: center;
+  text-align: center;
 }
 
 .App-logo {
   animation: App-logo-spin infinite 10s linear;
-  margin: 100px 0 45px 0;
+  margin: 120px 0 60px 0;
   height: 170px;
 }
 
 .App-header {
-  background-color: #0e0e0e;
-  height: 850px;
   color: white;
+  width: 95%;
+  font-family: 'Abel', sans-serif;
 }
 
 .greeting {
-  line-height: 30px;
-  color: #975c9f;
-  font-size: 35px;
+  max-width: 100%;
+  line-height: 42px;
+  color: #ffd900;
+  font-size: 70px;
+  font-weight: 900;
+  text-transform: uppercase;
 }
 
 .about {
-  margin-top: 35px;
+  margin: 0 auto;
+}
+
+.avatar-links {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-evenly;
+  width: 100%;
+}
+
+.avatar-style {
+  width: 90px;
+  height: 90px;
+  margin: 0 17px 17px 17px;
+  padding: 10px;
+  background-color: #cdd7ec;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #85caf7;
+}
+
+.avatar-style:hover {
+  transform: scale(1.1);
+}
+
+.tooltip-style {
+  font-family: 'Abel', sans-serif;
+  font-size: 24px;
+  color: red;
 }
 
 @keyframes App-logo-spin {
@@ -181,10 +207,12 @@ Section styles
 }
 
 .welcome-message {
-  color: #ddd;
-  font-size: 22px;
-  line-height: 60px;
-  margin: 0 35px;
+  color: #975c9f;
+  margin: 15px auto;
+  font-family: 'Abel', sans-serif;
+  text-align: center;
+  font-size: 40px;
+  font-weight: 600;
 }
 
 .warp-img {
@@ -346,11 +374,20 @@ Section styles
     width: 95%;
     margin: 80px 0;
   }
+  .greeting {
+    font-size: 60px;
+  }
 }
 
 @media screen and (max-width: 850px) and (min-width: 350px) {
   .warp-img {
     margin: 120px 0;
+  }
+  .greeting {
+    font-size: 50px;
+  }
+  .welcome-message {
+    font-size: 32px;
   }
 }
 
@@ -359,5 +396,19 @@ Section styles
     font-weight: 500;
     margin-bottom: 10px;
     padding: 0;
+  }
+  .greeting {
+    font-size: 50px;
+  }
+  .welcome-message {
+    font-size: 32px;
+  }
+}
+
+@media screen and (min-width: 850px) {
+  .avatar-links {
+    justify-content: space-evenly;
+    width: 67%;
+    margin: 0 auto;
   }
 }
