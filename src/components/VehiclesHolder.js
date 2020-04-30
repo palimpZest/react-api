@@ -1,18 +1,19 @@
-import React, { Component } from 'react';
-import axios from 'axios';
-import VehiclesItem from './VehiclesItem';
-import { vehicleImages } from '../data/imageData';
-import { Row, Col } from 'antd';
-import { Layout } from 'antd';
-const { Content } = Layout;
+import React, { Component } from "react";
+import axios from "axios";
+import { Row, Col } from "antd";
+import { Layout } from "antd";
 
-let BASE_API = 'https://swapi.co/api';
+import VehiclesItem from "./VehiclesItem";
+import { vehicleImages } from "../data/imageData";
+import { BASE_API } from "../constants";
+
+const { Content } = Layout;
 
 const vehicleCalls = [
   axios.get(`${BASE_API}/vehicles/?page=1`),
   axios.get(`${BASE_API}/vehicles/?page=2`),
   axios.get(`${BASE_API}/vehicles/?page=3`),
-  axios.get(`${BASE_API}/vehicles/?page=4`)
+  axios.get(`${BASE_API}/vehicles/?page=4`),
 ];
 
 class VehiclesHolder extends Component {
@@ -21,7 +22,7 @@ class VehiclesHolder extends Component {
     this.state = {
       items: [],
       vehicleImg: vehicleImages,
-      loading: true
+      loading: true,
     };
   }
 
@@ -33,20 +34,20 @@ class VehiclesHolder extends Component {
           let allItems = page1.data.results.concat(
             page2.data.results,
             page3.data.results,
-            page4.data.results
+            page4.data.results,
           );
           this.setState({ items: allItems });
-        })
+        }),
       )
       .then(() => {
         this.setState({ loading: false });
       })
-      .catch(error => console.log(error));
+      .catch((error) => console.log(error));
   }
 
   render() {
-    let indices = this.state.items.map(index => {
-      let removedText = index.url.replace(/\D+/g, '');
+    let indices = this.state.items.map((index) => {
+      let removedText = index.url.replace(/\D+/g, "");
       return removedText;
     });
     let list;
@@ -63,7 +64,7 @@ class VehiclesHolder extends Component {
       : (list = this.state.items.map((item, index) => {
           return (
             <Col key={index} xs={24} sm={16} md={12} lg={12} xl={8} xxl={6}>
-              {this.state.vehicleImg.map(vehicle => {
+              {this.state.vehicleImg.map((vehicle) => {
                 return (
                   <VehiclesItem
                     key={index}

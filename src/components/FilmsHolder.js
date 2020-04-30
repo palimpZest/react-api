@@ -1,12 +1,13 @@
-import React, { Component } from 'react';
-import axios from 'axios';
-import FilmsItem from './FilmsItem';
-import { filmImages } from '../data/imageData';
-import { Row, Col } from 'antd';
-import { Layout } from 'antd';
-const { Content } = Layout;
+import React, { Component } from "react";
+import axios from "axios";
+import { Row, Col } from "antd";
+import { Layout } from "antd";
 
-let BASE_API = 'https://swapi.co/api';
+import FilmsItem from "./FilmsItem";
+import { filmImages } from "../data/imageData";
+import { BASE_API } from "../constants";
+
+const { Content } = Layout;
 
 const filmCalls = [`${BASE_API}/films/?page=1`];
 
@@ -16,30 +17,30 @@ class PlanetsHolder extends Component {
     this.state = {
       items: [],
       filmImg: filmImages,
-      loading: true
+      loading: true,
     };
   }
 
   componentDidMount() {
     axios
       .get(filmCalls)
-      .then(response => {
+      .then((response) => {
         let sortedItems = response.data.results.sort((a, b) => {
           return a.episode_id - b.episode_id;
         });
         this.setState({
-          items: sortedItems
+          items: sortedItems,
         });
       })
       .then(() => {
         this.setState({ loading: false });
       })
-      .catch(error => console.log(error));
+      .catch((error) => console.log(error));
   }
 
   render() {
-    let indices = this.state.items.map(index => {
-      let removedText = index.url.replace(/\D+/g, '');
+    let indices = this.state.items.map((index) => {
+      let removedText = index.url.replace(/\D+/g, "");
       return removedText;
     });
     let list;
@@ -54,7 +55,7 @@ class PlanetsHolder extends Component {
       : (list = this.state.items.map((item, index) => {
           return (
             <Col key={index} xs={24} sm={18} md={16} lg={12} xl={8} xxl={7}>
-              {this.state.filmImg.map(film => {
+              {this.state.filmImg.map((film) => {
                 return (
                   <FilmsItem
                     key={index}

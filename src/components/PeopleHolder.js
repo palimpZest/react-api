@@ -1,12 +1,13 @@
-import React, { Component } from 'react';
-import axios from 'axios';
-import PeopleItem from './PeopleItem';
-import { peopleImages } from '../data/imageData';
-import { Row, Col } from 'antd';
-import { Layout } from 'antd';
-const { Content } = Layout;
+import React, { Component } from "react";
+import axios from "axios";
+import { Row, Col } from "antd";
+import { Layout } from "antd";
 
-let BASE_API = 'https://swapi.co/api';
+import PeopleItem from "./PeopleItem";
+import { peopleImages } from "../data/imageData";
+import { BASE_API } from "../constants";
+
+const { Content } = Layout;
 
 const peopleCalls = [
   axios.get(`${BASE_API}/people/?page=1`),
@@ -17,7 +18,7 @@ const peopleCalls = [
   axios.get(`${BASE_API}/people/?page=6`),
   axios.get(`${BASE_API}/people/?page=7`),
   axios.get(`${BASE_API}/people/?page=8`),
-  axios.get(`${BASE_API}/people/?page=9`)
+  axios.get(`${BASE_API}/people/?page=9`),
 ];
 
 class PeopleHolder extends Component {
@@ -26,7 +27,7 @@ class PeopleHolder extends Component {
     this.state = {
       items: [],
       peopleImg: peopleImages,
-      loading: true
+      loading: true,
     };
   }
 
@@ -44,21 +45,21 @@ class PeopleHolder extends Component {
               page6.data.results,
               page7.data.results,
               page8.data.results,
-              page9.data.results
+              page9.data.results,
             );
             this.setState({ items: allItems });
-          }
-        )
+          },
+        ),
       )
       .then(() => {
         this.setState({ loading: false });
       })
-      .catch(error => console.log(error));
+      .catch((error) => console.log(error));
   }
 
   render() {
-    let indices = this.state.items.map(index => {
-      let removedText = index.url.replace(/\D+/g, '');
+    let indices = this.state.items.map((index) => {
+      let removedText = index.url.replace(/\D+/g, "");
       return removedText;
     });
     let list;
@@ -73,7 +74,7 @@ class PeopleHolder extends Component {
       : (list = this.state.items.map((item, index) => {
           return (
             <Col key={index} xs={24} sm={12} md={8} lg={7} xl={6} xxl={5}>
-              {this.state.peopleImg.map(people => {
+              {this.state.peopleImg.map((people) => {
                 return (
                   <PeopleItem
                     key={index}

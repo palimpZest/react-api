@@ -1,12 +1,13 @@
-import React, { Component } from 'react';
-import axios from 'axios';
-import PlanetsItem from './PlanetsItem';
-import { planetImages } from '../data/imageData';
-import { Row, Col } from 'antd';
-import { Layout } from 'antd';
-const { Content } = Layout;
+import React, { Component } from "react";
+import axios from "axios";
+import { Row, Col } from "antd";
+import { Layout } from "antd";
 
-let BASE_API = 'https://swapi.co/api';
+import PlanetsItem from "./PlanetsItem";
+import { planetImages } from "../data/imageData";
+import { BASE_API } from "../constants";
+
+const { Content } = Layout;
 
 const planetCalls = [
   axios.get(`${BASE_API}/planets/?page=1`),
@@ -15,7 +16,6 @@ const planetCalls = [
   axios.get(`${BASE_API}/planets/?page=4`),
   axios.get(`${BASE_API}/planets/?page=5`),
   axios.get(`${BASE_API}/planets/?page=6`),
-  axios.get(`${BASE_API}/planets/?page=7`)
 ];
 
 class PlanetsHolder extends Component {
@@ -24,7 +24,7 @@ class PlanetsHolder extends Component {
     this.state = {
       items: [],
       planetImg: planetImages,
-      loading: true
+      loading: true,
     };
   }
 
@@ -39,20 +39,19 @@ class PlanetsHolder extends Component {
             page4.data.results,
             page5.data.results,
             page6.data.results,
-            page7.data.results
           );
           this.setState({ items: allItems });
-        })
+        }),
       )
       .then(() => {
         this.setState({ loading: false });
       })
-      .catch(error => console.log(error));
+      .catch((error) => console.log(error));
   }
 
   render() {
-    let indices = this.state.items.map(index => {
-      let removedText = index.url.replace(/\D+/g, '');
+    let indices = this.state.items.map((index) => {
+      let removedText = index.url.replace(/\D+/g, "");
       return removedText;
     });
     let list;
@@ -67,7 +66,7 @@ class PlanetsHolder extends Component {
       : (list = this.state.items.map((item, index) => {
           return (
             <Col key={index} xs={24} sm={16} md={12} lg={8} xl={6} xxl={6}>
-              {this.state.planetImg.map(planet => {
+              {this.state.planetImg.map((planet) => {
                 return (
                   <PlanetsItem
                     key={index}
