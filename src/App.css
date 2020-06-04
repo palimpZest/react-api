@@ -1,10 +1,10 @@
-/* 
+/*
  *
 Global styles
  *
 */
 
-@import '~antd/dist/antd.css';
+@import "~antd/dist/antd.css";
 
 body {
   background-color: black;
@@ -12,15 +12,20 @@ body {
 }
 
 .selected {
-  color: rgb(255, 217, 0);
-  text-decoration: none;
+  font-weight: bolder !important;
+  color: #ffd900 !important;
+  border-bottom: 1px solid #ffd900 !important;
 }
 
-/* 
+/*
  *
 Ant design styles
  *
 */
+
+.ant-menu-item-selected {
+  background-color: black !important;
+}
 
 .ant-layout-header {
   margin: 0;
@@ -81,7 +86,7 @@ Ant design styles
 .ant-card-head-title {
   color: #975c9f;
   font-size: 20px;
-  font-family: 'Abel', sans-serif;
+  font-family: "Abel", sans-serif;
 }
 
 .ant-card-cover {
@@ -104,7 +109,7 @@ Ant design styles
 .ant-card-body {
   color: #40a9ff;
   padding: 0 40px 5px 40px;
-  font-family: 'Archivo Narrow', sans-serif;
+  font-family: "Archivo Narrow", sans-serif;
 }
 
 .ant-card-body p {
@@ -123,7 +128,7 @@ Ant design styles
   text-transform: capitalize;
 }
 
-/* 
+/*
  *
 Section styles
  *
@@ -146,7 +151,7 @@ Section styles
 .App-header {
   color: white;
   width: 95%;
-  font-family: 'Abel', sans-serif;
+  font-family: "Abel", sans-serif;
 }
 
 .greeting {
@@ -186,7 +191,7 @@ Section styles
 }
 
 .tooltip-style {
-  font-family: 'Abel', sans-serif;
+  font-family: "Abel", sans-serif;
   font-size: 24px;
   color: red;
 }
@@ -209,7 +214,7 @@ Section styles
 .welcome-message {
   color: #975c9f;
   margin: 15px auto;
-  font-family: 'Abel', sans-serif;
+  font-family: "Abel", sans-serif;
   text-align: center;
   font-size: 40px;
   font-weight: 600;
