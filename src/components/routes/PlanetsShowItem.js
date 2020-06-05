@@ -1,10 +1,11 @@
-import React, { Component } from 'react';
-import { NavLink } from 'react-router-dom';
-import Card from 'antd/lib/card';
-import { Row, Col } from 'antd';
-import axios from 'axios';
-import arrow from '../../icons/play-button.svg';
-import { planetImages } from '../../data/imageData';
+import React, { Component } from "react";
+import { NavLink } from "react-router-dom";
+import axios from "axios";
+import { Row, Col, Card } from "antd";
+
+import { planetImages } from "../../data/imageData";
+import { BASE_API } from "../../constants";
+import arrow from "../../icons/play-button.svg";
 
 class PlanetsShowItem extends Component {
   constructor(props) {
@@ -13,21 +14,21 @@ class PlanetsShowItem extends Component {
       item: [],
       planet: planetImages[0],
       planetImg: null,
-      loading: true
+      loading: true,
     };
   }
 
   componentDidMount() {
-    axios.get(`https://swapi.co/api${this.props.match.url}/`).then(response => {
+    axios.get(`${BASE_API}${this.props.match.url}/`).then((response) => {
       this.setState({
-        item: response.data
+        item: response.data,
       });
-      Object.values(this.state.planet).map(result => {
+      Object.values(this.state.planet).map((result) => {
         if (result.name === this.state.item.name) {
           let linkToImg = result.image;
           this.setState({
             planetImg: linkToImg,
-            loading: false
+            loading: false,
           });
           return linkToImg;
         }
@@ -45,7 +46,7 @@ class PlanetsShowItem extends Component {
       gravity,
       terrain,
       surface_water,
-      population
+      population,
     } = this.state.item;
     return (
       <Row type="flex" justify="center">

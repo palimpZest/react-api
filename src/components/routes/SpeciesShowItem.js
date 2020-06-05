@@ -1,10 +1,11 @@
-import React, { Component } from 'react';
-import { NavLink } from 'react-router-dom';
-import Card from 'antd/lib/card';
-import { Row, Col } from 'antd';
-import axios from 'axios';
-import arrow from '../../icons/play-button.svg';
-import { speciesImages } from '../../data/imageData';
+import React, { Component } from "react";
+import { NavLink } from "react-router-dom";
+import axios from "axios";
+import { Row, Col, Card } from "antd";
+
+import { speciesImages } from "../../data/imageData";
+import { BASE_API } from "../../constants";
+import arrow from "../../icons/play-button.svg";
 
 class SpeciesShowItem extends Component {
   constructor(props) {
@@ -13,21 +14,21 @@ class SpeciesShowItem extends Component {
       item: [],
       species: speciesImages[0],
       speciesImg: null,
-      loading: true
+      loading: true,
     };
   }
 
   componentDidMount() {
-    axios.get(`https://swapi.co/api${this.props.match.url}`).then(response => {
+    axios.get(`${BASE_API}${this.props.match.url}/`).then((response) => {
       this.setState({
-        item: response.data
+        item: response.data,
       });
-      Object.values(this.state.species).map(result => {
+      Object.values(this.state.species).map((result) => {
         if (result.name === this.state.item.name) {
           let linkToImg = result.image;
           this.setState({
             speciesImg: linkToImg,
-            loading: false
+            loading: false,
           });
           return linkToImg;
         }
@@ -42,7 +43,7 @@ class SpeciesShowItem extends Component {
       designation,
       average_height,
       average_lifespan,
-      language
+      language,
     } = this.state.item;
     return (
       <Row type="flex" justify="center">

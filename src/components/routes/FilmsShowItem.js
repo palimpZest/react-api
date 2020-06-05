@@ -1,10 +1,11 @@
-import React, { Component } from 'react';
-import { NavLink } from 'react-router-dom';
-import Card from 'antd/lib/card';
-import { Row, Col } from 'antd';
-import axios from 'axios';
-import arrow from '../../icons/play-button.svg';
-import { filmImages } from '../../data/imageData';
+import React, { Component } from "react";
+import { NavLink } from "react-router-dom";
+import axios from "axios";
+import { Row, Col, Card } from "antd";
+
+import { filmImages } from "../../data/imageData";
+import { BASE_API } from "../../constants";
+import arrow from "../../icons/play-button.svg";
 
 class FilmsShowItem extends Component {
   constructor(props) {
@@ -12,15 +13,15 @@ class FilmsShowItem extends Component {
     this.state = {
       item: [],
       film: filmImages[0],
-      loading: true
+      loading: true,
     };
   }
 
   componentDidMount() {
-    axios.get(`https://swapi.co/api${this.props.match.url}/`).then(response => {
+    axios.get(`${BASE_API}${this.props.match.url}/`).then((response) => {
       this.setState({
         item: response.data,
-        loading: false
+        loading: false,
       });
     });
   }
@@ -60,7 +61,7 @@ class FilmsShowItem extends Component {
           <br />
           <Row type="flex" justify="center">
             <NavLink to="/films">
-              {' '}
+              {" "}
               <img
                 src={arrow}
                 alt="arrow up"
